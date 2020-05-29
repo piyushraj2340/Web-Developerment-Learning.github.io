@@ -1,0 +1,524 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title>22.05.2020-- CSS -- Gradient</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+	.b {
+	 font-weight: 550;
+	}
+	 
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+ 
+  <header id= "logo-nav">
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+     </a>
+		   
+    <li>
+	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a> 
+			
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	  <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+     </li>
+		   
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+	
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li class="active">22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) -</li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+  </article>
+		 
+   <article id="learning">
+    <div id="css-gradient">
+	 <h2> CSS Gradient(linear and radial) </h2>
+	 <p class="b">
+	  Syntex: <br />
+	  <span style="margin-left: 20px">background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</span> <br />
+	  <span style="margin-left: 20px">background-image: radial-gradient(shape size at position, start-color, ..., last-color);</span>
+	 </p>
+	 <h2> linear-gradient </h2>
+	 <div style="height: 300px; background-image: linear-gradient(red,yellow); padding: 10px 20px" id="li-grad-direct">
+	 <h3 id="li-grad-h3">linear-gradient-- direction Top To Bottom (This is default)</h3>
+	 <button id="top-bottom" title="this is default">Top To Bottom</button>
+	 <button id="left-right">Left To Right</button>
+	 <button id="diagonal">Diagonal</button>
+	 <button id="45deg">45deg angle</button>
+	 <button id="90deg">90deg angle</button>
+	 <button id="0deg">0deg angle</button>
+	 <button id="-120deg">-120deg angle</button>
+	 
+	 
+	 
+	 <ul>
+	  <li> CSS Property Used:
+	   <ul>
+	    <li class="b" id="li-grad-value">background-image: linear-gradient(red,yellow);</li>
+		<li>height: 300px;</li>
+		<li>padding: 10px 20px;</li>
+		</li>
+	   </ul>
+	  </li>
+	 </ul>
+	 
+	  
+	 
+	 </div>
+	
+	 <script>
+	  var liGradH3 = document.getElementById("li-grad-h3");
+	  var liGradValue = document.getElementById("li-grad-value");
+	  var liGradDirect = document.getElementById("li-grad-direct");
+	 
+	  
+	  
+	  document.getElementById("top-bottom").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction Top To Bottom (This is default)";
+	   
+	  } 
+	  
+	  document.getElementById("diagonal").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(to bottom right, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(to bottom right, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction To Bottom Right";
+	  }
+	  
+	  document.getElementById("left-right").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(to right, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(to right, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction To Right";
+	  }
+	  
+	  document.getElementById("45deg").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(45deg, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(45deg, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction 45deg";
+	  }
+	  
+	  document.getElementById("90deg").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(90deg, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(90deg, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction 90deg";
+	  }
+	  
+	  document.getElementById("0deg").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(0deg, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(0deg, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction 0deg";
+	  }
+	  
+	  document.getElementById("0deg").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(0deg, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(0deg, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction 0deg";
+	  }
+	  
+	  document.getElementById("-120deg").onclick = function() {
+	   liGradDirect.style.backgroundImage = "linear-gradient(-120deg, red, yellow)";
+	   liGradValue.innerHTML = "background-image: linear-gradient(-120deg, red,yellow);";
+	   liGradH3.innerHTML = "linear-gradient-- direction -120deg";
+	  }
+	  
+	 </script>
+	 
+	 <div style="height: 300px; background-image: repeating-linear-gradient(red, yellow 10%, green 20%); margin: 10px 0; padding: 10px 20px">
+	 <h3>repeating-linear-gradient</h3>
+	 
+	 <ul>
+	  <li>CSS Property Used:
+	   <ul>
+	    <li class="b">background-image: repeating-linear-gradient(red, yellow 10%, green 20%);</li>
+		<li>height: 300px;</li>
+		<li>padding: 10px 20px;</li>
+		
+	   </ul>
+	  </li>
+	 </ul>
+	 
+	</div>
+	 
+	<h2>radial-gradient</h2>
+	 
+	<div style="background-image: radial-gradient(red,yellow,green); height: 300px; padding: 10px 20px;" id="radial-gradient">
+	 <h3 id="radial-grad-h3">Evenly spaced color stop(this is default)</h3>
+	 <button id="evenly">Evenly spaced</button>
+	 <button id="differ">Differently Spaced</button>
+	 <button id="circle">circle</button>
+	  
+	 <ul>
+	  <li>CSS Property Used:
+	   <ul id="radial-ul-add">
+		<li class="b" id="radial-grad-value">background-image: radial-gradient(red,yellow,green);</li>
+		<li id="radial-grad-height">height: 300px;</li>
+		<li>padding: 10px 20px;</li>
+		<li id="radial-grad-width" style="">width: 100%;</li>
+		<li id="radial-grad-margin" style="">margin: 0;</li>
+	   </ul>
+	  </li>
+	 </ul>
+	 
+	</div>
+	
+	<script>
+	 var radialGradient = document.getElementById("radial-gradient");
+     var radialH3 = document.getElementById("radial-grad-h3");
+     var radialValue = document.getElementById("radial-grad-value");
+     var radialUlAdd = document.getElementById("radial-ul-add");
+	 var radialHeight = document.getElementById("radial-grad-height");
+	 var radialMargin = document.getElementById("radial-grad-margin");
+	 var radialWidth = document.getElementById("radial-grad-width");
+  
+     document.getElementById("evenly").onclick = function() {
+	  radialGradient.style.backgroundImage = "radial-gradient(red,yellow,green)";
+	  radialGradient.style.width = "100%";
+	  radialGradient.style.height = "300px";
+	  radialGradient.style.margin = "0";
+	  radialH3.innerHTML = "Evenly spaced color stop(this is default)";
+	  radialValue.innerHTML = "background-image: radial-gradient(red,yellow,green);";
+	  radialMargin.innerHTML = "margin: 0;";
+	  radialWidth.innerHTML = "width: 100%;";
+	  radialHeight.innerHTML = "height: 300px;";
+	 }  
+	 
+	 document.getElementById("differ").onclick = function() {
+	  radialGradient.style.backgroundImage = "radial-gradient(red 10%,yellow 20%,green 60%)";
+	  radialGradient.style.width = "100%";
+	  radialGradient.style.height = "300px";
+	  radialGradient.style.margin = "0";
+	  radialH3.innerHTML = "Differently Spaced Color Stops(red 10%,yellow 20%,green 60%)";
+	  radialValue.innerHTML = "background-image: radial-gradient(red 10%,yellow 20%,green 60%);";
+	  radialMargin.innerHTML = "margin: 0;";
+	  radialWidth.innerHTML = "width: 100%;";
+	  radialHeight.innerHTML = "height: 300px;";
+	 } 
+	 
+	 document.getElementById("circle").onclick = function() {
+	  radialGradient.style.backgroundImage = "radial-gradient(circle, red,yellow,green)";
+	  radialGradient.style.height = "600px";
+	  radialGradient.style.width = "600px";
+	  radialGradient.style.margin = "0 auto";
+	  radialH3.innerHTML = "Set Shape(circle or ellipse is default)";
+	  radialValue.innerHTML = "background-image: radial-gradient(crrcle, red,yellow,green);";
+	  radialHeight.innerHTML = "height: 600px;";
+	  radialMargin.innerHTML = "margin: 0 auto;";
+	  radialWidth.innerHTML = "width: 600px;";
+	  
+	 } 
+	 
+	 </script>
+	 <div id="radial-gradient-1" style="background-image: radial-gradient(farthest-side at 55% 65%, red, yellow, green); height: 300px; padding: 10px 20px; margin: 10px 0;">
+	  <h3>Use of Different Size Keywords</h3>
+	  <span class="b">ellipse:</span>
+	  <button id="e-farthest-side">farthest-side</button>
+	  <button id="e-closest-side">closest-side</button>
+	  <button id="e-closest-corner">closest-corner</button>
+	  <button id="e-farthest-corner">farthest-corner</button>
+	  
+	  <br />
+	  <span class="b">circle :</span>
+	  <button id="c-farthest-side">farthest-side</button>
+	  <button id="c-closest-side">closest-side</button>
+	  <button id="c-closest-corner">closest-corner</button>
+	  <button id="c-farthest-corner">farthest-corner</button>
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b" id="differ-size-value">background-image: radial-gradient(farthest-side at 55% 65%, red, yellow, green);</li>
+		 <li>padding: 10px 20px;</li>
+		 <li>height: 300px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	  <p class="b">
+	   Note: We are not using ellipse for ellipse case because it is default.
+	  </p>
+	 </div>
+	 
+	 <script>
+	  var radialGradient1 = document.getElementById("radial-gradient-1");
+	  var radialValueDifferSize = document.getElementById("differ-size-value");
+	  
+	  document.getElementById("e-farthest-corner").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(farthest-corner at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(farthest-corner at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("e-farthest-side").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(farthest-side at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(farthest-side at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("e-closest-side").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(closest-side at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(closest-side at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("c-closest-corner").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(circle closest-corner at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(circle closest-corner at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("c-farthest-corner").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(circle farthest-corner at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(circle farthest-corner at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("c-farthest-side").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(circle farthest-side at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(circle farthest-side at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("c-closest-side").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(circle closest-side at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(circle closest-side at 55% 65%, red, yellow, green);";
+	  }
+	  
+	  document.getElementById("e-closest-corner").onclick = function() {
+	   radialGradient1.style.backgroundImage = "radial-gradient(closest-corner at 55% 65%, red, yellow, green)";
+	   radialValueDifferSize.innerHTML = "background-image: radial-gradient(closest-corner at 55% 65%, red, yellow, green);";
+	  }
+	 
+	 </script>
+	 
+	 <div id="radial-gradient-2" style="background-image: repeating-radial-gradient(lightskyblue, yellow 5%, lightgreen 15%); height: 300px; padding: 10px 20px; border: 10px dotted red;
+	 background-clip: border-box; background-origin: border-box;">
+	  <h3>repeating-radial-gradient with background-clip and background-origin.</h3>
+	  <span class="b">origin:</span> 
+	  <button id="o-border-box" title="this is default">border-box</button>
+	  <button id="o-padding-box">padding-box</button>
+	  <button id="o-content-box">content-box</button>
+	  <button id="o-resets">reset</button>
+	  <br />
+	  <span class="b"> &nbsp;clip :</span>
+	  <button id="c-border-box" title="this is default">border-box</button>
+	  <button id="c-padding-box">padding-box</button>
+	  <button id="c-content-box">content-box</button>
+	  <button id="c-resets">reset</button>
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b" id="repeat-radial-value">background-image: repeating-radial-gradient(lightskyblue, yellow 5%, lightgreen 15%);</li>
+		 <li class="b" id="back-origin-value">background-origin: border-box;</li>
+		 <li class="b" id="back-clip-value">background-clip: border-box;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 
+	 </div>
+	 
+	 <script>
+	  var radialGradient2 = document.getElementById("radial-gradient-2");
+	  var repeatRadialValue = document.getElementById("repeat-radial-value");
+	  var backOriginValue = document.getElementById("back-origin-value");
+	  var backClipValue = document.getElementById("back-clip-value");
+	  
+	  document.getElementById("c-content-box").onclick = function() {
+	   radialGradient2.style.backgroundClip = "content-box";
+	   backClipValue.innerHTML = "background-clip: content-box;";
+	  }
+	  
+	  document.getElementById("c-padding-box").onclick = function() {
+	   radialGradient2.style.backgroundClip = "padding-box";
+	   backClipValue.innerHTML = "background-clip: padding-box;";
+	  }
+	  
+	  document.getElementById("c-border-box").onclick = function() {
+	   radialGradient2.style.backgroundClip = "border-box";
+	   backClipValue.innerHTML = "background-clip: border-box;";
+	  }
+	  
+	  document.getElementById("c-resets").onclick = function() {
+	   radialGradient2.style.backgroundClip = "border-box";
+	   backClipValue.innerHTML = "background-clip: border-box;";
+	   
+	   alert("background-clip is resetted");
+	  }
+	  
+	  document.getElementById("o-content-box").onclick = function() {
+	   radialGradient2.style.backgroundOrigin = "content-box";
+	   backOriginValue.innerHTML = "background-origin: content-box;";
+	  }
+	  
+	  document.getElementById("o-padding-box").onclick = function() {
+	   radialGradient2.style.backgroundOrigin = "padding-box";
+	   backOriginValue.innerHTML = "background-origin padding-box;";
+	  }
+	  
+	  document.getElementById("o-border-box").onclick = function() {
+	   radialGradient2.style.backgroundOrigin = "border-box";
+	   backOriginValue.innerHTML = "background-origin: border-box;";
+	  }
+	  
+	  document.getElementById("o-resets").onclick = function() {
+	   radialGradient2.style.backgroundOrigin = "border-box";
+	   backOriginValue.innerHTML = "background-origin: border-box;";
+	   
+	   alert("background-origin is resetted");
+	  }
+	 </script>
+	
+	</div>
+   
+
+   </article>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#css-gradient">
+	 <li>CSS Gradient</li>
+	</a>
+   </ul>
+  </aside>
+	 
+ </main> 
+	 
+ <footer id="footer">
+  This Page is developed by Piyush raj &copy;2020.
+ </footer>
+
+ <script src="index.js"></script>
+ </body>
+ </html>

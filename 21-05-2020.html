@@ -1,0 +1,529 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title> 21.05.2020-- CSS -- border-images -- Multiple background</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+    .bold {
+	  font-weight: 550;
+	}
+	
+	ul {
+	  padding: 0 23px;
+	}
+	
+	#hero-image {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 z-index: 10;
+	 width: 100%;
+	 height: 100%;
+	 background-image: url('assets/images/bg1.jpg');
+	 background-position: center;
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 display: none;
+	 overflow: auto;
+	 opacity: 1;
+	}
+	
+	#hero-text {
+	 position: absolute;
+	 text-align: center;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 color: gold;
+	}
+	
+	#hero-image {
+	 animation-name: zoom;
+	 animation-duration: 0.7s;
+	}
+	
+	
+	@keyframes zoom {
+	 from {transform: scale(0.1)}
+	 to {transform: scale(1)}
+	 
+	}
+	
+	.close-times {
+	  position: fixed;
+	  top: 5%;
+	  right: 5%;
+	  font-weight: 600;
+	  font-size: 40px;
+	  color: #fff;
+	  cursor: pointer;
+	}
+	
+	.close-times:hover {
+	 font-weight: 550;
+	 color: #aaa;
+	}
+	
+	
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+ 
+  <header id= "logo-nav">
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+     </a>
+		   
+    <li>
+	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a> 
+			
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	  <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+     </li>
+		   
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+	
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li class="active">21.05.2020-- CSS -- border-images -- Multiple background   </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+  </article>
+		 
+   <article id="learning">
+    <div id="border-images">
+	 <h2> border-images </h2>
+	 <div style="margin: 10px 0; height: 100px">
+	  <img src="assets/images/border-image.png" width="100px" height="100px" title= "this image is use for border-image-property" alt="border-images.png is failed to load." style="display: inline-block; float: left" />
+	 
+	  <span style="height: 100px; display: inline-block; line-height: 100px;float: left"> this image is used for border-images. </span>
+	 </div>
+	 
+	 <div style="clear: both; margin-top: 10px;">
+	  <p style="border: 10px solid black; padding: 10px 20px; border-image: url('assets/images/border-image.png') 30 round"> this paragraph have 10px border-width and have border-images with 30 round. 
+	   <ul>
+	    <li>CSS Property Used:
+		 <ul>
+		  <li style="font-weight: 550;">border: 10px solid black;</li>
+		  <li style="font-weight: 550;">border-image: url('assets/images/border-image.png') 30 round;</li>
+		  <li>padding: 10px 20px;</li>
+		 </ul>
+		</li>
+	   </ul>
+	  </p>
+	   
+	  <p style="border: 10px solid black; padding: 10px 20px; border-image: url('assets/images/border-image.png') 30 stretch"> this paragraph have 10px border-width and have border-images with 30 round. 
+	   <ul>
+	    <li>CSS Property Used:
+		 <ul>
+		  <li style="font-weight: 550;">border: 10px solid black;</li>
+		  <li style="font-weight: 550;">border-image: url('assets/images/border-image.png') 30 stretch;</li>
+		  <li>padding: 10px 20px;</li>
+		 </ul>
+		</li>
+	   </ul>
+	  </p>
+	  
+	  <p style="border: 20px solid black; padding: 10px 20px; border-image: url('assets/images/border-image.png')  20 fill round; font-weight: 550; font-size: 20px;"> this paragraph have 10px border-width and have border-images with 20 fill round.
+	   <ul>
+		<li>CSS Property Used:
+		 <ul>
+		  <li style="font-weight: 550">border: 10px solid black;</li>
+		  <li style="font-weight: 550">border-image: url('assets/images/border-image.png') 20 fill round;</li>
+		  <li>padding: 10px 20px;</li>
+		  <li>font-weight: 550;</li>
+		  <li>font-size: 20px;</li>
+		 </ul>
+		</li>
+	   </ul>
+	  </p>
+	 </div>
+	</div>
+	
+	<div id="Multiple-background">
+	 <h2> CSS Multiple background Property </h2>
+	 
+	 <div style="background-image: url('assets/images/flower.gif'), url('assets/images/paper.gif'); background-position: bottom right, top left; background-repeat: no-repeat, repeat; height: 330px; padding: 5px 10px">
+	  <p>this div contains two background-image(paper and flower).</p>
+		
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li style="font-weight: 550">background-image: url('assets/images/flower.gif'), url('assets/images/paper.gif');</li>
+		 <li style="font-weight: 550">background-position: bottom right, top left;</li>
+		 <li style="font-weight: 550">background-repeat: no-repeat, repeat;</li>
+		 <li>padding: 5px 10px;</li>
+		 <li>height: 330px;</li>
+		  Or By Shorthand Property: 
+		 <li class="bold">background: <br />url('assets/images/flower.gif') bottom right no-repeat, <br /> url(assets/images/paper.gif) top left repeat; </li>
+		</ul>
+	   </li>
+	  </ul>
+	  <p class="bold">NOTE: First background-image is closest the viewer.</p>
+	 </div>
+	 
+	 <div style="background: url('assets/images/flower.gif') bottom right / 200px 150px no-repeat; height: 350px; margin: 10px 0; padding: 10px 5px;">
+	 <h3>background-size Property</h3>
+	 <p> this image have background-size: 200px width and 150px height. </p>
+	 <ul>
+	  <li>CSS Property Used:
+	   <ul>
+	    <li>background-image: url('assets/images/flower.gif');</li>
+		<li class="bold">background-size: 200px 150px;</li>
+		<li>background-position: bottom right;</li>
+		<li>background-repeat: no-repeat;</li>
+		Or By Shorthand Property:
+		<li>background: <br />
+		url('assets/images/flower.gif') bottom right / <br />
+		200px 150px no-repeat;</li>
+		
+	    </ul>
+	   </li>
+	  </ul>
+	 </div>
+	 
+	 <div style="height: 300px; background-image: url('assets/images/flower.gif'); background-position: top right; background-repeat: no-repeat; background-size: contain;" id="bg-size">
+	  <h3>background-size: contain and cover Property</h3>
+	  <p class="550" id="info">Currently background-size: contain;</p>
+	  <button onclick="changeValue()" id="butn">Change it!</button>
+	  <ul>
+	   <li>CSS Property Used:
+        <ul>
+		 <li>background-image: url('assets/images/flower.gif');</li>
+		 <li>background-position: top right;</li>
+		 <li>background-repeat: no-repeat;</li>
+		 <li class="bold" id="contain">background-size: contain;</li>
+		 <li class="bold" id="cover" style="display: none;">background-size: cover;</li>
+		 <li>height: 300px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 </div>
+	 <script>
+	    var num = 0;
+		var countFor = (function() {
+		  return function () {
+		    num +=1;
+			return num;
+		  }
+		})();
+	 
+	   function changeValue() {
+	     
+	     var contain = document.getElementById("contain");
+		 var cover = document.getElementById("cover");
+		 var info = document.getElementById("info");
+		 var bgSize = document.getElementById("bg-size");
+		 
+		 if(countFor() % 2 !== 0) {
+		  info.innerHTML = "Currently background-size: cover;";
+		  cover.style.display = "inline";
+		  contain.style.display = "none";
+		  bgSize.style.backgroundSize = "cover";
+		 }
+		 
+		 else {
+		  info.innerHTML = "Currently background-size: contain;";
+		  cover.style.display = "none";
+		  contain.style.display = "inline";
+		  bgSize.style.backgroundSize = "contain";
+		  return num = 0;
+		 }
+		 
+	   }
+	 </script>
+	 
+	  <div>
+	  <h3>Full size background-image</h3>
+	  <button onclick="heroImage()">Click Here!</button>
+	  <div id="hero-image"> 
+	   <span class="close-times">&times;</span>
+	  <div id="hero-text">
+	    <h1 style="font-size: 50px">I AM PIYUSH RAJ</h1>
+		<h3>And I'm a Web Developer</h3>
+		<button onclick="alert('I Am Working On It!')">Hire me</button>
+	  </div>
+	  </div>
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li>background-image: url('assets/images/bg1.jpg');</li>
+		 <li class="bold">background-position: center;</li>
+		 <li class="bold">background-size: cover;</li>
+		 <li>background-repeat: no-repeat;</li>
+		 <li>position: fixed;</li>
+		 <li>top: 0;</li>
+		 <li>left: 0;</li>
+		 <li>width: 100%;</li>
+		 <li>height: 100%;</li>
+		 <li>overflow: auto;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 
+	 </div>
+	 <script>
+	    function heroImage() {
+		 var elem = document.getElementById('hero-image');
+		 elem.style.display = "block";
+		 var close = document.getElementsByClassName('close-times');
+		 close[0].onclick = function() {
+		   elem.style.display = "none";
+		 }
+		}
+		
+		
+	 </script>
+	
+	<div id="bg-origin" style="background: url('assets/images/flower.gif') no-repeat top right; border: 10px solid black; padding: 35px">
+	 <h3>CSS background-origin Property.</h3>
+	 <button id="border">border-box</button>
+	 <button id="padding" title="this is default">padding-box</button>
+	 <button id="content-B">content-box</button>
+	 <ul>
+	  <li>CSS Property Used:
+	   <ul>
+	    <li class="bold">background: url('assets/images/flower.gif') no-repeat top right;</li>
+		<li class="bold" id="border-box" style="display: none;">background-origin: border-box;</li>
+		<li class="bold" title="this is default" id="padding-box">background-origin: padding-box;</li> 
+		<li class="bold" id="content-box" style="display: none;">background-origin: content-box;</li>
+		<li>padding: 35px;</li>
+		<li>border: 10px solid black;</li>
+	   </ul>
+	  </li>
+	 </ul>
+	 
+	</div>
+	
+	<script>
+	  var border = document.getElementById("border");
+	  var contentB = document.getElementById("content-B");
+	  var padding = document.getElementById("padding");
+	  var bgOrigin = document.getElementById("bg-origin");
+	  var borderBox = document.getElementById("border-box");
+	  var paddingBox = document.getElementById("padding-box");
+	  var contentBox = document.getElementById("content-box");
+	  
+	  border.onclick = function() {
+	    bgOrigin.style.backgroundOrigin = "border-box";
+		paddingBox.style.display = "none";
+        borderBox.style.display = "inline";	
+        contentBox.style.display = "none";			
+	  }
+	  
+	  padding.onclick = function() {
+	    bgOrigin.style.backgroundOrigin = "padding-box";
+		paddingBox.style.display = "inline";
+        borderBox.style.display = "none";
+        contentBox.style.display = "none";		
+	  }
+	  
+	  contentB.onclick = function() {
+	    bgOrigin.style.backgroundOrigin = "content-box";
+		paddingBox.style.display = "none";
+        borderBox.style.display = "none";
+        contentBox.style.display = "inline";		
+	  }
+	</script>
+	
+	<div id="bg-clip" style="background: url('assets/images/paper.gif') center / cover no-repeat; background-clip: border-box; border: 10px dotted red; margin: 10px 0; padding: 35px">
+	 <h3>CSS background-clip Property</h3>
+	 <button id="border1" title="this is default">border-box</button>
+	 <button id="padding1">padding-box</button>
+	 <button id="content-b1">content-box</button>
+	 <ul>
+	  <li>
+	   <ul>
+	    <li class="bold">background: url('assets/images/paper.gif') center / cover no-repeat;</li>
+		<li class="bold" id="bg-clip-value">background-clip: border-box;</li>
+		<li>padding: 35px;</li>
+		<li>border: 10px dotted red;</li>
+	   </ul>
+	  </li>
+	 </ul>
+	 
+	</div>
+	
+	<script>
+	 var border1 = document.getElementById("border1");
+	 var padding1 = document.getElementById("padding1");
+	 var contentB1 = document.getElementById("content-b1");
+	 var bgClipValue = document.getElementById("bg-clip-value");
+	 var bgClip = document.getElementById("bg-clip");
+	 
+	 border1.onclick = function() {
+	  bgClip.style.backgroundClip = "border-box";
+	  bgClipValue.innerHTML = "background-clip: border-box;";
+	 }
+	 
+	 padding1.onclick = function() {
+	  bgClip.style.backgroundClip = "padding-box";
+	  bgClipValue.innerHTML = "background-clip: padding-box;";
+	 }
+	 
+	 contentB1.onclick = function() {
+	  bgClip.style.backgroundClip = "content-box";
+	  bgClipValue.innerHTML = "background-clip: content-box;";
+	 }
+	</script>
+	
+	</div>
+
+   </article>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#border-images">
+	 <li>border-images</li>
+	</a>
+	
+	<a href="#Multiple-background">
+	 <li>Multiple background</li>
+	</a>
+   </ul>
+  </aside>
+	 
+ </main> 
+	 
+ <footer id="footer">
+  This Page is developed by Piyush raj &copy;2020.
+ </footer>
+
+ <script src="index.js"></script>
+ </body>
+ </html>

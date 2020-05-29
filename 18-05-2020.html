@@ -1,0 +1,283 @@
+<!DOCTYPE html>   
+<!-- HTML --   -->
+ 
+<html>
+ <head>
+  <title>18.05.2020--CSS -- border-radius property -- border-images -- , </title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+	 <!--   CSS......   -->
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+	 
+  <header id= "logo-nav">
+   <a href="index.html">
+	<img id="logo" src="assets/images/testing.png" >
+	<span class="sitename" style="font-family: arial">&lt;</span>
+	<span class="sitename">!--webDev--</span>
+	<span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+	</a>
+		   
+		   
+        
+	<li>
+	 <a href = "https://www.w3schools.com" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a>
+	 
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	   <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	   <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+		
+	</li>
+	
+	</a>
+		
+	 <li>
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		
+	 <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		   
+   </ul>
+  </header>
+  
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+	  
+  <aside id="aside-left">
+   <ul> 
+	<a href="15-05-2020.html">
+	 <li>15.05.2020--js -- Google Maps </li>
+	</a>
+		  
+    <a href="18-05-2020.html">
+	 <li class="active">18.05.2020--CSS -- border-radius -- border-images --  </li>
+	</a>
+		  
+    <a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+	 
+   <article id= "topic">
+		
+    <div id="comment">
+	 <span class="comment">&lt;!-- 12.05.2020 border-radius,border-images, --&gt;</span>
+	</div>
+		 
+   </article>
+		 
+   <article id="learning">
+	   
+    <div id="border-radius-property">
+     <h2>border-radius</h2>
+     <p style="border: 1px solid black; padding: 10px 20px; border-radius: 6px"> this paragraph have border radius 6px.<br />
+      <ul>
+	   <li> css property used: 
+	    <ul>
+	     <li>border: 1px solid black;</li> 
+	     <li> padding: 10px 20px;</li>
+	     <li style="font-weight: 550"> border-radius: 6px;</li>
+	    </ul>
+	   </li>
+	  </ul>
+	 </p>
+		  
+	 <p style="border: 1px solid black; padding: 10px 20px; border-radius: 30px 10px"> this paragraph have border radius 30px top-left-corner, 10px top-right-corner, 30px bottom-right-corner, 10px bottom-left-corner .<br />
+      <ul>
+	   <li> css property used: 
+		<ul>
+		 <li>border: 1px solid black;</li> 
+		 <li> padding: 10px 20px;</li>
+		 <li style="font-weight: 550"> border-radius: 30px 10px or 30px 10px 30px 10px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 </p>
+		  
+	 <p style="border: 1px solid black; padding: 10px 20px; border-radius: 50%; text-align: center"> this paragraph have border radius 50%.<br />
+		  
+      <ul>
+	   <li> css property used: 
+	    <ul>
+	     <li>border: 1px solid black;</li> 
+	     <li> padding: 10px 20px;</li>
+	     <li>text-align: center;</li>
+	     <li style="font-weight: 550"> border-radius: 50%;</li>
+	    </ul>
+	   </li>
+	  </ul>
+	 </p>
+		  
+	 <p style="border: 1px solid black; padding: 30px 20px; border-radius: 50px / 15px "> this paragraph have elliptical corner for border radius 50px / 15px.<br />
+      <ul>
+	   <li> css property used: 
+	    <ul>
+	     <li>border: 1px solid black;</li> 
+	     <li> padding: 30px 20px;</li>
+	     <li style="font-weight: 550"> border-radius: 50px / 15px;</li>
+	    </ul>
+	   </li>
+	  </ul>
+	 </p>
+		  
+	 <p style="border: 1px solid black; padding: 30px 20px; border-radius: 15px / 50px"> this paragraph have ellipticl corner for border radius 15px / 50px.<br />
+      <ul>
+	   <li> css property used: 
+	    <ul>
+	     <li>border: 1px solid black;</li> 
+	     <li> padding: 30px 20px;</li>
+		 <li style="font-weight: 550"> border-radius: 15px 50px;</li>
+	    </ul>
+	   </li>
+	  </ul>
+	 </p>
+	</div>
+		
+	<div id="border-image-property">
+	 <h2> border-image </h2>
+	 <p>
+	  <img src="assets\images\border-image.png" width="100px" height="100px" title= "this image is use for border-image-property" alt="border-images.png is failed to load."  />
+	  <span> this image is use for border-image-property. </span>
+	 </p>
+		 
+     <p style="border: 10px solid; border-image: url('assets/images/border-image.png') 30 round; padding: 10px 20px">
+	  this paragraph have 10px solid black and having border image
+	 </p>
+	</div>
+		 
+   </article>
+	   
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+	 <li>Topic Name</li>
+	</a>
+		  
+		  
+	<a href="#border-radius-property">
+	 <li> border-radius </li>
+	</a>
+		  
+	<a href="#border-image-property">
+	 <li> border-image </li>
+	</a>
+		  
+		 
+   </ul>
+	   
+	 
+  </aside>
+	 
+ </main>
+	 
+ <footer id="footer"> This Page is developed by Piyush raj &copy;2020.</footer>
+	 
+	 
+ <script>
+    // js........ javascript
+ </script>
+	 
+ <script src="index.js"></script>
+   
+ </body>
+</html>

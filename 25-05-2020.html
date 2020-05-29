@@ -1,0 +1,397 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title>25.05.2020-- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+   .b{
+	 font-weight: 550;
+	}
+	
+	#flex-child-element {
+	 counter-reset: count;
+	}
+	
+	h3::before {
+	 counter-increment: count;
+	 content: counter(count) ":";
+	}
+
+	
+	.flex-container, .flex-box-child > div {
+	 width: 100px;
+	 background-color: #b9a03a;
+	 font-size: 30px; 
+	 line-height: 75px;
+	 margin: 10px;
+	 text-align: center;
+	} 
+	
+    .flex-box-child {
+	 display: flex;
+	 background: #539a93;
+	}
+	
+	
+    	
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+ 
+  <header id= "logo-nav">
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+     </a>
+		   
+    <li>
+	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a> 
+			
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	  <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+     </li>
+		   
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+	
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li class="active">25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+  </article>
+		 
+   <article id="learning">
+   
+    <div id="Flexbox">
+	 <h2>Flexbox(align-content and Flexbox Child-Elements[order and flex-grow] ).</h2>
+	 
+	 <h3>flexbox align-content property.</h3>
+	 
+	 <button id="space-between">space-between</button>
+	 <button id="space-around">space-around</button>
+	 <button id="center">center</button>
+	 <button id="flex-start">flex-start</button>
+	 <button id="flex-end">flex-end</button>
+	 <button id="stretch">stretch</button>
+	 
+	 <br /> <br />
+	 flex-wrap: 
+	 
+	 <button id="wrap">wrap</button>
+	 <button id="nowrap">nowrap</button>
+	 
+	 <ul>
+	  <li>CSS Property Used:
+	   <ul>
+		<li class="b">display: flex;</li>
+		<li class="b" id="flex-align-value">align-content: flex-start;</li>
+		<li class="b" id="flex-wrap">flex-wrap: wrap;</li>
+		<li class="b">height: 500px;</li>
+		<li>background-color: #539a93;</li>
+	   </ul>
+	  </li>
+	 </ul>
+	 
+     <div style="height: 500px; display: flex; align-content: flex-start; flex-wrap: wrap; background-color: #539a93;" id="align-content">
+	  <div class="flex-container">1</div>
+	  <div class="flex-container">2</div>
+	  <div class="flex-container">3</div>
+	  <div class="flex-container">4</div>
+	  <div class="flex-container">5</div>
+	  <div class="flex-container">6</div>
+	  <div class="flex-container">7</div>
+	  <div class="flex-container">8</div>
+	  <div class="flex-container">9</div>
+	  <div class="flex-container">10</div>
+	  <div class="flex-container">11</div>
+	  <div class="flex-container">12</div>
+	  <div class="flex-container">13</div>
+	 </div>
+     <script>
+	  var alignConta = document.getElementById("align-content");
+	  var alignValue = document.getElementById("flex-align-value");
+	  var flexWra = document.getElementById("flex-wrap");
+	  
+	  document.getElementById("space-between").onclick = function() {
+	   alignConta.style.alignContent = "space-between";
+	   alignValue.innerHTML = "align-content: space-between;";
+	  }
+	  
+	  document.getElementById("space-around").onclick = function() {
+	   alignConta.style.alignContent = "space-around";
+	   alignValue.innerHTML = "align-content: space-around;";
+	  }
+	  
+	  document.getElementById("center").onclick = function() {
+	   alignConta.style.alignContent = "center";
+	   alignValue.innerHTML = "align-content: center;";
+	  }
+	  
+	  document.getElementById("flex-start").onclick = function() {
+	   alignConta.style.alignContent = "flex-start";
+	   alignValue.innerHTML = "align-content: flex-start;";
+	  }
+	  
+	  document.getElementById("flex-end").onclick = function() {
+	   alignConta.style.alignContent = "flex-end";
+	   alignValue.innerHTML = "align-content: flex-end;";
+	  }
+	  
+	  document.getElementById("stretch").onclick = function() {
+	   alignConta.style.alignContent = "stretch";
+	   alignValue.innerHTML = "align-content: stretch;";
+	  }
+	  
+	  document.getElementById("wrap").onclick = function() {
+	   alignConta.style.flexWrap = "wrap";
+	   flexWra.innerHTML = "flex-wrap: wrap;";
+	  }
+	  
+	  document.getElementById("nowrap").onclick = function() {
+	   alignConta.style.flexWrap = "nowrap";
+	   flexWra.innerHTML = "flex-wrap: nowrap;";
+	  }
+	 </script>
+     
+	 <div id="flex-child-element">
+	 <h2>Flexbox Child-Elements(items).</h2>
+	 <ul>
+	   <li>child-elements Property:
+	    <ul>
+		 <li>order</li>
+		 <li>flex-grow</li>
+		 <li>flex-shrink</li>
+		 <li>flex-basis</li>
+		 <li>flex</li>
+		 <li>align-self</li>
+		</ul>
+	   </li>
+	  </ul> 
+	  
+	 
+	 <h3>The Order Property.</h3>
+	 
+	 <div class="flex-box-child">
+	  <div style="order: 5;" title="order is 5">1</div>
+	  <div style="order: 1;" title="order is 1">2</div>
+	  <div style="order: 2;" title="order is 2">3</div>
+	  <div style="order: 0;" title="order is 0">4</div>
+	  <div style="order: 3;" title="order is 3">5</div>
+	 </div>
+	 
+	 <p class="b">
+	  <span style="color: red;">Code Used:</span>  <br />
+	  <span style="margin-left: 20px;" class="b">
+	  &lt;div class="flex-box-child"&gt;
+	  </span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="order: 5;" title="order is 5"&gt; 1 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="order: 5;" title="order is 1"&gt; 2 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="order: 5;" title="order is 2"&gt; 3 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="order: 5;" title="order is 0"&gt; 4 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="order: 5;" title="order is 3"&gt; 5 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 20px;" class="b">
+	  &lt;/div&gt;
+	  </span>
+	  
+	 </p>
+	 
+	 <h3> The flex-grow Property.</h3>
+	 
+	 <div id="flex-box-child" class="flex-box-child">
+	  <div style="flex-grow: 1" title="flex-grow is 1">1</div>
+	  <div style="flex-grow: 2" title="flex-grow is 2">2</div>
+	  <div style="flex-grow: 8" title="flex-grow is 8">3</div>
+	  <div style="flex-grow: 4" title="flex-grow is 3">4</div>
+	  <div style="flex-grow: 5" title="flex-grow is 4">5</div>
+	 
+	 </div>
+	 
+	 <p class="b">
+	  <span style="color: red;">Code Used:</span>  <br />
+	  <span style="margin-left: 20px;" class="b">
+	  &lt;div class="flex-box-child"&gt;
+	  </span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="flex-grow: 1;" title="flex-grow is 1"&gt; 1 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="flex-grow: 2;" title="flex-grow is 2"&gt; 2 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="flex-grow: 8;" title="flex-grow is 8"&gt; 3 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="flex-grow: 3;" title="flex-grow is 3"&gt; 4 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 25px;">&lt;div style="flex-grow: 4;" title="flex-grow is 4"&gt; 5 &lt;/div &gt;</span>
+	  <br />
+	  <span style="margin-left: 20px;" class="b">
+	  &lt;/div&gt;
+	  </span>
+	  
+	 </p>
+	 
+	 
+	 
+	 </div>
+	 
+	</div>
+	
+
+   </article>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#Flexbox">
+	 <li>Flexbox</li>
+	</a>
+   </ul>
+  </aside>
+	 
+ </main> 
+	 
+ <footer id="footer">
+  This Page is developed by Piyush raj &copy;2020.
+ </footer>
+
+ <script src="index.js"></script>
+ </body>
+ </html>

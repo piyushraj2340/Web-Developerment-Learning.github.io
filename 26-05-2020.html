@@ -1,0 +1,367 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title>26.05.2020-- Flexbox</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+  
+    #flexbox-child-element {
+	 counter-reset: count;
+	}
+	
+	h3::before {
+	 counter-increment: count;
+	 content: counter(count) ":";
+	}
+  
+   .flex-box-child > div {
+	 width: 100px;
+	 background-color: #b9a03a;
+	 font-size: 30px; 
+	 line-height: 75px;
+	 margin: 10px;
+	 text-align: center;
+	}  
+	
+	.flex-box-child {
+	 display: flex;
+	 background: #539a93;
+	}
+	
+	.b {
+	 font-weight: 550;
+	}
+	 
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+ 
+  <header id= "logo-nav">
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+     </a>
+		   
+    <li>
+	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a> 
+			
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	  <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+     </li>
+		   
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+  
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li class="active">26.05.2020--</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+  </article>
+		 
+   <article id="learning">
+    <div id="Flexbox">
+	 <h2>Flexbox Child-Elements</h2>
+	 
+	 <div id="flexbox-child-element">
+	  <h3>flex-shrink Property.</h3>
+	  
+	  <div class="flex-box-child">
+	   <div title="flex-shrink is default i.e. [1]" style="flex-shrink: 1;">1</div>
+	   <div title="flex-shrink is default i.e. [1]" style="flex-shrink: 1;">2</div>
+	   <div title="flex-shrink is [2]" style="flex-shrink: 2;">3</div>
+	   <div title="flex-shrink is default i.e. [1]" style="flex-shrink: 1;">4</div>
+	   <div title="flex-shrink is [3]" style="flex-shrink: 3;">5</div>
+	   <div title="flex-shrink is 0" style="flex-shrink: 0;">6</div>
+	   <div title="flex-shrink is default i.e. [1]" style="flex-shrink: 1;">7</div>
+	   <div title="flex-shrink is [3]" style="flex-shrink: 3;">8</div>
+	   <div title="flex-shrink is default i.e. [1]" style="flex-shrink: 1;">9</div>
+	   <div title="flex-shrink is [2]" style="flex-shrink: 2;">10</div>
+	   <div title="flex-shrink is 1" style="flex-shrink: 1;">11</div>
+	  </div>
+	  
+	  <p class="b">
+	   <span style="color: red"> Code Used:</span>
+	   <br />
+	   <span style="margin-left: 20px;">&lt;div class="flex-box-child"&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 1;"&gt;1&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 1;"&gt;2&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 2;"&gt;3&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 1;"&gt;4&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 3;"&gt;5&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 0;"&gt;6&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 1;"&gt;7&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 3;"&gt;8&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 1;"&gt;9&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 2;"&gt;10&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 30px;">&lt;div style="flex-shrink: 1;"&gt;11&lt;/div&gt;</span>
+	   <br />
+	   <span style="margin-left: 20px;">&lt;/div&gt;</span>
+	  </p>
+	 
+	 </div>
+	 
+	 <div id="flex-basis">
+	  <h3>flex-basis Property.</h3>
+	  <div class="flex-box-child">
+	   <div style="flex-basis: 200px;" title="flex-basis is 200px">1</div>
+	   <div style="flex-basis: 100px;" title="flex-basis is 100px">2</div>
+	   <div style="flex-basis: 50px;" title="flex-basis is 50px">3</div>
+	   <div style="flex-basis: 150px;" title="flex-basis is 150px">4</div>
+	   <div style="flex-basis: 300px;" title="flex-basis is 300px">5</div>
+	  </div>
+	  <p class="b">
+	  <span style="color: red;">Code Used:</span>
+	  <br />
+	  <span style="margin-left: 20px;">&lt;div class="flex-box-child"&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex-basis: 200px;"&gt; 1 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex-basis: 100px;"&gt; 2 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex-basis: 50px;"&gt; 3 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex-basis: 150px;"&gt; 4 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex-basis: 300px;"&gt; 5 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 20px;">&lt;/div&gt;</span>
+	 </p>
+	 </div>
+	 
+	 <div id="flex">
+	  <h3>flex Property (Shorthand Property).</h3>
+	  <p class="b">
+	   <span style="color: red;">SYNTX:</span>
+	   flex: flex-grow flex-shrink flex-basis;
+	  </p>
+	  <div class="flex-box-child">
+	   <div style="flex: 0 0 200px">1</div>
+	   <div style="flex: 3 0 0">2</div>
+	   <div style="flex: 0 2 0px">3</div>
+	   <div style="flex: 2 3 200px">4</div>
+	  </div>
+	  <p class="b">
+	  <span style="color: red;">Code Used:</span>
+	  <br />
+	  <span style="margin-left: 20px;">&lt;div class="flex-box-child"&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex: 0 0 200px;"&gt; 1 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex: 3 0 0px;"&gt; 2 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex: 0 2 0px;"&gt; 3 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="flex: 2 3 200px;"&gt; 4 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 20px;">&lt;/div&gt;</span>
+	 </p>
+	 </div>
+	 
+	 <div id="align-self">
+	 <h3>align-self Property.</h3>
+
+     <div class="flex-box-child" style="height: 200px; align-items: center;";>
+	  <div style="align-self: center;" title="align-self is center.">1</div>
+	  <div style="align-self: flex-start;" title="align-self is flex-start.">2</div>
+	  <div style="align-self: flex-end;"  title="align-self is flex-end.">3</div>
+	  <div style="align-self: stretch"  title="align-self is stretch.">4</div>
+	  <div style="align-self: baseline;"  title="align-self is baseline.">5</div>
+	  <div title="this is default" style="flex-grow: 2; font-size: 18px; color: white; font-weight: 550;">default is center</div>
+	 
+	 </div>	 
+	 <p class="b">
+	  <span style="color: red;">Code Used:</span>
+	  <br />
+	  <span style="margin-left: 20px;">&lt;div class="flex-box-child"&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="align-self: center"&gt; 1 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="align-self: flex-start"&gt; 2 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="align-self: flex-end"&gt; 3 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="align-self: stretch"&gt; 4 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div style="align-self: baseline"&gt; 5 &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 30px;">&lt;div&gt; default is center &lt;/div&gt;</span>
+	  <br />
+	  <span style="margin-left: 20px;">&lt;/div&gt;</span>
+	 </p>
+	 
+	 </div>
+	 
+	</div>
+
+   </article>
+   
+   
+   
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+   </ul>
+  </aside>
+  
+ 
+	 
+ </main> 
+	 
+  <footer id="footer">
+  This Page is developed by Piyush raj &copy;2020.
+  </footer>
+
+ <script src="index.js"></script>
+ </body>
+ </html>

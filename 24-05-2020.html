@@ -1,0 +1,322 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title> 24.05.2020-- CSS -- Flexbox</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+   .b{
+	 font-weight: 550;
+	}
+	
+	
+	.flex-container {
+	 width: 100px;
+	 background-color: #b9a03a;
+	 font-size: 30px; 
+	 line-height: 75px;
+	 margin: 10px;
+	 text-align: center;
+	}
+	 
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+ 
+  <header id= "logo-nav">
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+     </a>
+		   
+    <li>
+	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a> 
+			
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	  <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+     </li>
+		   
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+	
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li class="active">24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+  </article>
+		 
+   <article id="learning">
+    <div id="flex-box">
+	 <h2>CSS Flex-box(justify-content & align-items).</h2>
+	 
+	 <h3>flex-box justify-content and align-items property.</h3>
+	 justify-content: 
+	 
+	 <button id="center">center</button>
+	 <button id="flex-start">flex-start</button>
+	 <button id="flex-end">flex-end</button>
+	 <button id="space-around">space-around</button>
+	 <button id="space-between">space-between</button>
+	 <br /><br />
+	 
+	 align-items:
+	 
+	 <button id="align-center">center</button>
+	 <button id="flex-start1">flex-start</button>
+	 <button id="flex-end1">flex-end</button>
+	 <button id="stretch">stretch</button>
+	 <button id="baseline">baseline</button>
+	 
+	 <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">display: flex;</li>
+		 <li class="b" id="flex-content-value">flex-content: center;</li>
+		 <li class="b" id="flex-align-value">flex-align: center;</li>
+		 <li>background-color: #acedda;</li>
+		 <li class="b" id="flex-height">height: 300px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	  <p class="b">Note: To Make Perfect Centering use justify-content: center; and align-items: center;</p>
+	
+	 <div id="justify-content" style="display: flex;
+	 justify-content: center; background-color: #acedda; height: 300px; align-items: center;  ">
+	  <div class="flex-container"><h1> &lt;h1&gt; </h1></div>
+	  <div class="flex-container"><h6> &lt;h6&gt; </h6></div>
+	  <div class="flex-container"><h3> &lt;h3&gt; </h3></div>
+
+	 </div>
+	
+	
+	</div>
+	
+	<script>
+	 var flexCont = document.getElementById("justify-content");
+	 var flexContValue = document.getElementById("flex-content-value");
+	 var flexAlignValue = document.getElementById("flex-align-value");
+	
+	 
+	 
+	 document.getElementById("center").onclick = function() {
+	  flexCont.style.justifyContent = "center";
+	  flexContValue.innerHTML = "flex-content: center;";
+	 }
+	 
+	 document.getElementById("flex-start").onclick = function() {
+	  flexCont.style.justifyContent = "flex-start";
+	  flexContValue.innerHTML = "flex-content: flex-start;";
+	 }
+	 
+	 document.getElementById("flex-end").onclick = function() {
+	  flexCont.style.justifyContent = "flex-end";
+	  flexContValue.innerHTML = "flex-content: flex-end;";
+	 }
+	 
+	 document.getElementById("space-around").onclick = function() {
+	  flexCont.style.justifyContent = "space-around";
+	  flexContValue.innerHTML = "flex-content: space-around;";
+	 }
+	 
+	 document.getElementById("space-between").onclick = function() {
+	  flexCont.style.justifyContent = "space-between";
+	  flexContValue.innerHTML = "flex-content: space-between;";
+	 }
+	 
+	 document.getElementById("align-center").onclick = function() 
+	 {
+	  flexCont.style.alignItems = "center";
+	  flexContValue.innerHTML = "flex-content: space-between;";
+	 }
+	 
+	 document.getElementById("align-center").onclick = function() 
+	 {
+	  flexCont.style.alignItems = "center";
+	  flexAlignValue.innerHTML = "align-items: center;";
+	 }
+	 
+	 document.getElementById("flex-start1").onclick = function() 
+	 {
+	  flexCont.style.alignItems = "flex-start";
+	  flexAlignValue.innerHTML = "align-items: flex-start;";
+	 }
+	 
+	 document.getElementById("flex-end1").onclick = function() 
+	 {
+	  flexCont.style.alignItems = "flex-end";
+	  flexAlignValue.innerHTML = "align-items: flex-end;";
+	 }
+	 
+	 document.getElementById("stretch").onclick = function() 
+	 {
+	  flexCont.style.alignItems = "stretch";
+	  flexAlignValue.innerHTML = "align-items: stretch;";
+	 }
+	 
+	 document.getElementById("baseline").onclick = function() 
+	 {
+	  flexCont.style.alignItems = "baseline";
+	  flexAlignValue.innerHTML = "align-items: baseline;";
+	 }
+	 
+	 
+	 
+	 
+	</script>
+	
+	
+	
+   </article>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#flex-box">
+	 <li>Flex-box</li>
+	</a>
+	
+   </ul>
+  </aside>
+	 
+ </main> 
+	 
+ <footer id="footer">
+  This Page is developed by Piyush raj &copy;2020.
+ </footer>
+
+ <script src="index.js"></script>
+ </body>
+ </html>

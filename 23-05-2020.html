@@ -1,0 +1,774 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox -</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  <style>
+	.b{
+	 font-weight: 550;
+	}
+	
+	div {
+	 counter-reset: count;
+	}
+	
+	h4::before{
+	 counter-increment: count;
+     content: counter(count) ":";	 
+	}
+	
+	#flex-direction {
+	 display: flex;
+	 background-color: #ac0399;
+	 margin: 10px 0;
+	 flex-direction: row;
+	}
+	
+	.flex-container {
+	 width: 100px;
+	 background-color: #90bad3;
+	 font-size: 30px; 
+	 line-height: 75px;
+	 margin: 10px;
+	 text-align: center;
+	}
+	 
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="close">&times;</a>
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+  
+  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
+  
+  
+	
+ </header>
+ 
+  <header id= "logo-nav">
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+	     
+   <ul>
+    <a href = "index.html">
+	 <li>
+	  <b class="dot">&bull;</b><span class="nav">Home</span>
+	 </li>
+     </a>
+		   
+    <li>
+	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	 </a> 
+			
+	 <ul>
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
+	  <li title="w3schools CSS Toutorial">CSS</li> 
+	  </a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
+	  </a>
+			  
+	 </ul>
+     </li>
+		   
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li> 
+	 
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	 </li>
+	 
+	 <li id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </li>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+ 
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li class="active">23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020--</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+  </article>
+		 
+   <article id="learning">
+    <div id="text-shadow" >
+	 <h2>CSS text-shadow Property.</h2>
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 2px 2px">text-shadow effect!.</h4>
+	  
+	  text-shadow with horizontal shadow(2px) and vertical shadow(2px).
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 2px 2px;</li>
+		 <li>font-size: 25px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 2px 2px red;">text-shadow effect!.</h4>
+	  
+	  text-shadow with horizontal shadow(2px) and vertical shadow(2px) and color(red).
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 2px 2px red;</li>
+		 <li>font-size: 25px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 2px 2px 5px red">text-shadow effect!.</h4>
+	  
+	  text-shadow with horizontal shadow(2px) and vertical shadow(2px) and blur(5px) color(red).
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 2px 2px 5px red;</li>
+		 <li>font-size: 25px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 2px 2px 4px #000000; color: #fff;">text-shadow effect!.</h4>
+	  
+	  white color with black shadow.
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 2px 2px 4px #000;</li>
+		 <li>font-size: 25px;</li>
+		 <li class="b">color: #FFF;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 0px 0px 3px red">text-shadow effect!.</h4>
+	  
+	  Red neon glow shadow.
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 0px 0px 3px red;</li>
+		 <li>font-size: 25px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 0px 0px 3px #f00, 0px 0px 5px #00f">text-shadow effect!.</h4>
+	  
+	  Multiple Shadow Seperated By Comma, Red and Blue neon glow.
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 0px 0px 3px #f00, 0px 0px 5px #00f;</li>
+		 <li>font-size: 25px;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 1px 1px 2px black, 0px 0px 25px blue, 0 0 5px darkblue; color: white;">text-shadow effect!.</h4>
+	  
+	  White color with Black, Blue, and Darkblue Shadow.
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;</li>
+		 <li>font-size: 25px;</li>
+		 <li>color: white;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	 
+	 <p>
+	  <h4 style="font-size: 25px; text-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black; color: gold;">text-shadow effect!.</h4>
+	  
+	  text-shadow with border effect.
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">tex-shadow: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;</li>
+		 <li>font-size: 25px;</li>
+		 <li>color: gold;</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	 </p>
+	</div>
+	
+	<div id="box-shadow">
+	 <h2>CSS box-shadow Property</h2>
+	 
+	 <div style="box-shadow: 10px 10px; background-color: yellow; padding: 10px 20px;">
+	  <h3>box-shadow with 10px horizontal and 10px vertical shadow.</h3>
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">box-shadow: 10px 10px;</li>
+		 <li>padding: 10px 20px;</li>
+		 <li>background-color: yellow;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 </div>
+	 
+	 <div style="box-shadow: 10px 10px #999; background-color: yellow; padding: 10px 20px; margin: 20px 0;">
+	  <h3>box-shadow with 10px horizontal, 10px vertical shadow and color(#999).</h3>
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">box-shadow: 10px 10px #999;</li>
+		 <li>padding: 10px 20px;</li>
+		 <li>background-color: yellow;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 </div>
+	 
+	 <div style="box-shadow: 10px 10px 5px #999; background-color: yellow; padding: 10px 20px;">
+	  <h3>box-shadow with 10px horizontal, 10px vertical shadow, blur of 5px and color(#999).</h3>
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">box-shadow: 10px 10px 5px #999;</li>
+		 <li>padding: 10px 20px;</li>
+		 <li>background-color: yellow;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 </div>
+	 
+	 <div style="box-shadow: 0 5px 8px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.8); background-color: yellow; padding: 10px 20px; margin: 30px 0;">
+	  <h3>card effect.</h3>
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">box-shadow: 0 5px 8px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.8);</li>
+		 <li>padding: 10px 20px;</li>
+		 <li>background-color: yellow;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 </div>
+	 
+	</div>
+	
+	<div id="css-flexbox">
+	 <h2>CSS Flexbox</h2>
+	 
+	 <p>syntex: Parent Element contain css property display: flex; and container element contain flex property like flex-direction;
+	 
+	 </p>
+	 
+	 <ul>
+	   <li class="b">CSS Flexbox Layout container Property:
+	    <ul>
+		 <li class="b">flex-direction</li>
+		 <li class="b">flex-wrap</li>
+		 <li class="b">flex-flow</li>
+		 <li class="b">justify-content</li>
+		 <li class="b">align-content</li>
+		 <li class="b">align-items</li>
+		</ul>
+	   </li>
+	  </ul>
+	  
+	  <div>
+	   <h3>flex-direction Property.</h3>
+	   
+	   <button id="row" title="this is default">row</button>
+	   <button id="row-reverse">row-reverse</button>
+	   <button id="column">column</button>
+	   <button id="column-reverse">column-reverse</button>
+	   
+	   <ul>
+	    <li>CSS Property Used:
+	     <ul>
+		  <li>background-color: #ac0399;</li>
+		  <li class="b">display: flex;</li>
+		  <li class="b" id="flex-direct-value">flex-direction: row;</li>
+		 </ul>
+	    </li>
+	   </ul>
+
+	   <div style="display: flex;" id="flex-direction">
+	    <div class="flex-container">1</div>
+	    <div class="flex-container">2</div>
+	    <div class="flex-container">3</div>
+		
+		
+	   
+	   </div>
+	   
+	   <script>
+	    var flexDirec = document.getElementById("flex-direction");
+		var flexDirecValue = document.getElementById("flex-direct-value");
+		
+		document.getElementById("row").onclick = function () {
+		 flexDirec.style.flexDirection = "row";
+		 flexDirecValue.innerHTML = "flex-direction: row;";
+		}
+		
+		document.getElementById("row-reverse").onclick = function () {
+		 flexDirec.style.flexDirection = "row-reverse";
+		 flexDirecValue.innerHTML = "flex-direction: row-reverse;";
+		}
+		
+		document.getElementById("column").onclick = function () {
+		 flexDirec.style.flexDirection = "column";
+		 flexDirecValue.innerHTML = "flex-direction: column;";
+		}
+		
+		document.getElementById("column-reverse").onclick = function () {
+		 flexDirec.style.flexDirection = "column-reverse";
+		 flexDirecValue.innerHTML = "flex-direction: column-reverse;";
+		}
+		
+	   
+	   </script>
+	   
+	 
+	 </div>
+	 
+	 <div>
+      <h3>flex-wrap property.</h3>	 
+	  
+	  <button id="wrap">wrap</button>
+	  <button id="nowarp">nowarp</button>
+	  <button id="wrap-reverse">wrap-reverse</button>
+	  
+	  <ul>
+	    <li>CSS Property Used:
+	     <ul>
+		  <li>background-color: #ac0399;</li>
+		  <li class="b">display: flex;</li>
+		  <li class="b" id="flex-wrap-value">flex-wrap: wrap;</li>
+		 </ul>
+	    </li>
+	   </ul>
+	   
+	   <div id="flex-wrap" style="display: flex;flex-wrap: wrap; background-color: #ac0399">
+	    <div class="flex-container">1</div>
+	    <div class="flex-container">2</div>
+	    <div class="flex-container">3</div>
+	    <div class="flex-container">4</div>
+	    <div class="flex-container">5</div>
+	    <div class="flex-container">6</div>
+	    <div class="flex-container">7</div>
+	    <div class="flex-container">8</div>
+	    <div class="flex-container">9</div>
+	    <div class="flex-container">10</div>
+	    <div class="flex-container">11</div>
+	    <div class="flex-container">12</div>
+	    <div class="flex-container">13</div>
+	    
+	   </div>
+	   
+	 </div>
+	 
+	 <script>
+	  var flexWra = document.getElementById("flex-wrap");
+	  var flexWrapValue = document.getElementById("flex-wrap-value");
+	  
+	  document.getElementById("wrap").onclick = function() {
+	    flexWra.style.flexWrap = "wrap";
+		flexWrapValue.innerHTML = "flex-wrap: wrap;";
+	  }
+	  
+	  document.getElementById("nowarp").onclick = function() {
+	    flexWra.style.flexWrap = "nowrap";
+		flexWrapValue.innerHTML = "flex-wrap: nowrap;";
+	  }
+	  
+	  document.getElementById("wrap-reverse").onclick = function() {
+	    flexWra.style.flexWrap = "wrap-reverse";
+		flexWrapValue.innerHTML = "flex-wrap: wrap-reverse;";
+	  }
+	  
+	 </script>
+	 
+	 <div>
+	 <h3>flex-flow property.</h3>
+	 
+	  <p class="b">this is shorthand property for flex-direction and flex-wrap</p>
+	 flex-direction:
+	  <button id="row1" title="this is default">row</button>
+	  <button id="row-reverse1">row-reverse</button>
+	  <button id="column1">column</button>
+	  <button id="column-reverse1">column-reverse</button>
+      <button id="direct-resets">reset</button>
+	  <br /><br />
+	 flex-wrap: 
+	  <button id="wrap1" title="this is default">wrap</button>
+	  <button id="nowarp1">nowarp</button>
+	  <button id="wrap-reverse1">wrap-reverse</button>
+	  <button id="wrap-resets">reset</button>
+	  
+	  <ul>
+	   <li>CSS Property Used:
+	    <ul>
+		 <li class="b">display: flex;</li>
+		 <li class="b" id="flex-flow-value">flex-flow: row wrap;</li>
+		</ul>
+	   </li>
+	  </ul>
+	 
+	 
+	 <div id="flex-flow" style="display: flex; flex-flow: row wrap; background-color: #ac0399;"> 
+	  <div class="flex-container">1</div>
+	  <div class="flex-container">2</div>
+	  <div class="flex-container">3</div>
+	  <div class="flex-container">4</div>
+	  <div class="flex-container">5</div>
+	  <div class="flex-container">6</div>
+	  <div class="flex-container">7</div>
+	  <div class="flex-container">8</div>
+	  <div class="flex-container">9</div>
+	  <div class="flex-container">10</div>
+	  <div class="flex-container">11</div>
+	  <div class="flex-container">12</div>
+	  <div class="flex-container">13</div>
+	 
+	 </div>
+	 </div>
+	 
+	 <script>
+	  var flexFlo = document.getElementById("flex-flow");
+	  var flexFlowVale = document.getElementById("flex-flow-value");
+	  
+	  document.getElementById("row1").onclick = function(){	   
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	   var arrValu = valu.split(" ");
+       var x = arrValu[0];
+	   var y = arrValu[1];
+	  
+	   flexFlo.style.flexFlow = "row"+ " " + y;
+	   
+	   flexFlo.onchange = (function() {
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	    
+	    })();
+	  }
+	  
+	  document.getElementById("row-reverse1").onclick = function() {
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	   
+	   
+	   flexFlo.style.flexFlow = "row-reverse" + " " + y;
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	    
+	   })();
+	  }
+	  
+	  document.getElementById("column1").onclick = function() {
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	  
+	   
+	   flexFlo.style.flexFlow = "column" + " " + y;
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	    
+	   })();
+	  }
+	  
+	  document.getElementById("column-reverse1").onclick = function() {
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	   
+	   flexFlo.style.flexFlow = "column-reverse" + " " + y;
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	    
+	   })();
+	  }
+	  
+	  document.getElementById("direct-resets").onclick = function() {
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	   
+	   flexFlo.style.flexFlow = "row" + " " + y;
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	    alert("flex-direction is reset to default.");
+	   })();
+	  }
+	  
+	  
+	  document.getElementById("wrap1").onclick = function() {
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	  
+	   flexFlo.style.flexFlow = x + " " + "wrap";
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	   })();
+	  }
+	  
+	  document.getElementById("nowarp1").onclick = function() {
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	  
+	   flexFlo.style.flexFlow = x + " " + "nowrap";
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	   })();
+	  }
+	  
+	  document.getElementById("wrap-reverse1").onclick = function() {
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	  
+	   flexFlo.style.flexFlow = x + " " + "wrap-reverse";
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+	   })();
+	  }
+	  
+	  document.getElementById("wrap-resets").onclick = function() {
+	   var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+	  
+	   flexFlo.style.flexFlow = x + " " + "wrap";
+	   
+	   flexFlo.onchange = (function(){
+	   
+	    var valu = document.getElementById("flex-flow").style.flexFlow;
+	    var arrValu = valu.split(" ");
+        var x = arrValu[0];
+	    var y = arrValu[1];
+		flexFlowVale.innerHTML = "flex-flow: " + valu + ";";
+		alert("flex-wrap property is reset to its default value.");
+	   })();
+	  }
+	 </script>
+	 
+	 
+	 
+	</div>
+	
+	
+
+   </article>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#text-shadow">
+	 <li>Text-Shadow</li>
+	</a>
+	
+	<a href="#box-shadow">
+	 <li>box-shadow</li>
+	</a>
+	
+	<a href="#css-flexbox">
+	 <li>Flexbox</li>
+	</a>
+   </ul>
+  </aside>
+	 
+ </main> 
+	 
+ <footer id="footer">
+  This Page is developed by Piyush raj &copy;2020.
+ </footer>
+
+ <script src="index.js"></script>
+ </body>
+ </html>
