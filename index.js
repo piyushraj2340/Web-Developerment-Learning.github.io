@@ -23,10 +23,14 @@ var active = document.getElementsByClassName("active");
 var rightAnchorLi = document.querySelectorAll("#aside-right a li");
 var w3DropList = document.querySelectorAll("#logo-nav li ul");
 var navLi = document.querySelectorAll("#logo-nav li");
-var navUl = document.querySelectorAll("#logo-nav > ul");
+var navUl = document.querySelectorAll("#logo-nav #nav > ul");
+var navLogonav = document.querySelectorAll("#logo-nav #nav");
 var menuBar = document.getElementById("menu");
 var rightMenuOpen = document.getElementById("right-menu-open");
 var rightMenuClose = document.getElementById("right-menu-close");
+var slide = document.getElementsByClassName("slide");
+var next = document.getElementsByClassName("next");
+var prev = document.getElementsByClassName("prev");
 var countDarkTheme = 0;
 var countMenu = 0;
 
@@ -46,7 +50,42 @@ var countMenu = 0;
     return countMenu;
     }
     })(); 
-	
+
+// slide function
+    var slideIndex = 1;
+
+    function plusSlides(n) {
+	 if(window.innerHeight < 1050) {
+	   showSlides(slideIndex += n);
+	}
+	else {
+	 //nothing
+	}
+    }
+
+    // function currentSlide(n) {
+	    // showSlide(slideIndex = n);
+    // }		  
+          
+
+      function showSlides(n) {
+        var i;
+        if(n > slide.length) {
+	     slideIndex = 1;
+        }
+   
+        if(n < 1 ) {
+	     slideIndex = slide.length 
+        }
+   
+         for(i=0; i<slide.length; i++) {
+	      slide[i].style.display = "none";
+        }
+   
+         slide[slideIndex - 1].style.display = "inline-block";
+
+        }
+// darkTheme function dark mode control
 	  
  var darkTheme = function() {
 	
@@ -74,14 +113,14 @@ var countMenu = 0;
     darkMode.style.boxShadow = "0 0 0 transparent";
     }
 	  
-  darkMode.focus();
+  //darkMode.focus();
   
-  
+
       
   if(counterDarkTheme() % 2 !== 0)	{
 	  
     dark.style.backgroundColor = "black";
-    dark.style.boxShadow = "0 6px #fff";
+    dark.style.boxShadow = "0 5px #fff";
     elemBody.style.backgroundColor = "#282c34";
     elemBody.style.color = "#fff";
     topic.style.boxShadow = "0 6px 3px 0 rgba(256,256,256,0.7), 0 0px 10px 0 rgba(256,256,256,0.7)";
@@ -136,7 +175,7 @@ var countMenu = 0;
 	   
     else {
       dark.style.backgroundColor = "white";
-      dark.style.boxShadow = "0 7px #000";
+      dark.style.boxShadow = "0 5px #000";
 	  elemBody.style.backgroundColor = "#fff";
 	  elemBody.style.color = "#000";
       topic.style.boxShadow = "0 2px 5px 0 rgba(0,0,0,0.7), 0 2px 10px 0 rgba(0,0,0,0.7)";
@@ -281,10 +320,12 @@ var countMenu = 0;
 	function menuFunction() {
 		var pos = -50;
 	    if(counterMenu() % 2 !== 0) {
-		 asideLeft.style.display = "block";
-		 var clearItOpen = setInterval(menuAniOpen, 10);
+		 
+		 var clearItOpen = setInterval(menuAniOpen, 20);
 		 
 		 function menuAniOpen() {
+			asideLeft.style.display = "block";
+			navLogonav[0].style.display = "block";
 			if(pos == 0) {
 				clearInterval(clearItOpen);
 			}
@@ -305,13 +346,12 @@ var countMenu = 0;
 		 function menuAniClose() {
 			if(pos == -50) {
 				clearInterval(clearItClose);
+				navLogonav[0].style.display = "none";
 				asideLeft.style.display = "none";
-				//console.log("if part");
 			}
 			else {
 				pos--;
 				asideLeft.style.right = pos + "%";
-				//console.log("else part");
 			}
 		}
 
@@ -334,6 +374,7 @@ var countMenu = 0;
 			    rightMenuOpen.style.display = "inline-block";
 			    rightMenuClose.style.display = "none";
 				asideLeft.style.display = "none";
+				navLogonav[0].style.display = "none";
                 countMenu = 0;
 			}
 			
@@ -359,7 +400,7 @@ var countMenu = 0;
 		 var pos = -25;
 		 var point = 0;
 		 var clearIt = setInterval(menuAni, 20);
-         asideRight.style.display = "block";
+         
 
 		 function menuAni() {
          if(pos == 0 && point == 25) {
@@ -371,6 +412,7 @@ var countMenu = 0;
 		 else {
 			pos++;
 			point++;
+			asideRight.style.display = "block";
 			asideRight.style.right = pos + "%";
 			rightMenuOpen.style.right = point + "%";
 		 }
@@ -488,6 +530,8 @@ var countMenu = 0;
 	  logoNav.style.width = "100%";
 	  logo.style.width = "55px";
 	  logo.style.height = "55px";
+	  navLogonav[0].style.height = "60px";
+	  navLogonav[0].style.top = "60px";
 	  content.style.marginTop = "75px"; 
 	//  w3DropList[0].style.top = "100%";
 	  navUl[0].style.height = "50px";
@@ -520,9 +564,9 @@ var countMenu = 0;
 	}
 	  
 	  if(window.innerWidth < 1050) {
-       asideLeft.style.height = window.innerHeight - 73 + "px";
-	   asideRight.style.height = window.innerHeight - 73 + "px";
-	   asideLeft.style.top = "55px";
+       asideLeft.style.height = window.innerHeight - 137 + "px";
+	   asideRight.style.height = window.innerHeight - 77 + "px";
+	   asideLeft.style.top = "115px";
 	   asideRight.style.top = "55px";
 	}
 	  
@@ -547,6 +591,8 @@ var countMenu = 0;
 	  logoNav.style.width = "auto";
 	  logo.style.width = "70px";
 	  logo.style.height = "70px";
+	  navLogonav[0].style.height = "70px";
+	  navLogonav[0].style.top = "80px";
 	  content.style.marginTop = "5px";
 	  navUl[0].style.height = "70px";
 	  asideLeft.style.height = window.innerHeight -(145 - y) + "px";
@@ -581,9 +627,9 @@ var countMenu = 0;
 	  }
 	  
 	  if(window.innerWidth < 1050) {
-		asideLeft.style.height = window.innerHeight - (152 - y) + "px";
+		asideLeft.style.height = window.innerHeight - (222 - y) + "px";
 	    asideRight.style.height = window.innerHeight - (152 - y) + "px";
-	    asideLeft.style.top = 130 - y + "px";
+	    asideLeft.style.top = 200 - y + "px";
 	    asideRight.style.top = 130 - y + "px";
 	}
 	
@@ -597,6 +643,8 @@ var countMenu = 0;
 	
 	}
 	
+	
+	
 // resize event control
 	
 	function resizeEvent() {
@@ -606,6 +654,11 @@ var countMenu = 0;
 			rightMenuOpen.style.display = "inline-block";
 			rightMenuOpen.style.right = "0%";
 			rightMenuClose.style.display = "none";
+			
+			 showSlides(slideIndex);
+	   
+
+	
 		}
 		
 		else {
@@ -613,6 +666,11 @@ var countMenu = 0;
 			asideRight.style.display = "block";
 			rightMenuOpen.style.display = "none";
 			rightMenuClose.style.display = "none";
+		    var i, len;
+			len = slide.length;
+			for(i=0; i<len; i++) {
+				slide[i].style.display = "inline-block"; 
+			} 
 		}
 	}
 
@@ -625,3 +683,5 @@ var countMenu = 0;
 	window.addEventListener("load", scrollEvent);
 	window.addEventListener("resize", scrollEvent);
 	window.addEventListener("resize", resizeEvent);
+	window.addEventListener("load", resizeEvent);
+	//window.addEventListener("load", showSlides(n));

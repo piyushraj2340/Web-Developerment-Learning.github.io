@@ -32,22 +32,69 @@ html {
 	background-color: #8860d0;
 	line-height: 50px;
 	padding: 0px 20px;
-    text-align: center;
+    /* text-align: center; */
+	/* overflow: hidden; */
+	margin: 0px 0 4px 0;
+}
+
+
+
+#dark-font-social > div{
+	padding: 0;
+	margin: 0;
+	line-height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#dark-font-social  div > div {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	line-height: 50px;
+	
+}
+
+#dark-font-social .prev, #dark-font-social .next {
+	padding: 10px 15px;
+    display: none;
+	/* float: left; */
+	position: absolute;
+	top: 0;
+	color: #000;
+	cursor: pointer;
+	line-height: 30px;
+}
+
+.prev:hover, .next:hover {
+	background-color: #555;
+	color: #fff !important;	
+	transition: ease 1s;
+}
+
+#dark-font-social .next {
+	right: 0;
+	/* float: right; */
+}
+
+#dark-font-social .prev {
+	left: 0;
 }
 
 #dark-font-social button:not(#dark) {
 	padding: 2px 5px;
 	font-family: alice,serif !important; 
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
+	border-radius: 6px;
 	text-align: center;
-	line-height: 35px;
+	line-height: 25px;
 	color: #fff;
 	background-color: transparent;
 	border: 1px solid #fff;
 	cursor: pointer;
-	float: left;
-	margin: 5px;
+	/* float: left; */
+	/* margin: 10px 2.6px; */
 
 
 }
@@ -55,32 +102,41 @@ html {
 #dark-font-social button:active {
 	border: 1px solid #4D90FE;
 	box-shadow: 0 0 17px #4D90FE;
+	outline-color: #4D90FE;
 	
 }
 
 #dark-mode {
-	padding: 9px 5px !important;
+	/* padding: 9px 5px !important; */
 	display: inline-block;
 	position: relative;
-	margin: 5px 20px;
-	float: left;
-	
+	width: 30px;
+	height: 30px;
+	border-radius: 6px;
+	border: 1px solid #fff;
+	margin-bottom: -10px;
+	cursor: pointer;
+	/* margin: 5px 20px; */
+	/* float: left; */
+	z-index: 1;
 }
 
 #dark {
     background-color: white;	
 	border-radius: 6px;
-    width: 25px;
-	height: 25px;
+    width: 26px !important;
+	height: 22.5px !important;
 	outline: none;
 	border: none;
-	box-shadow: 0 7px #000;
-	position: relative;
-	left: -40px;
+	box-shadow: 0 5px #000;
+	position: absolute;
+	top: -10px;
+	left: 1px;
 	transition: 0.4s ease;
 	cursor: pointer;
-	float: left;
-	margin: 5px;
+	/* float: left; */
+	margin: 10px 0px;
+	z-index: 1;
 }
 
 #dark:active {
@@ -92,53 +148,63 @@ html {
 .contacts {
 	color: #000;
 	text-decoration: none;
-	margin: 5px;
+	/* margin: 10px; */
+	/* float: left; */
+	display: inline-block;
 }
 
 .sp-image {
-	float: right;
-	margin: 5px;
-	width: 35px;
-	height: 35px;
+	/* float: right; */
+	margin-bottom: -10px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
 	background-image: url('assets/images/image-sprite-social-media.png');
 	background-repeat: no-repeat;
 	cursor: pointer;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	text-decoration: none;
 }
 
 #sp-facebook {
-	background-position: 0px -85px;
+	background-position: 0px -77px;
+	background-size: 225px 150px;
 	transition: 0.3s;
 }
 
 #sp-facebook:hover {
-	background-position: 0px -45px;
+	background-position: 0px -42px;
 }
 
 #sp-instagram {
-	background-position: -131px -86px;
+	background-position: -101px -79px;
+	background-size: 230px 150px;
 	transition: 0.3s;
 }
 
 #sp-instagram:hover {
-	background-position: -131px -45px;
+	background-position: -101px -42px;
 }
 
 #sp-twitter {
-	background-position: -45px -85px;
+	background-position: -36px -77px;
+	background-size: 230px 150px;
 	transition: 0.3s;
 }
 
 #sp-twitter:hover {
-	background-position: -45px -45px;
+	background-position: -36px -42px;
 }
 
 #sp-youtube {
-	background-position: -90px -86px;
+	background-position: -87px -78px;
+    background-size: 280px 150px;
 	transition: 0.3s;
 }
 
 #sp-youtube:hover {
-	background-position: -90px -45px;
+	background-position: -87px -42px;
 }
 
 #dark-font-social .close {
@@ -157,6 +223,12 @@ html {
 	color: #cacaca;
 }
 
+#dark-font-social::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 
 #logo-nav {
 	width: auto;
@@ -164,11 +236,14 @@ html {
 	padding: 5px 20px;
 	margin: 0px;
 	box-shadow: 0 6px 10px 0 rgba(0,0,0,0.7), 0 0px 15px 0 rgba(0,0,0,0.7);
-	z-index: 4;
+	z-index: 10;
 	position: sticky;
 	top: 0px;
 	transition: all 0.6s;
+	clear: both;
 }
+
+
 
 #logo-nav  img {
 	display: inline-block;
@@ -188,7 +263,16 @@ html {
 	transition: all 0.6s;
 }
 
-#logo-nav > ul {
+#logo-nav #nav {
+	margin: 0;
+	padding: 0;
+	float: right;
+	height: 70px;
+	transition: all 0.4s;
+	line-height: 70px;
+}
+
+#logo-nav #nav > ul {
 	margin: 0;
 	padding: 0;
 	float: right;
@@ -247,6 +331,10 @@ html {
 #logo-nav #menu {
 	cursor: pointer;
 	display: none;
+	display: none;
+	position: absolute;
+	right: 40px;
+	top: 15px;
 }
 
 #logo-nav li ul {
@@ -315,6 +403,12 @@ html {
 
 #logo-nav li:hover .dot {
 	visibility: visible;
+}
+
+#logo-nav::after { 
+    content: "";
+	display: table;
+	clear: both;
 }
 
  #main {
@@ -557,6 +651,66 @@ aside a {
 	display: inline-block;
 }
 
+.contacts, .sp-image {
+	float: none;
+}
 
+#dark-font-social > div {
+	text-align: center;
+	display: block;
+}
+
+.slide {
+	display: none;
+}
+
+.fade,#logo-nav #nav {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#dark-font-social .prev, #dark-font-social .next {
+	display: inline-block;
+}
+
+#logo-nav {
+	z-index: 3;
+	background-color: #fff;
+}
+
+#logo-nav #nav {
+	float: none;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	background-color: #94bce0;
+	width: 100%;
+	margin: 0;
+	border-top: 1px solid #000;
+	z-index: -1;
+	opacity: 0.9;
+}
+
+#logo-nav #nav > ul {
+	float: none;
+}
+
+#logo-nav #nav li {
+	float: none;
+}
 
 }

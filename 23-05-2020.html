@@ -46,12 +46,21 @@
  </head>
  <body>
   <header id= "dark-font-social" >
+  <div class="slide-div">
+  
+   <a class="prev fas fa-angle-left" onclick="plusSlides(-1)"></a>
+   
+   <div class="fontsize-dark slide fade">
    <button id="inc" onclick= "fontInc()">A+</button>
    <button id="reset" onclick= "fontReset()">A</button>
    <button id="dec" onclick= "fontDec()"> A-</button>
 		
-  <button id="dark-mode" onclick="darkTheme()"><button id="dark" title="Dark Theme" onclick="darkTheme()"></button></button>
+   <a id="dark-mode" onclick="darkTheme()">
+   <button id="dark" title="Dark Theme"></button>
+   </a>
+  </div>
   
+  <div class="contact-info slide fade">
   <a href="javascript:void(0)" class="contacts">
    <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
   </a>
@@ -63,19 +72,21 @@
   <a href="javascript:void(0)" class="contacts">
    <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
   </a>
+  </div>
   
-  <a href="javascript:void(0)" class="close">&times;</a>
+  <div class="social-link slide fade">
+  <a href="https://facebook.com" class="sp-image" id="sp-youtube"></a>
   
-  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-youtube">
+  <a href="https://facebook.com" class="sp-image" id="sp-twitter"></a>
   
-  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-twitter">
+  <a href="https://facebook.com" class="sp-image" id="sp-instagram"></a>
   
-  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-instagram">
+ 
+  <a href="https://facebook.com" class="sp-image" id="sp-facebook"> </a>
+  </div>
   
-  <img src="assets/images/spacers-image.png" alt="image" class="sp-image" id="sp-facebook">
-  
-  
-	
+  <a class="next fas fa-angle-right" onclick="plusSlides(1)"></a>
+ </div>
  </header>
  
   <header id= "logo-nav">
@@ -85,7 +96,8 @@
     <span class="sitename">!--webDev--</span>
     <span style="font-family: arial" class="sitename">&gt;</span>
    </a>
-	     
+   
+   <nav id="nav">  
    <ul>
     <a href = "index.html">
 	 <li>
@@ -119,12 +131,13 @@
 	 <li> 
 	  <b class="dot">&bull;</b> 
 	  <span class="nav"> By Date </span>
-	 </li> 
+	 </li>
 	 
 	 <li> 
 	  <b class="dot">&bull;</b> 
 	  <span class="nav"> About </span>
 	 </li>
+	 </nav> 
 	 
 	 <li id="menu" onclick="menuFunction()">
 	  <i class="fas fa-bars" style="font-size: 30px;"></i>
