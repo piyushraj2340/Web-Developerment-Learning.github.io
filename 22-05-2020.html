@@ -22,10 +22,12 @@
  <body>
   <header id= "dark-font-social" >
   <div class="slide-div">
-  
+   
+   <a class="fas fa-ellipsis-v" id="menu-dfs" onclick="menuDFS()"></a> 
+   
    <a class="prev fas fa-angle-left" onclick="plusSlides(-1)"></a>
    
-   <div class="fontsize-dark slide fade">
+   <div class="fontsize-dark slide fade a-slide">
    <button id="inc" onclick= "fontInc()">A+</button>
    <button id="reset" onclick= "fontReset()">A</button>
    <button id="dec" onclick= "fontDec()"> A-</button>
@@ -36,20 +38,20 @@
   </div>
   
   <div class="contact-info slide fade">
-  <a href="javascript:void(0)" class="contacts">
+  <a href="javascript:void(0)" class="contacts a-slide">
    <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
   </a>
   
-  <a href="javascript:void(0)" class="contacts">
+  <a href="javascript:void(0)" class="contacts a-slide">
    <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
   </a>
   
-  <a href="javascript:void(0)" class="contacts">
+  <a href="javascript:void(0)" class="contacts a-slide">
    <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
   </a>
   </div>
   
-  <div class="social-link slide fade">
+  <div class="social-link slide fade a-slide">
   <a href="https://facebook.com" class="sp-image" id="sp-youtube"></a>
   
   <a href="https://facebook.com" class="sp-image" id="sp-twitter"></a>
@@ -65,6 +67,7 @@
  </header>
  
   <header id= "logo-nav">
+  
    <a href="index.html">
     <img id="logo" src="assets/images/testing.png" >
     <span class="sitename" style="font-family: arial">&lt;</span>
@@ -73,50 +76,47 @@
    </a>
    
    <nav id="nav">  
-   <ul>
     <a href = "index.html">
-	 <li>
-	  <b class="dot">&bull;</b><span class="nav">Home</span>
-	 </li>
-     </a>
-		   
-    <li>
-	 <a href = "https://www.w3schools.com" target="_blank" title="w3schools.com">
+	  <b class="dot">&bull;</b>
+	  <span class="nav">Home</span>
+    </a>
+	
+	
+	<div id="w3school-com" title="w3schools.com">
+	  <a href = "https://www.w3schools.com" target="_blank" >
 	  <b class="dot">&bull;</b>
 	  <span class="nav w3school">w3schools</span>
 	  <span class="w3school nav w3com">.com</span>
-	 </a> 
-			
-	 <ul>
-	  <a href="https://www.w3schools.com/html/default.asp" target="_blank">
-	  <li title="w3schools HTML Toutorial">HTML</li> 
+	  <i class="fas fa-caret-up list-hide"></i>
+	  <i class="fas fa-caret-down list-view"></i>
 	  </a>
+	
+	 <div class="dropdown-list">
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank" title="w3schools HTML Toutorial">HTML</a>
 			   
-	  <a href="https://www.w3schools.com/css/default.asp" target="_blank">
-	  <li title="w3schools CSS Toutorial">CSS</li> 
-	  </a>
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank" title="w3schools CSS Toutorial">CSS</a>
 			   
-	  <a href="https://www.w3schools.com/js/default.asp" target="_blank">
-	   <li title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</li> 
-	  </a>
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank" title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</a>
 			  
-	 </ul>
-     </li>
-		   
+	 </div>
+     
+	 </div>
+   <!--	<a href="javascript:void(0)">
 	 <li> 
 	  <b class="dot">&bull;</b> 
 	  <span class="nav"> By Date </span>
 	 </li>
-	 
-	 <li> 
+	</a> -->
+	
+	<a href="about.html">
 	  <b class="dot">&bull;</b> 
 	  <span class="nav"> About </span>
-	 </li>
+	</a>
 	 </nav> 
 	 
-	 <li id="menu" onclick="menuFunction()">
+	 <a id="menu" onclick="menuFunction()">
 	  <i class="fas fa-bars" style="font-size: 30px;"></i>
-	 </li>
+	 </a>
 		   
      <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
 		
@@ -124,10 +124,14 @@
   </header>
 	 
  <main id= "main">
- 
+	
   <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
 
   <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+  
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="left-menu-close" onclick="asideLeftMenuClose()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="left-menu-open" onclick="asideLeftMenuOpen()"></a>
 	
   <aside id="aside-left">
    <ul> 
