@@ -656,8 +656,28 @@ aside a {
 	margin: 5px;
 }
 
+/* learning div supports css */
+
+.bold {
+	font-weight: 550;
+}
 
 
+.label-tag-value, .label-tag {
+	color: #4d90fe;
+	font-style: italic;
+	font-weight: 550;
+}
+
+.label-tag {
+	color: red;
+}
+
+.hr-line {
+	background-image: -webkit-linear-gradient(left, #5680e9, #84ceeb, #5ab9ea, #c1c8e4, #8860d0);
+	height: 3px;
+	width: 90%;
+}
 
 
 @media screen and (max-width: 992px) {
@@ -819,7 +839,7 @@ aside a {
 	z-index: 1;
 }
 
-#learning div {
+.overflow {
    overflow-x: scroll;
    overflow-y: scroll;
 }

@@ -221,7 +221,11 @@
 	</a>
 	
 	<a href="26-05-2020.html">
-	 <li>26.05.2020--</li>
+	 <li>26.05.2020-- CSS -- Flexbox Child-Elements</li>
+	</a>
+	
+	<a href="04-06-2020.html">
+	 <li>04.06.2020-- CSS -- Grid Layout --</li>
 	</a>
 
    </ul>
@@ -238,13 +242,13 @@
    <article id="learning">
     <div id="border-images">
 	 <h2> border-images </h2>
-	 <div style="margin: 10px 0; height: 100px">
+	 <div class="overflow" style="margin: 10px 0; height: 100px">
 	  <img src="assets/images/border-image.png" width="100px" height="100px" title= "this image is use for border-image-property" alt="border-images.png is failed to load." style="display: inline-block; float: left" />
 	 
 	  <span style="height: 100px; display: inline-block; line-height: 100px;float: left"> this image is used for border-images. </span>
 	 </div>
 	 
-	 <div style="clear: both; margin-top: 10px;">
+	 <div class="overflow" style="clear: both; margin-top: 10px;">
 	  <p style="border: 10px solid black; padding: 10px 20px; border-image: url('assets/images/border-image.png') 30 round"> this paragraph have 10px border-width and have border-images with 30 round. 
 	   <ul>
 	    <li>CSS Property Used:
@@ -288,7 +292,7 @@
 	<div id="Multiple-background">
 	 <h2> CSS Multiple background Property </h2>
 	 
-	 <div style="background-image: url('assets/images/flower.gif'), url('assets/images/paper.gif'); background-position: bottom right, top left; background-repeat: no-repeat, repeat; height: 330px; padding: 5px 10px">
+	 <div class="overflow" style="background-image: url('assets/images/flower.gif'), url('assets/images/paper.gif'); background-position: bottom right, top left; background-repeat: no-repeat, repeat; height: 330px; padding: 5px 10px">
 	  <p>this div contains two background-image(paper and flower).</p>
 		
 	  <ul>
@@ -307,7 +311,7 @@
 	  <p class="bold">NOTE: First background-image is closest the viewer.</p>
 	 </div>
 	 
-	 <div style="background: url('assets/images/flower.gif') bottom right / 200px 150px no-repeat; height: 350px; margin: 10px 0; padding: 10px 5px;">
+	 <div class="overflow" style="background: url('assets/images/flower.gif') bottom right / 200px 150px no-repeat; height: 350px; margin: 10px 0; padding: 10px 5px;">
 	 <h3>background-size Property</h3>
 	 <p> this image have background-size: 200px width and 150px height. </p>
 	 <ul>
@@ -327,7 +331,7 @@
 	  </ul>
 	 </div>
 	 
-	 <div style="height: 300px; background-image: url('assets/images/flower.gif'); background-position: top right; background-repeat: no-repeat; background-size: contain;" id="bg-size">
+	 <div class="overflow" style="height: 300px; background-image: url('assets/images/flower.gif'); background-position: top right; background-repeat: no-repeat; background-size: contain;" id="bg-size">
 	  <h3>background-size: contain and cover Property</h3>
 	  <p class="550" id="info">Currently background-size: contain;</p>
 	  <button onclick="changeValue()" id="butn">Change it!</button>
@@ -421,7 +425,7 @@
 		
 	 </script>
 	
-	<div id="bg-origin" style="background: url('assets/images/flower.gif') no-repeat top right; border: 10px solid black; padding: 35px">
+	<div class="overflow" id="bg-origin" style="background: url('assets/images/flower.gif') no-repeat top right; border: 10px solid black; padding: 35px">
 	 <h3>CSS background-origin Property.</h3>
 	 <button id="border">border-box</button>
 	 <button id="padding" title="this is default">padding-box</button>
@@ -472,7 +476,7 @@
 	  }
 	</script>
 	
-	<div id="bg-clip" style="background: url('assets/images/paper.gif') center / cover no-repeat; background-clip: border-box; border: 10px dotted red; margin: 10px 0; padding: 35px">
+	<div class="overflow" id="bg-clip" style="background: url('assets/images/paper.gif') center / cover no-repeat; background-clip: border-box; border: 10px dotted red; margin: 10px 0; padding: 35px">
 	 <h3>CSS background-clip Property</h3>
 	 <button id="border1" title="this is default">border-box</button>
 	 <button id="padding1">padding-box</button>

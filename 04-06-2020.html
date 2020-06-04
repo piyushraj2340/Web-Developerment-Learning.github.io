@@ -1,14 +1,31 @@
 <!DOCTYPE html>   
 <!-- HTML -->
  
+ 
+
 <html>
  <head>
-  <title>15.05.2020-- js -- Google Maps, </title> 
+  <title> 04-06-2020-- Grid Layout </title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="index.css" type="text/css" rel="stylesheet">
   <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  
   <style>
-	 <!--   CSS......   -->
+	 
+	 .grid-contener {
+	   display: grid;
+	   grid-template-columns: auto auto auto;
+	   background-color: #f99c93;
+	   padding: 10px;
+	 }
+	 
+	 .grid-items {
+	   border: 1px solid #000;
+	   padding: 20px;
+	   text-align: center;
+	   background-color: #89a6c5;
+	   color: #000;
+	 }
   </style>
   
   <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
@@ -127,22 +144,22 @@
   <a href="javascript:void(0)" class="fas fa-angle-double-left" id="left-menu-close" onclick="asideLeftMenuClose()"></a>
 
   <a href="javascript:void(0)" class="fas fa-angle-double-right" id="left-menu-open" onclick="asideLeftMenuOpen()"></a>
-  
-   <aside id="aside-left">
-    <ul> 
-     <a href="15-05-2020.html">
-      <li class="active">15.05.2020-- js -- Google Maps </li>
-     </a>
+   
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
 		  
-     <a href="18-05-2020.html">
-      <li>18.05.2020--CSS -- border-radius -- border-images --  </li>
-	 </a>
-		  
-     <a href="21-05-2020.html">
-	 <li>21.05.2020-- CSS -- border-images -- Multiple background </li>
-	 </a>
-	 
-	 <a href="22-05-2020.html">
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
 	 <li>22.05.2020-- CSS -- Gradient</li>
 	</a>
 	
@@ -163,78 +180,134 @@
 	</a>
 	
 	<a href="04-06-2020.html">
-	 <li>04.06.2020-- CSS -- Grid Layout --</li>
+	 <li class="active">04.06.2020-- CSS -- Grid Layout --</li>
 	</a>
 	
 	
 
-	</ul>
+   </ul>
 	 
-   </aside>
+  </aside>
 	 
-   <section id="content">
-	 
-    <article id= "topic">
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+    </div>
+   </article>
+    
+   <article id="learning">
+     <div id="grid-layout" style="width: auto; height: auto;">
+      <h2>Grid Layout</h2>
+      <div>
+	   <h3>Grid Elements :</h3>
+	   <div class="grid-contener overflow">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	   </div>
+	  </div> 
+
+ 	  <div>
+	   <hr class="hr-line" />
+	   <hr class="hr-line" style="width: 100%;" />
+	   
+	   <h3>Display Property :</h3>
+	   <p class="bold">
+	    <span class="label-tag">Properties Are :</span> grid & inline-grid.
+	   </p>
+	   
+	   <button onclick="displayGrid()">grid</button>
+	   <button onclick="displayInlineGrid()">inline-grid</button>
+	   
+
+	   
+	   <br /><br />
+	   
+	   <div class="display-property grid-contener overflow" id="grid-display">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	   </div>
+	   
+	   <p class="bold">
+	    <span class="label-tag"> CSS Properties Used :</span>
 		
-     <div id="comment">
-      <span class="comment">&lt;!-- 12.05.2020 Google Map, --&gt;</span>
+	    <pre class="bold">
+         .grid-contener {
+            <span class="label-tag-value" id="display-value">display: grid;</span>
+            grid-template-columns: auto auto auto;
+            background-color: #f99c93;
+            padding: 10px;
+         }
+	 
+         .grid-items {
+            border: 1px solid #000;
+            padding: 20px;
+            text-align: center;
+            background-color: #89a6c5;
+            color: #000;
+         }
+        </pre>
+	   </p>
+	   <hr class="hr-line" />
+	   <hr class="hr-line" style="width: 100%;" />
+	   
+	   <script>
+	    var gridDisplay = document.getElementById("grid-display");
+	    var displayValue = document.getElementById("display-value");
+		
+		function displayGrid() {
+		 gridDisplay.style.display = "grid";
+		 displayValue.innerHTML = "display: grid;";
+		}
+		
+		function displayInlineGrid() {
+		 gridDisplay.style.display = "inline-grid";
+		 displayValue.innerHTML = "display: inline-grid;";
+		}
+	   </script>
+	  </div>
 	 </div>
-		 
-	</article>
-		 
-	<article id="learning">
-	   
-	 <div id="google-maps">
-	  <h2> Google Maps</h2></h2>
-	  <div id="g-maps" style="width: 100%; height: 500px"></div>
-      </div>
-		 
-	</article>
-	 
-   </section>
+   </article>
    
-   <aside id="aside-right">
-	<ul>
-	 <a href="#topic">
-	  <li>Topic Name</li>
-	 </a>
-		  
-	 <a href="#google-maps">
-	  <li>Google Map</li>
-	 </a>
-		  
-	</ul>
-	   
+   
+   
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#grid-layout">
+	 <li>Grid Layout</li>
+	</a>
+   </ul>
+  </aside>
+  
+ 
 	 
-   </aside>
-	 
-  </main>
+ </main> 
 	 
   <footer id="footer">
-    This Page is developed by Piyush raj &copy;2020.
+  This Page is developed by Piyush raj &copy;2020.
   </footer>
-	 
-	 
-  <script>
-	function googleMap() {
-	 var mapProp = {
-	 center: new google.maps.LatLng(24.977, 84.65),
-	 zoom: 3
-	}
-				
-	 var map = new google.maps.Map(document.getElementById("g-maps"), mapProp);
-				
-	 var marker = new google.maps.Marker({
-	  position: new google.maps.LatLng(24.977,84.65),
-	  map: map
-	});
-				
-	}
-			
-  </script>
-	
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAubbfPS8FPUbnkHfhhxZ7uwaZyQrUbFvM&callback=googleMap"></script>
-	 
-  <script src="index.js"></script>
+
+ <script src="index.js"></script>
  </body>
-</html>
+ </html>
