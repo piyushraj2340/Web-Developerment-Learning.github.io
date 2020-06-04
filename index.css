@@ -510,7 +510,7 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
 	width: 19%;
 	height: 100%;
 	border-top: 2px solid #5ab9ea;
-	margin: 5px;
+	margin: 0.5%; 
 	padding: 5px;
     position: sticky;
 	top: 70px;
@@ -534,11 +534,11 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
 	width: 64%;
 	border-top: 2px solid #84ceeb;
 	border-image: linear-gradient(to right, #5680e9, #84ceeb, #5ab9ea, #c1c8e4, #8860d0) 30;
-	margin: 5px;
+	margin: 0.5%; 
 	padding:  0px 10px;
 }
 
-#topic,#learning > div {
+#topic,#learning {
 	 margin: 10px 0 30px 0;
 	 width: auto;
 	 height: auto;
@@ -556,10 +556,7 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
  }
  
  
-#learning  div {
-  overflow-x: scroll;
-  overflow-y: scroll;
- }
+
  
 #learning h2 {
 	 text-align: center;
@@ -570,7 +567,7 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
 	height: 100%;
 	width: 14%;
 	border-top: 2px solid  #5ab9ea;
-	margin: 5px;
+	margin: 0.5%; 
 	padding: 5px;
     position: sticky; 
 	top: 70px;
@@ -659,11 +656,11 @@ aside a {
 	margin: 5px;
 }
 
-@media screen and (max-width: 1600px) {
-	
-}
 
-@media screen and (max-width: 1050px) {
+
+
+
+@media screen and (max-width: 992px) {
 
 #dark-font-social {
 	text-align: center;
@@ -765,7 +762,8 @@ aside a {
 }
 
 }
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 600px) {
 
 #dark-font-social #menu-dfs {
 	display: inline-block;
@@ -804,6 +802,10 @@ aside a {
 	top: 18% !important;
 }
 
+#dark-font-social {
+	overflow: hidden;
+}
+
 #dark-font-social .prev, #dark-font-social .next {
 	display: none;
 }
@@ -815,6 +817,11 @@ aside a {
 #aside-left, #aside-right {
 	width: 75%;
 	z-index: 1;
+}
+
+#learning div {
+   overflow-x: scroll;
+   overflow-y: scroll;
 }
 
 

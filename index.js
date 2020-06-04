@@ -1,6 +1,6 @@
 // JavaScript Code 
 	   
-// DOM variable decleared
+// DOM variable decleared 
 var darkFontSocial = document.getElementById("dark-font-social");
  
 var logoNav = document.getElementById("logo-nav");
@@ -109,7 +109,7 @@ var countDFS = 0;
     var slideIndex = 1;
 
     function plusSlides(n) {
-	    if(window.innerWidth <= 1050 ) {
+	    if(window.innerWidth <= 992 ) {
 	     showSlides(slideIndex += n);
 	    }
 		
@@ -121,7 +121,7 @@ var countDFS = 0;
     function showSlides(n) {
          var i;
 
-	    if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+	    if(window.innerWidth <= 992 && window.innerWidth > 650) {
 		    if(n > slide.length) {
 	         slideIndex = 1;
             }
@@ -140,29 +140,30 @@ var countDFS = 0;
              slide[slideIndex - 1].style.display = "inline-block";
 		    }
 		
-	    else if(window.innerWidth <= 650) {
-        
+	    else if(window.innerWidth <= 650 && window.innerWidth > 600) {
+       
 		    if(n > newSlide.length) {
-	         slideIndex = 1;
+	          slideIndex = 1;
             }
    
             if(n < 1 ) {
-	         slideIndex = newSlide.length 
+	          slideIndex = newSlide.length 
             }
 		
 		    for(i=0; i<slide.length; i++) {
-	         slide[i].style.display = "inline-block";
+	          slide[i].style.display = "inline-block";
             }
 		
             for(i=0; i<newSlide.length; i++) {
-	         newSlide[i].style.display = "none";
+	          newSlide[i].style.display = "none";
             }
-		     newSlide[slideIndex - 1].style.display = "inline-block";
-	    }
+			
+		      newSlide[slideIndex - 1].style.display = "inline-block";  
+	    } 
 		
-		    else {
-		     //nothing
-		    }
+		else {
+		  //nothing
+		}
     }
 	
 //darkTheme function dark mode control
@@ -247,7 +248,7 @@ var countDFS = 0;
 		      dropDownA[i].style.color = "#fff";
 	        }
 
-            if(window.innerWidth <= 1050) {
+            if(window.innerWidth <= 992) {
 	          asideLeft.style.backgroundColor = "#282c34";
 			  
 	          asideRight.style.backgroundColor = "#282c34";
@@ -320,7 +321,7 @@ var countDFS = 0;
 		      dropDownA[i].style.color = "#000";
 	        }
 	
-	        if(window.innerWidth <= 1050) {
+	        if(window.innerWidth <= 992) {
 	          asideLeft.style.backgroundColor = "#FFF";
 			  
 	          asideRight.style.backgroundColor = "#FFF";
@@ -439,7 +440,7 @@ var countDFS = 0;
 		 
 		    function menuAniOpen() { 
 			
-		        if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+		        if(window.innerWidth <= 992 && window.innerWidth > 600) {
 
 		            if(pos == 0) {
 		              clearInterval(clearItOpen); 
@@ -454,7 +455,7 @@ var countDFS = 0;
 		            }
 		        }
 		
-		        else if(window.innerWidth <= 650) {
+		        else if(window.innerWidth <= 600) {
 		          navLogonav[0].style.display = "block";
 		          clearInterval(clearItOpen);
 		        } 
@@ -471,7 +472,7 @@ var countDFS = 0;
 		  var clearItClose = setInterval(menuAniClose, 1);
 
 		    function menuAniClose() {
-		        if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+		        if(window.innerWidth <= 992 && window.innerWidth > 600) {
 			 
 		            if(pos == -50) { 
 		              clearInterval(clearItClose);
@@ -485,7 +486,7 @@ var countDFS = 0;
 		            }
 		        }
 		
-		        else if(window.innerWidth <= 650) {
+		        else if(window.innerWidth <= 600) {
 		          navLogonav[0].style.display = "none";
 		          clearInterval(clearItClose);
 		        }
@@ -529,7 +530,7 @@ var countDFS = 0;
 
 //close all menu
 	content.onclick = function() {
-	    if(window.innerWidth <= 1050 && window.innerWidth> 650) {
+	    if(window.innerWidth <= 992 && window.innerWidth> 600) {
 		  asideLeft.style.display = "none";
 		  
 		  asideRight.style.display = "none";
@@ -546,7 +547,7 @@ var countDFS = 0;
 		  countMenu = 0;
 	    }
 	 
-	    else if(window.innerWidth <= 650) {
+	    else if(window.innerWidth <= 600) {
 		  leftMenuOpen.style.display = "inline-block";
 		  leftMenuOpen.style.left = "0";
 		  leftMenuClose.style.display = "none";
@@ -576,7 +577,7 @@ var countDFS = 0;
          
 
 	    function menuAni() {
-		    if(window.innerWidth <= 650) {
+		    if(window.innerWidth <= 600) {
 		  
 		        if(pos == 0 && point == 75 && post == -75 && points == 0) {
 		          clearInterval(clearIt);
@@ -626,7 +627,7 @@ var countDFS = 0;
 
 	    function menuAni() {
          
-		    if(window.innerWidth <= 1050 && window. innerWidth > 650) {
+		    if(window.innerWidth <= 992 && window. innerWidth > 600) {
                 if(pos == 0 && point == 25) {
 			      clearInterval(clearIt);
 				  
@@ -647,7 +648,7 @@ var countDFS = 0;
 		 
 		    }
 		 
-		    else if(window.innerWidth <= 650) {
+		    else if(window.innerWidth <= 600) {
 	
 		        if(post == 0 && points == 75) {
 		          clearInterval(clearIt);
@@ -690,7 +691,7 @@ var countDFS = 0;
       var clearIt = setInterval(menuAni, 1);
          
         function menuAni() {
-		    if(window.innerWidth <= 650) {
+		    if(window.innerWidth <= 600) {
 			    if(pos == -75 && point == 0) {
 			      clearInterval(clearIt);
 				  
@@ -722,7 +723,7 @@ var countDFS = 0;
 	  var clearIt = setInterval(menuAni, 1);
          
         function menuAni() {
-		    if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+		    if(window.innerWidth <= 992 && window.innerWidth > 600) {
                 if(pos == -25 && point == 0) {
 			      clearInterval(clearIt); 
 				  
@@ -743,7 +744,7 @@ var countDFS = 0;
 		        }
 		    }
 		 
-		    else if(window.innerWidth <= 650) {
+		    else if(window.innerWidth <= 600) {
 			    if(post == -75 && points == 0) {
 			      clearInterval(clearIt);
 				  
@@ -787,11 +788,9 @@ var countDFS = 0;
 		
 		      var getPosition = document.getElementById(asideHash[i]).offsetTop; // get the top position of content from top scroll
 			  
-		      var start = getPosition - 125; // start position content have padding-top: 125;
-		  
-		  
+			  var start = getPosition - 125; // start position content have scroll-padding-top: 110; 
+
 		      startPosition.push(start); //push start position to array startPosition
-		  
 		  
 		      var getHeight = document.getElementById(asideHash[i]).offsetHeight; // get Height of the content 
 		  
@@ -808,20 +807,24 @@ var countDFS = 0;
 
                       rightAnchorLi[i].style.color = "#1a73e8";
 		              rightAnchorLi[i].style.fontWeight = "550";
+					 
 		            }
 		
-		            else {
+		            else { 
+					  
 			
 		              rightAnchorLi[i].style.fontWeight = "400";
-			
+					  			
 		                if(countDarkTheme % 2 !== 0) {
 		                   rightAnchorLi[i].style.color = "#fff";
+						   
 		                }
 		  
 		                else{
 		                 rightAnchorLi[i].style.color = "#000";
+						 
 		                }
-		  
+		                
 		            }
 		        })();
 		    }
@@ -846,7 +849,7 @@ var countDFS = 0;
 	      navLogonav[0].style.height = "60px";
 	      navLogonav[0].style.top = "60px";
 	  
-	      content.style.margin = "75px 13.5% 0 20.1%";
+	      content.style.margin = "75px 15.5% 0 20.5%";
 	  
 	      w3schoolDrop.style.lineHeight = "58px";
 	  
@@ -881,7 +884,7 @@ var countDFS = 0;
 		      navA[i].style.lineHeight = "58px";
 	        }
 	  
-	        if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+	        if(window.innerWidth <= 992 && window.innerWidth > 600) {
               asideLeft.style.height = window.innerHeight - 120 + "px";
 	          asideLeft.style.top = "115px";
 	          asideLeft.style.left = "null";
@@ -892,11 +895,13 @@ var countDFS = 0;
 	          asideRight.style.left = "null";
 	          asideRight.style.right = "0";
 	   
-	          content.style.margin = "5px";
+	          content.style.margin = "0.5%";
+	          content.style.marginTop = "75px";
 	        }
 	
-	        else if (window.innerWidth <= 650) {
-		      content.style.margin = "5px";
+	        else if (window.innerWidth <= 600) {
+		      content.style.margin = "0.5%";
+		      content.style.marginTop = "75px";
 		
 		      asideLeft.style.top = "55px";
 		      asideLeft.style.height = window.innerHeight - 60 + "px";
@@ -954,7 +959,7 @@ var countDFS = 0;
 	  
 	      
 	  
-	      content.style.margin = "5px";
+	      content.style.margin = "0.5%";
 	  
 	      w3schoolDrop.style.lineHeight = "78px";
 	  
@@ -992,7 +997,7 @@ var countDFS = 0;
 		      navA[i].style.lineHeight = "78px";
 	        }
 	  
-	        if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+	        if(window.innerWidth <= 992 && window.innerWidth > 600) {
 		      asideLeft.style.height = window.innerHeight - (205 - y) + "px";
 		      asideLeft.style.top = 200 - y + "px";
 		
@@ -1003,7 +1008,7 @@ var countDFS = 0;
 	          navLogonav[0].style.top = "80px";
 	        }
 	
-	        else if(window.innerWidth <= 650) {
+	        else if(window.innerWidth <= 600) {
 		      asideLeft.style.height = window.innerHeight - (135 - y) + "px";
 		      asideLeft.style.top = 130 - y + "px";
 		
@@ -1028,11 +1033,11 @@ var countDFS = 0;
 	
 //resize event control and onload function
 	function resizeEvent() {
-	    if(window.innerWidth <= 1050 && window.innerWidth > 650) {
+	    if(window.innerWidth <= 992 && window.innerWidth > 600) {
 		  navLogonav[0].style.display = "none";
 		  navLogonav[0].style.height = "70px";
 		
-		  content.style.margin = "5px";
+		  content.style.margin = "0.5%";
 		
 		  asideLeft.style.display = "none";
 		  asideLeft.style.left = "null";
@@ -1071,7 +1076,7 @@ var countDFS = 0;
 		}
 		
 //reSize control function if else part		
-	    else if(window.innerWidth <= 650) {
+	    else if(window.innerWidth <= 600) {
 		  asideLeft.style.display = "none";
 		
 		  asideRight.style.display = "none";
@@ -1090,7 +1095,14 @@ var countDFS = 0;
 		
 		  navLogonav[0].style.height  = "auto";
 		
-		  countMenu = 0;	
+		  countMenu = 0;
+         /*
+		  var i,len;
+		  len = slide.length; 
+		   
+		  for(i=0; i<len; i++) {
+			  slide[i].style.display = "none";
+		  } */
 		
 	      showSlides(slideIndex); 
 		 
@@ -1149,7 +1161,7 @@ var countDFS = 0;
 			
 			for(i=0; i<newLen; i++) {
 			  newSlide[i].style.display = "inline-block"; 
-			}
+			} 
 			
 	        if(countDarkTheme % 2 !== 0) {
 		      asideLeft.style.backgroundColor = "#282c34";
