@@ -290,7 +290,7 @@ var countDFS = 0;
 		  
           footer.style.boxShadow = "0 0 4px 0 rgba(0,0,0,0.7), 0 2px 10px 0 rgba(0,0,0,0.7)";
 		  
-          learning.style.backgroundColor = "#fff";
+          learning.style.backgroundColor = "#f1f1f1";
           learning.style.boxShadow = "0 2px 5px 0 rgba(0,0,0,0.7), 0 2px 10px 0 rgba(0,0,0,0.7)";
 	  
 	      var i;
@@ -309,8 +309,8 @@ var countDFS = 0;
             }
 	
 	        for(i=0; i<learnDiv; i++) {
-		      learningDiv[i].style.backgroundColor = "#f1f1f1";
-		      learningDiv[i].style.boxShadow = "0 2px 5px 0 rgba(0,0,0,0.7), 0 2px 10px 0 rgba(0,0,0,0.7)";
+		      learningDiv[i].style.backgroundColor = "transparent";
+		      learningDiv[i].style.boxShadow = "null";
 	        }
 	
 	        for(i=0; i<lenActive; i++) {
@@ -778,7 +778,6 @@ var countDFS = 0;
 	  var contentHeight = []; // height of content
 	  var startPosition = []; // starting position of content 
 	  var lastPosition = [];  // last position of content 
-		
 		(function(){
 		    for(i=0; i<lenRightAnchor; i++) {
 		      var getHash = asideRightAnchor[i].hash; // get hash for example: (#topic) 
@@ -807,7 +806,8 @@ var countDFS = 0;
 
                       rightAnchorLi[i].style.color = "#1a73e8";
 		              rightAnchorLi[i].style.fontWeight = "550";
-					 
+					  
+					  
 		            }
 		
 		            else { 

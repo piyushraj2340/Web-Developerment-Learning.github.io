@@ -1,0 +1,1136 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html>
+ <head>
+  <title> 06-06-2020 Grid layout</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JAVASCRIPT, Web, Development, Learning, tutorials, !--Web Dev--, Grid-Layout ">
+  <meta name="description" content="web development learning or making notes and backup of web Learning grid layout code,date.">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  
+  <style>
+	 .grid-contener {
+	  display: grid;
+	  grid-template-columns: auto auto auto;
+	  background-color: #f99c93;
+	  padding: 10px;
+	 }
+	 
+	 .grid-items {
+	  padding: 20px;
+	  background-color: #89a6c5;
+	  text-align: center;
+	  color: #000;
+	  border: 1px solid #000;
+	 }
+	 
+	 .grid-column:focus {
+	  border: 1px solid #fff;
+	  outline: none;
+	 }
+	 
+	 .input-value {
+	  width: 80px;
+	  border: none;
+	  color: #4d90fe;
+	  font-weight: 550;
+	  background-color: #fff;
+	 }
+	 
+	 .input-value:focus {
+	  outline: none;
+	  border: none;
+	 }
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+  <div class="slide-div">
+   
+   <a class="fas fa-ellipsis-v" id="menu-dfs" onclick="menuDFS()"></a> 
+   
+   <a class="prev fas fa-angle-left" onclick="plusSlides(-1)"></a>
+   
+   <div class="fontsize-dark slide fade a-slide">
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+   <a id="dark-mode" onclick="darkTheme()">
+   <button id="dark" title="Dark Theme"></button>
+   </a>
+  </div>
+  
+  <div class="contact-info slide fade">
+  <a href="javascript:void(0)" class="contacts a-slide">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts a-slide">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts a-slide">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  </div>
+  
+  <div class="social-link slide fade a-slide">
+  <a href="https://facebook.com" class="sp-image" id="sp-youtube"></a>
+  
+  <a href="https://facebook.com" class="sp-image" id="sp-twitter"></a>
+  
+  <a href="https://facebook.com" class="sp-image" id="sp-instagram"></a>
+  
+ 
+  <a href="https://facebook.com" class="sp-image" id="sp-facebook"> </a>
+  </div>
+  
+  <a class="next fas fa-angle-right" onclick="plusSlides(1)"></a>
+ </div>
+ </header>
+ 
+  <header id= "logo-nav">
+  
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+   
+   <nav id="nav">  
+    <a href = "index.html">
+	  <b class="dot">&bull;</b>
+	  <span class="nav">Home</span>
+    </a>
+	
+	
+	<div id="w3school-com" title="w3schools.com">
+	  <a href = "https://www.w3schools.com" target="_blank" >
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	  <i class="fas fa-caret-up list-hide"></i>
+	  <i class="fas fa-caret-down list-view"></i>
+	  </a>
+	
+	 <div class="dropdown-list">
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank" title="w3schools HTML Toutorial">HTML</a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank" title="w3schools CSS Toutorial">CSS</a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank" title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</a>
+			  
+	 </div>
+     
+	 </div>
+   <!--	<a href="javascript:void(0)">
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li>
+	</a> -->
+	
+	<a href="about.html">
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	</a>
+	 </nav> 
+	 
+	 <a id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </a>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+	
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+  
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="left-menu-close" onclick="asideLeftMenuClose()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="left-menu-open" onclick="asideLeftMenuOpen()"></a>
+   
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020-- CSS -- Flexbox Child-Elements</li>
+	</a>
+	
+	<a href="04-06-2020.html">
+	 <li>04.06.2020-- CSS -- Grid Layout --</li>
+	</a>
+	
+	<a href="06-06-2020.html">
+	 <li class="active">06.06.2020-- CSS -- Grid Layout --</li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+	 <hr class="hr-line" style="width: 40%"/>
+	 <hr class="hr-line" style="width: 30%"/>
+	 <h2>Grid Layout</h2>
+	 <hr class="hr-line" style="width: 30%"/>
+	 <hr class="hr-line" style="width: 40%"/>
+    </div>
+  </article>
+		 
+   <article id="learning"> 
+    <div id="grid-layout">
+	
+	 <div id="grid-gaps">
+	  <hr class="hr-line" style="width: 40%"/>
+	  <hr class="hr-line" style="width: 30%"/>
+	  <h2>Grid Gaps: </h2>
+	  <hr class="hr-line" style="width: 30%"/>
+	  <hr class="hr-line" style="width: 40%"/>
+	  <img src="assets/images/grid_gaps.png" alt="grid-gaps" style="max-width: 100%; height: auto; margin: 0 auto;" />
+	  <p class="bold">
+	   <span class="label-tag"> values are :</span>
+	   grid-row-gap, grid-columns-gap and grid-gap.
+	  </p>
+	  <br />
+	  
+	  <h4>grid-row-gap :</h4>
+	  
+	  <div class="grid-contener" style="grid-row-gap: 40px;" title="grid-row-gap: 40px;">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	  </div>
+	  <p class="bold">
+	   <span class="label-tag"> CSS Properties Used :</span>
+	  
+       <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          <span class="label-tag-value">grid-row-gap: 40px;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }		
+	   </pre>
+	  </p>
+	  <br />
+	  
+	  <h4>grid-columns-gaps : </h4>
+	  <div class="grid-contener" style="grid-column-gap: 40px;" title="grid-column-gap: 40px;">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	  </div>
+	  
+	  <p class="bold">
+	   <span class="label-tag"> CSS Properties Used :</span>
+	  
+       <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          <span class="label-tag-value">grid-column-gap: 40px;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        } 
+	   </pre>
+	  </p>
+	  
+	  <h4>grid-gap: shorthand property. </h4>
+	  <div class="grid-contener" style="grid-gap: 40px;" title="grid-gap: 40px;">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	  </div>
+	  
+	  <p class="bold">
+	   <span class="label-tag"> CSS Properties Used :</span>
+	  
+       <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          <span class="label-tag-value">grid-gap: 40px;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        } 
+	   </pre>
+	  </p>
+	 </div>
+	 
+	 <div id="grid-line">
+	  <hr class="hr-line" style="width: 40%"/>
+	  <hr class="hr-line" style="width: 30%"/>
+	  <h2>Grid Line :</h2>
+	  <hr class="hr-line" style="width: 30%"/>
+	  <hr class="hr-line" style="width: 40%"/>
+	  <img src="assets/images/grid_lines.png" alt="grid-line" style="max-width: 100%; height: auto; margin: 0 auto;" />
+	  <p class="bold">
+	   <span class="label-tag"> values are :</span>
+	   grid-row-start, grid-row-end, grid-column-start and grid-column-end.
+	  </p>
+	   <br />
+	  <h4>grid-row-line : </h4>
+	  <div class="grid-contener">
+	    <div class="grid-items" style="grid-row-start: 1; grid-row-end: 3;" title="grid-row-start: 1; and grid-row-end: 3;">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	  </div>
+	  
+	  <p class="bold">
+	   <span class="label-tag"> CSS Properties Used :</span>
+	  
+       <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .items1 {
+          <span class="label-tag-value">grid-row-start: 1;</span>
+          <span class="label-tag-value">grid-row-end: 3;</span>
+        }		
+	   </pre>
+	  </p>
+	  
+	  <br />
+	  <h4>grid-columns-line : </h4>
+	  <div class="grid-contener">
+	    <div class="grid-items" style="grid-column-start: 1; grid-column-end: 3;" title="grid-column-start: 1; and grid-colmun-end: 3;">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	  </div>
+	  
+	  <p class="bold">
+	   <span class="label-tag"> CSS Properties Used :</span>
+	  
+       <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .items1 {
+          <span class="label-tag-value">grid-column-start: 1;</span>
+          <span class="label-tag-value">grid-column-end: 3;</span>
+        }		
+	   </pre>
+	  </p>
+	 </div>
+	 
+	 <div id="grid-page-structure">
+	  <h3>Grid Page Structure</h3>
+      <div class="grid-contener" style="grid-column-gap: 10px; grid-row-gap: 10px;">
+	    <div class="grid-items" style="grid-column-start: 1; grid-column-end: 4;">1.header</div>
+	    <div class="grid-items" style="grid-row-start: 2; grid-row-end: 4;">2.aside-right</div>
+	    <div class="grid-items" style="grid-column-start: 2; grid-column-end: 3;">3.content</div>
+	    <div class="grid-items" style="grid-column-start: 3; grid-column-end: 4;">4.aside-right</div>
+	    <div class="grid-items" style="grid-column-start: 2; grid-column-end: 4;">5.footer</div>
+	  </div>
+
+      <p class="bold">
+	   <span class="label-tag"> CSS Properties Used :</span>
+	  
+       <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .items1 {
+          <span class="label-tag-value">grid-column-start: 1;</span>
+          <span class="label-tag-value">grid-column-end: 4;</span>
+        }
+        .items2 {
+          <span class="label-tag-value">grid-row-start: 2;</span>
+          <span class="label-tag-value">grid-row-end: 4;</span>
+        }
+        .items3 {
+          <span class="label-tag-value">grid-column-start: 2;</span>
+          <span class="label-tag-value">grid-column-end: 3;</span>
+        }
+        .items4 {
+          <span class="label-tag-value">grid-column-start: 3;</span>
+          <span class="label-tag-value">grid-column-end: 4;</span>
+        }
+        .items1 {
+          <span class="label-tag-value">grid-column-start: 2;</span>
+          <span class="label-tag-value">grid-column-end: 4;</span>
+        }		
+	   </pre>
+	  </p>	  
+ 	 
+	 </div>
+	</div>
+	
+	<div id="grid-contener">
+	 <hr class="hr-line" style="width: 40%"/>
+	 <hr class="hr-line" style="width: 30%"/>
+	 <h2>Grid Contener</h2>
+	 <hr class="hr-line" style="width: 30%"/>
+	 <hr class="hr-line" style="width: 40%"/>
+	 <h3>grid-template-columns: </h3>
+	 
+	 <p class="bold">
+	   <span class="label-tag">NOTE:</span>
+	   By Default grid-template-columns: auto; i.e. one column. 
+	 </p>
+	 
+	 <button id="add-column" onclick="addColumn()">Add(+)</button>
+	 <button id="sub-column" onclick="subColumn()" style="display: none">Sub(-)</button>
+	 
+	 <p>Number of Column is <span id="span-vlu-column">1</span>.</p>
+	 
+	  <br />
+	 <div id="contener-column" class="grid-contener" style="grid-template-columns: auto;">
+	   <div class="grid-items">1</div>
+	   <div class="grid-items">2</div>
+	   <div class="grid-items">3</div>
+	   <div class="grid-items">4</div>
+	   <div class="grid-items">5</div>
+	   <div class="grid-items">6</div>
+	   <div class="grid-items">7</div>
+	   <div class="grid-items">8</div>
+	   <div class="grid-items">9</div>
+	   <div class="grid-items">10</div>
+	 </div>
+	 
+	 <p class="bold">
+	  <span class="label-tag">CSS Properties Used:</span>
+      
+	  <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns:<span id="add-column-value"> auto</span>;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+      </pre>
+	 </p>
+	 <p class="bold">
+	   <span class="label-tag">NOTE:</span>
+	   
+	    We can also set width of grid-template-columns in px,%,em or any measurement unit that support web browser. auto means each grid-template-columns have equal width.
+	   
+	  </p>
+	 
+	 
+	 <script>
+	   var count = 0;
+	   var subButton = document.getElementById("sub-column");
+	   var contentColumn = document.getElementById("contener-column");
+       var spanVlu = document.getElementById("span-vlu-column");
+	   var columnValur = document.getElementById("add-column-value");
+	   var getVlue = ["auto"];
+       var vlu;	   
+		var addColumn = (function(){
+	    return function() {
+		  count += 1;
+		  getVlue.push("auto");
+		  vlu = getVlue.join(" ");
+		  contentColumn.style.gridTemplateColumns = vlu;
+		  columnValur.innerHTML = " " + contentColumn.style.gridTemplateColumns;
+		  spanVlu.innerHTML = count + 1;
+		  
+		  if(count >= 1 && count < 10) {
+		    subButton.style.display = "inline";
+		  }
+		  
+		  else if(count >= 10) {
+		    alert("we have maximum 10 gride-items");
+		  }
+		  
+		  else {
+		    subButton.style.display = "none";
+		  }
+		  
+	      return count;
+		}
+	   })();
+	   
+	   var subColumn = (function() {
+	    return function() {
+		  count -= 1;
+		  getVlue.pop();
+		  vlu = getVlue.join(" ");
+		  contentColumn.style.gridTemplateColumns = vlu;
+		  spanVlu.innerHTML = count;
+		  columnValur.innerHTML = " " + contentColumn.style.gridTemplateColumns;
+		  spanVlu.innerHTML = count + 1;
+		  
+		  if(count >= 1) {
+		    subButton.style.display = "inline";
+		  }
+		  
+		  else {
+		    subButton.style.display = "none";
+		  }
+		  
+		  return count;
+		}
+	   })();
+
+	 </script>
+	 
+	 <div id="grid-template-row">
+	 <h3>grid template row :</h3>
+	  <p>its define height of row.</p>
+	  
+	  <div class="grid-contener" style="grid-template-rows: auto 100px auto;" title="middle row have 100px height">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	  </div>
+	  <p class="bold">
+	  <span class="label-tag">CSS Properties Used:</span>
+      
+	  <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns:<span id="add-column-value"> auto</span>;</span>
+          <span class="label-tag-value">grid-template-row: auto 100px auto;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+      </pre>
+	 </p>
+	 </div>
+	 
+	 <div id="justify-align">
+	  <h3>justify-content and align-content Property</h3>
+	  justify-content: 
+	  <button id="js-center">center</button>
+	  <button id="js-space-evenly">space-evenly</button>
+	  <button id="js-space-around">space-around</button>
+	  <button id="js-space-between">space-between</button>
+	  <button id="js-start">start</button>
+	  <button id="js-end">end</button>
+	  <br />
+	  <br />
+	  align-items: 
+	  <button id="al-center">center</button>
+	  <button id="al-space-evenly">space-evenly</button>
+	  <button id="al-space-around">space-around</button>
+	  <button id="al-space-between">space-between</button>
+	  <button id="al-start">start</button>
+	  <button id="al-end">end</button>
+	  <br />
+	  <br />
+	  
+	  <div id="justify-align-content" class="grid-contener" style="grid-template-columns: 50px 50px 50px; align-content: start; height: 500px; justify-content: start;  grid-gap: 10px;">
+	    <div class="grid-items">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	  </div>
+	  <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: 50px 50px 50px;</span>
+          <span class="label-tag-value">align-content:<span id="ali-cont-value"> start</span>;</span>
+          <span class="label-tag-value">justify-content:<span id="just-cont-value"> start</span>;</span>
+          <span class="label-tag-value">grid-gap: 10px;</span>
+          <span class="label-tag-value">height: 500px;</span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+      </pre>
+	 </p>
+	  <script>
+	     var justiAlignDiv = document.getElementById("justify-align-content");
+		 var aliValue = justiAlignDiv.style.alignContent;
+		 var justValue = justiAlignDiv.style.justifyContent;
+		 
+		 
+		 
+		 var spanAliValue = document.getElementById("ali-cont-value");
+		 
+		 var spanJustValue = document.getElementById("just-cont-value");
+		 
+		 
+		 var butjsCenter = document.getElementById("js-center");
+		 var butjsEvenly = document.getElementById("js-space-evenly");
+		 var butjsAround = document.getElementById("js-space-around");
+		 var butjsBetween = document.getElementById("js-space-between");
+		 var butjsStart = document.getElementById("js-start");
+		 var butjsEnd = document.getElementById("js-end");
+		 var butalCenter = document.getElementById("al-center");
+		 var butalEvenly = document.getElementById("al-space-evenly");
+		 var butalAround = document.getElementById("al-space-around");
+		 var butalBetween = document.getElementById("al-space-between");
+		 var butalStart = document.getElementById("al-start");
+		 var butalEnd = document.getElementById("al-end");
+		 
+		 butjsCenter.onclick = function() {
+		    justiAlignDiv.style.justifyContent = "center";
+			justValue = justiAlignDiv.style.justifyContent;
+			spanJustValue.innerHTML = " " + justValue;
+		 }
+		 
+		 butjsEvenly.onclick = function() {
+		    justiAlignDiv.style.justifyContent = "space-evenly";
+			justValue = justiAlignDiv.style.justifyContent;
+			spanJustValue.innerHTML = " " + justValue;
+		 }
+		 
+		 butjsAround.onclick = function() {
+		    justiAlignDiv.style.justifyContent = "space-around";
+			justValue = justiAlignDiv.style.justifyContent;
+			spanJustValue.innerHTML = " " + justValue;
+		 }
+		 
+		 butjsBetween.onclick = function() {
+		    justiAlignDiv.style.justifyContent = "space-between";
+			justValue = justiAlignDiv.style.justifyContent;
+			spanJustValue.innerHTML = " " + justValue;
+		 }
+		 
+		 butjsStart.onclick = function() {
+		    justiAlignDiv.style.justifyContent = "start";
+			justValue = justiAlignDiv.style.justifyContent;
+			spanJustValue.innerHTML = " " + justValue;
+		 }
+		 
+		 butjsEnd.onclick = function() {
+		    justiAlignDiv.style.justifyContent = "end";
+			justValue = justiAlignDiv.style.justifyContent;
+			spanJustValue.innerHTML = " " + justValue;
+		 }
+		 
+		//align-content
+		 
+		 butalCenter.onclick = function() {
+		    justiAlignDiv.style.alignContent = "center";
+			aliValue = justiAlignDiv.style.alignContent;
+			spanAliValue.innerHTML = " " + aliValue;
+		 }
+		 
+		 butalEvenly.onclick = function() {
+		    justiAlignDiv.style.alignContent = "space-evenly";
+			aliValue = justiAlignDiv.style.alignContent;
+			spanAliValue.innerHTML = " " + aliValue;
+		 }
+		 
+		 butalAround.onclick = function() {
+		    justiAlignDiv.style.alignContent = "space-around";
+			aliValue = justiAlignDiv.style.alignContent;
+			spanAliValue.innerHTML = " " + aliValue;
+		 }
+		 
+		 butalBetween.onclick = function() {
+		    justiAlignDiv.style.alignContent = "space-between";
+			aliValue = justiAlignDiv.style.alignContent;
+			spanAliValue.innerHTML = " " + aliValue;
+		 }
+		 
+		 butalStart.onclick = function() {
+		    justiAlignDiv.style.alignContent = "start";
+			aliValue = justiAlignDiv.style.alignContent;
+			spanAliValue.innerHTML = " " + aliValue;
+		 }
+		 
+		 butalEnd.onclick = function() {
+		    justiAlignDiv.style.alignContent = "end";
+			aliValue = justiAlignDiv.style.alignContent;
+			spanAliValue.innerHTML = " " + aliValue;
+		 }
+	  </script>
+	   
+	 </div>
+	 </div>
+	 <div id="grid-items">
+	   <hr class="hr-line" style="width: 40%"/>
+	   <hr class="hr-line" style="width: 30%"/>
+	   <h2>Grid Items : </h2>
+	   <hr class="hr-line" style="width: 30%"/>
+	   <hr class="hr-line" style="width: 40%"/>
+	   
+	   <h3>grid-column and grid-row property : </h3>
+	   
+	   <p>
+	     grid-column is the shorthand property for grid-column-start and grid-colmun-end. similarly grid-row is shorthand property for grid-row-start and grid-colmun-end.
+	   </p>
+	   
+	   <p class="bold">
+	    <span class="label-tag">Note :</span>
+		By default each column has one grid-item, in each row, but we can style so that it span multiple columns and/or rows.
+	   </p>
+	   
+	    <p> 
+		 <span class="label-tag">instruction : </span> <br />
+		 <span class='bold'> Step 1: </span> click on check box to enable the property. <br />
+		 <span class="bold"> Step 2: </span> Try to give valid input. <br />
+		 <span class="bold"> Step 3: </span> Then Select the grid-item see the result.
+		</p>
+		 
+		<br /> <br />
+		
+        <p align="center">
+		
+		 Number of column is <span class="bold" id="no-column">1</span>.
+		 
+		 <br /> <br />
+		 
+		 <button onclick="addColumnFunction()" id="column-add" title="add column">Add(+)</button>
+		 
+		 <button onclick="subColumnFunction()" id="column-sub" title="delete coloumn" style="display: none;">Sub(-)</button>
+		 
+		 <br /> <br />
+		 
+		 Number of Grid Items is <span class="bold" id="no-grid-item">1</span>.
+		 
+		 <br /> <br />
+		 
+		 <button onclick="addGridItems()" id="grid-items-add" title="add grid-items">Add(+)</button>
+		 
+		 <button onclick="subGridItems()" id="grid-items-sub" title="delete grid-items" style="display: none;">Sub(-)</button>
+		 
+		 <div align="center">
+		 
+		 <div style="display: inline-block;">
+         <input type="checkbox" onchange="checkedFunction()" id="label-column" name="grid-item" value="grid-column">
+		 
+		 <label class="bold" for="label-column">grid-column: </label>
+		 
+		 <input type="text" id="grid-input-column" class="input-value" title="use coloumn line or span value. for example: 1 / 5 or 1 / span 4" style="cursor: not-allowed" disabled />;
+		 
+		 </div>
+		 
+		 <div style="display: inline-block;">
+		 
+         <input type="checkbox" onchange="checkedFunction()" id="label-row"  value="grid-row" name="grid-item">
+		  
+		 <label class="bold" for="label-row">grid-row: </label>
+		 
+		 <input type="text" id="grid-input-row" class="input-value" title="use row line or span value. for example: 1 / 5 or 1 / span 4" style="cursor: not-allowed;" disabled />;
+		 
+		 </div>
+		 
+		 </div>
+		 <br />
+		 
+		 
+		 
+		 <p align="center" id="grid-area-info" style="display: none;">
+		 you have selected both property This means grid-area.<br />
+		 <span class="bold"> grid-area is shorthand property for grid-column and grid-row.</span>
+		 <br />
+		 <span class="bold">grid-area: </span>
+		 
+		 <input type="text" id="grid-area-input" class="input-value" title="example: 1 / 2 / 5 / 6;" style="width: 150px; cursor: not-allowed;" disabled />;
+		 </p>
+		 
+		</p> 
+	    
+	   
+	   <div class="grid-contener" style="grid-gap: 10px; grid-template-columns: auto;" id="grid-column-row" onclick="clickToRun()">
+	   <div class="grid-items">1</div>
+	    
+	   </div>
+	   
+	   <script>
+	     var i, len, gridColumn, columnInputValue, rowInputValue;
+		 
+		 var countColumn = 1;
+		 var countGridItems = 1;
+		 
+		 gridColumn = document.querySelectorAll("#grid-column-row > div");
+		 
+		 var gridColumnRow = document.getElementById("grid-column-row");
+	
+		 var rowInput = document.getElementById("grid-input-row"); 
+		 var columnInput = document.getElementById("grid-input-column");
+		 
+		 var checkedColumn = document.getElementById("label-column");
+		 var checkedRow = document.getElementById("label-row");
+		 
+		 var gridAreaInfo = document.getElementById("grid-area-info");
+		 var gridAreaInput = document.getElementById("grid-area-input");
+		 
+		 var subGridItemButton = document.getElementById("grid-items-sub");
+		 var subColumnButton = document.getElementById("column-sub");
+		 
+		 var spanColumnNumber = document.getElementById("no-column");
+		 var spanGridItemNumber = document.getElementById("no-grid-item");
+		 
+		 var setValue = ["auto"];
+         var getValue;
+		 
+		var clickToRun = (function() {
+          return function() {
+		 
+		  var gridColumn = document.querySelectorAll("#grid-column-row > div");
+
+		  len = gridColumn.length;
+		
+		 
+		  for(i=0; i<len; i++) {
+		    gridColumn[i].onclick = function() {
+				(function () {
+				    for(i=0; i<len; i++) {
+					 gridColumn[i].style.border = "1px solid #000";
+					}
+				})();
+				     
+				     this.style.border = "1px solid #fff";
+
+					   columnInputValue = document.getElementById("grid-input-column").value;
+					 
+					   this.style.gridColumn = columnInputValue;
+					   
+					   rowInputValue = document.getElementById("grid-input-row").value;
+					   
+					   this.style.gridRow = rowInputValue;
+					   
+					   var gridColumnArea = this.style.gridArea;
+					   
+					   gridAreaInput.value = gridColumnArea;
+					 
+			    }
+				
+				
+			}
+			
+		  }
+			
+		})();  
+		 
+		 
+		var addColumnFunction = (function () {
+		    return function () {
+			  countColumn += 1;
+			  spanColumnNumber.innerHTML = countColumn;
+			  setValue.push("auto");
+			  getValue = setValue.join(" ");
+			  
+			  gridColumnRow.style.gridTemplateColumns = getValue;
+			  
+			    if(countColumn <= 1) {
+			      subColumnButton.style.display = "none";
+			    }
+			  
+			    else {
+			      subColumnButton.style.display = "inline";
+			    }
+			  
+			  return countColumn;
+			}
+		})();
+		
+		var subColumnFunction = (function() {
+		    return function () {
+			  countColumn -= 1;
+			  spanColumnNumber.innerHTML = countColumn;
+			  setValue.pop("auto");
+			  getValue = setValue.join(" ");
+			  
+			  gridColumnRow.style.gridTemplateColumns = getValue;
+			    if(countColumn <= 1) {
+			      subColumnButton.style.display = "none";
+			    }
+			  
+			    else {
+			      subColumnButton.style.display = "inline";
+			    }
+			  
+			  return countColumn;
+			}
+		})();
+		
+		var addGridItems = (function (){
+		    return function() {
+			  countGridItems += 1;
+			  spanGridItemNumber.innerHTML = countGridItems;
+			  
+			  var newGridItems = document.createElement("div");
+			  newGridItems.classList.add("grid-items");
+			  var textNode = document.createTextNode(countGridItems);
+			  newGridItems.appendChild(textNode);
+			  
+			  gridColumnRow.appendChild(newGridItems);
+			  
+			  
+			  
+			  
+			  if(countGridItems <= 1) {
+			    subGridItemButton.style.display = "none";
+			  }
+			  
+			  else {
+			    subGridItemButton.style.display = "inline";
+			  }
+			  
+			  clickToRun();
+			  
+			  return countGridItems;
+			} 
+		})();
+		
+		
+		var subGridItems = (function (){
+		    return function() {
+			  countGridItems -= 1;
+			  spanGridItemNumber.innerHTML = countGridItems;
+			  
+			  var gridColumn = document.querySelectorAll("#grid-column-row > div");
+			  
+			  var lan = gridColumn.length;
+			  
+			  
+			  gridColumn[lan - 1].remove();
+			  
+			  if(countGridItems <= 1) {
+			    subGridItemButton.style.display = "none";
+			  }
+			  
+			  else {
+			    subGridItemButton.style.display = "inline";
+			  }
+			  
+			  clickToRun();
+			  
+			  return countGridItems;
+			}
+		})();
+		 
+		 function checkedFunction() {
+		    if(checkedColumn.checked == true && checkedRow.checked == true) {
+			   rowInput.style.cursor = "text";
+			   rowInput.removeAttribute("disabled");
+			   columnInput.style.cursor = "text";
+			   columnInput.removeAttribute("disabled");
+			   gridAreaInfo.style.display = "block";
+			}
+			
+			else if (checkedColumn.checked == true){
+			   columnInput.style.cursor = "text";
+			   columnInput.disabled = false;
+			   rowInput.value = "";
+			   rowInput.disabled = true;
+			   rowInput.style.cursor = "not-allowed";
+			   gridAreaInfo.style.display = "none";
+			}
+			
+			else if (checkedRow.checked == true){
+			   rowInput.style.cursor = "text";
+			   rowInput.disabled = false;
+			   columnInput.value = "";
+			   columnInput.disabled = true;
+			   columnInput.style.cursor = "not-allowed";
+			   gridAreaInfo.style.display = "none";
+			}
+			
+			else {
+			   columnInput.style.cursor = "not-allowed";
+			   columnInput.disabled = true;
+			   gridAreaInfo.style.display = "none";
+			   rowInput.style.cursor = "not-allowed";
+			   rowInput.disabled = true;
+			   columnInput.value = "";
+			   rowInput.value = "";
+			}
+		 }
+		 
+	    
+	     
+		 
+
+		 
+		 
+	   </script>
+	 </div>
+	
+   </article>
+   
+   
+    <footer id="footer">
+      This Page is developed by Piyush raj &copy;2020.
+    </footer>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	
+	<a href="#grid-gaps">
+	 <li>Grid Gaps</li>
+	</a>
+	
+	<a href="#grid-line">
+	 <li>Grid Line</li>
+	</a>
+	
+	<a href="#grid-contener">
+	 <li>Grid Contener</li>
+	</a>
+	
+	<a href="#grid-items">
+	 <li>Grid Items</li>
+	</a>
+	
+   </ul>
+  </aside>
+  
+ 
+	 
+ </main> 
+	 
+  
+
+ <script src="index.js"></script>
+ </body>
+ </html>

@@ -5,7 +5,10 @@
 
 <html>
  <head>
-  <title> 04-06-2020-- Grid Layout </title> 
+  <title> 04-06-2020-- Grid Layout </title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JAVASCRIPT, Web, Development, Learning, tutorials, !--Web Dev--, grid layou ">
+  <meta name="description" content="web development learning or making notes and backup of web Learning code, on the basis of date.">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="index.css" type="text/css" rel="stylesheet">
   <link href="assets/images/testing-1.png" type="image/png" rel="icon">
@@ -183,7 +186,9 @@
 	 <li class="active">04.06.2020-- CSS -- Grid Layout --</li>
 	</a>
 	
-	
+	<a href="06-06-2020.html">
+	 <li>06.06.2020-- CSS -- Grid Layout --</li>
+	</a>
 
    </ul>
 	 
@@ -192,16 +197,19 @@
   <section id="content">
    <article id= "topic">
     <div id="comment">
-     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+     <span class="comment">&lt;!-- Grid Layout --&gt;</span>
     </div>
    </article>
     
    <article id="learning">
-     <div id="grid-layout" style="width: auto; height: auto;">
+     
+     <div id="grid-layout" style="">
       <h2>Grid Layout</h2>
-      <div>
+	  <hr class="hr-line" style="width: 30%"/>
+	  <hr class="hr-line" style="width: 40%"/>
+      <div id="grid-elements">
 	   <h3>Grid Elements :</h3>
-	   <div class="grid-contener overflow">
+	   <div class="grid-contener">
 	    <div class="grid-items">1</div>
 	    <div class="grid-items">2</div>
 	    <div class="grid-items">3</div>
@@ -214,7 +222,7 @@
 	   </div>
 	  </div> 
 
- 	  <div>
+ 	  <div id="display-property">
 	   <hr class="hr-line" />
 	   <hr class="hr-line" style="width: 100%;" />
 	   
@@ -230,7 +238,7 @@
 	   
 	   <br /><br />
 	   
-	   <div class="display-property grid-contener overflow" id="grid-display">
+	   <div class="display-property grid-contener" id="grid-display">
 	    <div class="grid-items">1</div>
 	    <div class="grid-items">2</div>
 	    <div class="grid-items">3</div>
@@ -245,10 +253,10 @@
 	   <p class="bold">
 	    <span class="label-tag"> CSS Properties Used :</span>
 		
-	    <pre class="bold">
+	    <pre class="bold" style="white-space: pre-wrap;">
          .grid-contener {
             <span class="label-tag-value" id="display-value">display: grid;</span>
-            grid-template-columns: auto auto auto;
+            <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
             background-color: #f99c93;
             padding: 10px;
          }
@@ -280,11 +288,14 @@
 		}
 	   </script>
 	  </div>
+	  
 	 </div>
    </article>
    
    
-   
+    <footer id="footer">
+      This Page is developed by Piyush raj &copy;2020.
+    </footer>
 		 
   </section>
    
@@ -304,9 +315,7 @@
 	 
  </main> 
 	 
-  <footer id="footer">
-  This Page is developed by Piyush raj &copy;2020.
-  </footer>
+  
 
  <script src="index.js"></script>
  </body>

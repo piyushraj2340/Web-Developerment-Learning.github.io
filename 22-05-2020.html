@@ -5,7 +5,10 @@
 
 <html>
  <head>
-  <title>22.05.2020-- CSS -- Gradient</title> 
+  <title>22.05.2020-- CSS -- Gradient</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JAVASCRIPT, Web, Development, Learning, tutorials, !--Web Dev--, linear-gradient, border-images, background-images">
+  <meta name="description" content="web development learning or making notes and backup of web Learning linear-gradient css code,date: 22-05-2020.">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="index.css" type="text/css" rel="stylesheet">
   <link href="assets/images/testing-1.png" type="image/png" rel="icon">
@@ -170,6 +173,10 @@
 	<a href="04-06-2020.html">
 	 <li>04.06.2020-- CSS -- Grid Layout --</li>
 	</a>
+	
+	<a href="06-06-2020.html">
+	 <li>06.06.2020-- CSS -- Grid Layout --</li>
+	</a>
 
    </ul>
 	 
@@ -191,7 +198,7 @@
 	  <span style="margin-left: 20px">background-image: radial-gradient(shape size at position, start-color, ..., last-color);</span>
 	 </p>
 	 <h2> linear-gradient </h2>
-	 <div class="overflow" style="height: 300px; background-image: linear-gradient(red,yellow); padding: 10px 20px" id="li-grad-direct">
+	 <div style="height: auto; background-image: linear-gradient(red,yellow); padding: 10px 20px" id="li-grad-direct">
 	 <h3 id="li-grad-h3">linear-gradient-- direction Top To Bottom (This is default)</h3>
 	 <button id="top-bottom" title="this is default">Top To Bottom</button>
 	 <button id="left-right">Left To Right</button>
@@ -276,7 +283,7 @@
 	  
 	 </script>
 	 
-	 <div class="overflow" style="height: 300px; background-image: repeating-linear-gradient(red, yellow 10%, green 20%); margin: 10px 0; padding: 10px 20px">
+	 <div style="height: auto; background-image: repeating-linear-gradient(red, yellow 10%, green 20%); margin: 10px 0; padding: 10px 20px">
 	 <h3>repeating-linear-gradient</h3>
 	 
 	 <ul>
@@ -294,7 +301,7 @@
 	 
 	<h2>radial-gradient</h2>
 	 
-	<div style="background-image: radial-gradient(red,yellow,green); height: 300px; padding: 10px 20px;" id="radial-gradient">
+	<div  style="background-image: radial-gradient(red,yellow,green); max-width: 100%; height: auto; padding: 10px 20px;" id="radial-gradient">
 	 <h3 id="radial-grad-h3">Evenly spaced color stop(this is default)</h3>
 	 <button id="evenly">Evenly spaced</button>
 	 <button id="differ">Differently Spaced</button>
@@ -361,7 +368,7 @@
 	 } 
 	 
 	 </script>
-	 <div id="radial-gradient-1" style="background-image: radial-gradient(farthest-side at 55% 65%, red, yellow, green); height: 300px; padding: 10px 20px; margin: 10px 0;">
+	 <div id="radial-gradient-1" style="background-image: radial-gradient(farthest-side at 55% 65%, red, yellow, green); height: auto; padding: 10px 20px; margin: 10px 0;">
 	  <h3>Use of Different Size Keywords</h3>
 	  <span class="b">ellipse:</span>
 	  <button id="e-farthest-side">farthest-side</button>
@@ -437,7 +444,7 @@
 	 
 	 </script>
 	 
-	 <div id="radial-gradient-2" style="background-image: repeating-radial-gradient(lightskyblue, yellow 5%, lightgreen 15%); height: 300px; padding: 10px 20px; border: 10px dotted red;
+	 <div class="overflow" id="radial-gradient-2" style="background-image: repeating-radial-gradient(lightskyblue, yellow 5%, lightgreen 15%); height: 300px; padding: 10px 20px; border: 10px dotted red;
 	 background-clip: border-box; background-origin: border-box;">
 	  <h3>repeating-radial-gradient with background-clip and background-origin.</h3>
 	  <span class="b">origin:</span> 
@@ -519,7 +526,9 @@
    
 
    </article>
-		 
+    <footer id="footer">
+      This Page is developed by Piyush raj &copy;2020.
+    </footer>		 
   </section>
    
   <aside id="aside-right">
@@ -536,9 +545,7 @@
 	 
  </main> 
 	 
- <footer id="footer">
-  This Page is developed by Piyush raj &copy;2020.
- </footer>
+ 
 
  <script src="index.js"></script>
  </body>
