@@ -109,7 +109,7 @@ var countDFS = 0;
     var slideIndex = 1;
 
     function plusSlides(n) {
-	    if(window.innerWidth <= 992 ) {
+	    if(window.innerWidth <= 991 ) {
 	     showSlides(slideIndex += n);
 	    }
 		
@@ -121,7 +121,7 @@ var countDFS = 0;
     function showSlides(n) {
          var i;
 
-	    if(window.innerWidth <= 992 && window.innerWidth > 650) {
+	    if(window.innerWidth <= 991 && window.innerWidth > 650) {
 		    if(n > slide.length) {
 	         slideIndex = 1;
             }
@@ -248,7 +248,7 @@ var countDFS = 0;
 		      dropDownA[i].style.color = "#fff";
 	        }
 
-            if(window.innerWidth <= 992) {
+            if(window.innerWidth <= 991) {
 	          asideLeft.style.backgroundColor = "#282c34";
 			  
 	          asideRight.style.backgroundColor = "#282c34";
@@ -321,7 +321,7 @@ var countDFS = 0;
 		      dropDownA[i].style.color = "#000";
 	        }
 	
-	        if(window.innerWidth <= 992) {
+	        if(window.innerWidth <= 991) {
 	          asideLeft.style.backgroundColor = "#FFF";
 			  
 	          asideRight.style.backgroundColor = "#FFF";
@@ -440,7 +440,7 @@ var countDFS = 0;
 		 
 		    function menuAniOpen() { 
 			
-		        if(window.innerWidth <= 992 && window.innerWidth > 600) {
+		        if(window.innerWidth <= 991 && window.innerWidth > 600) {
 
 		            if(pos == 0) {
 		              clearInterval(clearItOpen); 
@@ -472,7 +472,7 @@ var countDFS = 0;
 		  var clearItClose = setInterval(menuAniClose, 1);
 
 		    function menuAniClose() {
-		        if(window.innerWidth <= 992 && window.innerWidth > 600) {
+		        if(window.innerWidth <= 991 && window.innerWidth > 600) {
 			 
 		            if(pos == -50) { 
 		              clearInterval(clearItClose);
@@ -530,7 +530,7 @@ var countDFS = 0;
 
 //close all menu
 	content.onclick = function() {
-	    if(window.innerWidth <= 992 && window.innerWidth> 600) {
+	    if(window.innerWidth <= 991 && window.innerWidth> 600) {
 		  asideLeft.style.display = "none";
 		  
 		  asideRight.style.display = "none";
@@ -627,7 +627,7 @@ var countDFS = 0;
 
 	    function menuAni() {
          
-		    if(window.innerWidth <= 992 && window. innerWidth > 600) {
+		    if(window.innerWidth <= 991 && window. innerWidth > 600) {
                 if(pos == 0 && point == 25) {
 			      clearInterval(clearIt);
 				  
@@ -723,7 +723,7 @@ var countDFS = 0;
 	  var clearIt = setInterval(menuAni, 1);
          
         function menuAni() {
-		    if(window.innerWidth <= 992 && window.innerWidth > 600) {
+		    if(window.innerWidth <= 991 && window.innerWidth > 600) {
                 if(pos == -25 && point == 0) {
 			      clearInterval(clearIt); 
 				  
@@ -884,7 +884,7 @@ var countDFS = 0;
 		      navA[i].style.lineHeight = "58px";
 	        }
 	  
-	        if(window.innerWidth <= 992 && window.innerWidth > 600) {
+	        if(window.innerWidth <= 991 && window.innerWidth > 600) {
               asideLeft.style.height = window.innerHeight - 120 + "px";
 	          asideLeft.style.top = "115px";
 	          asideLeft.style.left = "null";
@@ -997,7 +997,7 @@ var countDFS = 0;
 		      navA[i].style.lineHeight = "78px";
 	        }
 	  
-	        if(window.innerWidth <= 992 && window.innerWidth > 600) {
+	        if(window.innerWidth <= 991 && window.innerWidth > 600) {
 		      asideLeft.style.height = window.innerHeight - (205 - y) + "px";
 		      asideLeft.style.top = 200 - y + "px";
 		
@@ -1033,7 +1033,7 @@ var countDFS = 0;
 	
 //resize event control and onload function
 	function resizeEvent() {
-	    if(window.innerWidth <= 992 && window.innerWidth > 600) {
+	    if(window.innerWidth <= 991 && window.innerWidth > 600) {
 		  navLogonav[0].style.display = "none";
 		  navLogonav[0].style.height = "70px";
 		

@@ -384,7 +384,11 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
 	letter-spacing: 3px;
 	font-size: 20px;
 	color: #000;
-	transition: all 0.6s;
+	transition: all 0.2s;
+}
+
+#logo-nav #w3school-com:hover .w3school {
+	color: #4caf50 !important;
 }
 
 #logo-nav .w3com {
@@ -690,7 +694,7 @@ aside a {
 }
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 
 #dark-font-social {
 	text-align: center;
@@ -852,6 +856,10 @@ aside a {
 .overflow {
    overflow-x: scroll;
    overflow-y: scroll;
+}
+
+pre {
+	white-space: pre-line !important;
 }
 
 

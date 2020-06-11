@@ -667,6 +667,10 @@
 	    <div class="grid-items">8</div>
 	    <div class="grid-items">9</div>
 	  </div>
+	  <p class="bold">
+	  
+	   <span class="label-tag">CSS Properties Used:</span>
+	  
 	  <pre class="bold" style="white-space: pre-wrap;">
         .grid-contener {
           <span class="label-tag-value">display: grid;</span>
@@ -879,6 +883,29 @@
 	    
 	   </div>
 	   
+	   <p class="bold" >
+	    <span class="label-tag">CSS Properties Used : </span>
+		<pre>
+		 <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns:<span id="grid-column-value"> auto;</span></span>
+          <span id="grid-item-property" class="label-tag-value">&lt;!-- here are the property & value --&gt;</span><span id="grid-item-value" class="label-tag-value"></span>
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+      </pre>
+		 
+		</pre>
+	    </p>
+	   
 	   <script>
 	     var i, len, gridColumn, columnInputValue, rowInputValue;
 		 
@@ -904,6 +931,12 @@
 		 var spanColumnNumber = document.getElementById("no-column");
 		 var spanGridItemNumber = document.getElementById("no-grid-item");
 		 
+		 var addGridValue = document.getElementById("grid-column-value");
+		 var addGridProp = document.getElementById("grid-item-property");
+		 
+		 var gridProp = document.getElementById("grid-item-property");
+		 var gridValue = document.getElementById("grid-item-value");
+		 
 		 var setValue = ["auto"];
          var getValue;
 		 
@@ -919,31 +952,46 @@
 		    gridColumn[i].onclick = function() {
 				(function () {
 				    for(i=0; i<len; i++) {
-					 gridColumn[i].style.border = "1px solid #000";
+					  gridColumn[i].style.border = "1px solid #000";
 					}
 				})();
 				     
-				     this.style.border = "1px solid #fff";
-
-					   columnInputValue = document.getElementById("grid-input-column").value;
+				      this.style.border = "1px solid #fff";
 					 
-					   this.style.gridColumn = columnInputValue;
-					   
-					   rowInputValue = document.getElementById("grid-input-row").value;
-					   
-					   this.style.gridRow = rowInputValue;
-					   
-					   var gridColumnArea = this.style.gridArea;
-					   
-					   gridAreaInput.value = gridColumnArea;
+					  columnInputValue = document.getElementById("grid-input-column").value;
 					 
+					  this.style.gridColumn = columnInputValue;
+					   
+					  rowInputValue = document.getElementById("grid-input-row").value;
+					   
+					  this.style.gridRow = rowInputValue;
+					   
+					  var gridColumnArea = this.style.gridArea;
+					   
+					  gridAreaInput.value = gridColumnArea;
+					 
+					  
+					if( checkedColumn.checked == true && checkedRow.checked == true ) { 
+					  gridValue.innerHTML = gridColumnArea + ";";
+					  
+					}
+					 
+					else if ( checkedColumn.checked == true ) {
+                      gridValue.innerHTML =  columnInputValue + ";";
+					}
+					 
+					else if ( checkedRow.checked == true ) {
+                      gridValue.innerHTML = rowInputValue + ";";
+					  
+					}
+					 
+					else {
+					  gridProp.innerHTML = "&lt;!-- here are the property & value --&gt;";
+					  gridValue.innerHTML = " ";
+					}
 			    }
-				
-				
 			}
-			
 		  }
-			
 		})();  
 		 
 		 
@@ -955,6 +1003,7 @@
 			  getValue = setValue.join(" ");
 			  
 			  gridColumnRow.style.gridTemplateColumns = getValue;
+			  addGridValue.innerHTML = " " + getValue;
 			  
 			    if(countColumn <= 1) {
 			      subColumnButton.style.display = "none";
@@ -976,6 +1025,9 @@
 			  getValue = setValue.join(" ");
 			  
 			  gridColumnRow.style.gridTemplateColumns = getValue;
+			  
+			  addGridValue.innerHTML = " " + getValue;
+			  
 			    if(countColumn <= 1) {
 			      subColumnButton.style.display = "none";
 			    }
@@ -1014,7 +1066,7 @@
 			  clickToRun();
 			  
 			  return countGridItems;
-			} 
+			}
 		})();
 		
 		
@@ -1051,6 +1103,8 @@
 			   columnInput.style.cursor = "text";
 			   columnInput.removeAttribute("disabled");
 			   gridAreaInfo.style.display = "block";
+			   gridProp.innerHTML = "grid-area: ";
+			   gridValue.innerHTML = ";";
 			}
 			
 			else if (checkedColumn.checked == true){
@@ -1060,6 +1114,8 @@
 			   rowInput.disabled = true;
 			   rowInput.style.cursor = "not-allowed";
 			   gridAreaInfo.style.display = "none";
+			   gridProp.innerHTML = "grid-column: ";
+			   gridValue.innerHTML = ";";
 			}
 			
 			else if (checkedRow.checked == true){
@@ -1069,6 +1125,8 @@
 			   columnInput.disabled = true;
 			   columnInput.style.cursor = "not-allowed";
 			   gridAreaInfo.style.display = "none";
+			   gridProp.innerHTML = "grid-row: ";
+			   gridValue.innerHTML = ";";
 			}
 			
 			else {
@@ -1079,15 +1137,11 @@
 			   rowInput.disabled = true;
 			   columnInput.value = "";
 			   rowInput.value = "";
+			   gridProp.innerHTML = "&lt;!-- here are the property & value --&gt;";
+			   gridValue.innerHTML = " ";
 			}
-		 }
-		 
-	    
-	     
-		 
+		}
 
-		 
-		 
 	   </script>
 	 </div>
 	
