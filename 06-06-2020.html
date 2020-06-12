@@ -3,7 +3,7 @@
  
  
 
-<html>
+<html lang="en">
  <head>
   <title> 06-06-2020 Grid layout</title>
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
 	  border: 1px solid #000;
 	 }
 	 
-	 .grid-column:focus {
+	 .grid-column:focus {  
 	  border: 1px solid #fff;
 	  outline: none;
 	 }
@@ -885,12 +885,10 @@
 	   
 	   <p class="bold" >
 	    <span class="label-tag">CSS Properties Used : </span>
-		<pre>
 		 <pre class="bold" style="white-space: pre-wrap;">
         .grid-contener {
           <span class="label-tag-value">display: grid;</span>
           <span class="label-tag-value">grid-template-columns:<span id="grid-column-value"> auto;</span></span>
-          <span id="grid-item-property" class="label-tag-value">&lt;!-- here are the property & value --&gt;</span><span id="grid-item-value" class="label-tag-value"></span>
           background-color: #f99c93;
           padding: 10px;
         }
@@ -901,9 +899,10 @@
           color: #000;
           border: 1px solid #000;
         }
+        .grid-item<span id="grid-item-numb">1</span> {
+          <span id="grid-item-property" class="label-tag-value">/* here are the property & value */</span><span id="grid-item-value" class="label-tag-value"></span>
+        }
       </pre>
-		 
-		</pre>
 	    </p>
 	   
 	   <script>
@@ -937,6 +936,8 @@
 		 var gridProp = document.getElementById("grid-item-property");
 		 var gridValue = document.getElementById("grid-item-value");
 		 
+		 var gridItemNumb = document.getElementById("grid-item-numb");
+		 
 		 var setValue = ["auto"];
          var getValue;
 		 
@@ -949,15 +950,20 @@
 		
 		 
 		  for(i=0; i<len; i++) {
-		    gridColumn[i].onclick = function() {
-				(function () {
+		    
+		    (function(index) {
+
+		      gridColumn[i].onclick = function() {
+				
 				    for(i=0; i<len; i++) {
 					  gridColumn[i].style.border = "1px solid #000";
+					  gridItemNumb.innerHTML = index + 1;
 					}
-				})();
+			
 				     
 				      this.style.border = "1px solid #fff";
-					 
+                
+
 					  columnInputValue = document.getElementById("grid-input-column").value;
 					 
 					  this.style.gridColumn = columnInputValue;
@@ -970,6 +976,7 @@
 					   
 					  gridAreaInput.value = gridColumnArea;
 					 
+					  
 					  
 					if( checkedColumn.checked == true && checkedRow.checked == true ) { 
 					  gridValue.innerHTML = gridColumnArea + ";";
@@ -990,6 +997,7 @@
 					  gridValue.innerHTML = " ";
 					}
 			    }
+			  })(i);
 			}
 		  }
 		})();  
@@ -1143,6 +1151,196 @@
 		}
 
 	   </script>
+	   
+	  <h3>Naming Grid Items : </h3>
+	  
+	   <div class="grid-contener" style="grid-gap: 10px; grid-template-areas: 'header header header header header';">
+	    <div class="grid-items" style="grid-area: header;" title="grid-area: header;">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	   </div>
+	   
+	   <p class="bold">
+	    <span class="label-tag">CSS Properties Used: </span>
+         <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-areas: 'header header header header header';</span>
+          grid-gap: 10px;
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .grid-item1 {
+          <span class="label-tag-value">grid-area: header;</span>
+        }
+      </pre>
+	   </p>
+	   
+	   <div class="grid-contener" style="grid-template-areas: 'header header . . .'; grid-gap: 10px; ">
+	    <div class="grid-items" style="grid-area: header;" title="grid-area: header;">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	    <div class="grid-items">8</div>
+	    <div class="grid-items">9</div>
+	   </div>
+	   <p class="bold">
+	    <span class="label-tag">CSS Properties Used: </span>
+         <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-areas: 'header header . . .';</span>
+          grid-gap: 10px;
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .grid-item1 {
+          <span class="label-tag-value">grid-area: header;</span>
+        }
+      </pre>
+	   </p>
+	   
+	   <div class="grid-contener" style="grid-gap: 10px; grid-template-areas: 'header header . . .' 'header header . . .'">
+	    <div class="grid-items grid-item1" style="grid-area: header;" title="grid-area: header;">1</div>
+	    <div class="grid-items">2</div>
+	    <div class="grid-items">3</div>
+	    <div class="grid-items">4</div>
+	    <div class="grid-items">5</div>
+	    <div class="grid-items">6</div>
+	    <div class="grid-items">7</div>
+	   </div>
+	   <p class="bold">
+	    <span class="label-tag">CSS Properties Used: </span>
+         <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-areas: 'header header . . .' 'header header . . . ';</span>
+          grid-gap: 10px;
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .grid-item1 {
+          <span class="label-tag-value">grid-area: header;</span>
+        }
+      </pre>
+	   </p>
+	   
+	   <div class="grid-contener" style="grid-gap: 10px; grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer' ">
+	    <div class="grid-items grid-item1" style="grid-area: header;" title="grid-area: header;">Header</div>
+	    <div class="grid-items grid-item2" style="grid-area: menu;" title="grid-area: menu;">Menu</div>
+	    <div class="grid-items grid-item3" style="grid-area: main;" title="grid-area: main;">Main</div>
+	    <div class="grid-items grid-item4" style="grid-area: right;" title="grid-area: right;">Right</div>
+	    <div class="grid-items grid-item5" style="grid-area: footer;" title="grid-area: footer;">Footer</div>
+	   </div>
+	   <p class="bold">
+	    <span class="label-tag">CSS Properties Used: </span>
+         <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';</span>
+          grid-gap: 10px;
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .grid-item1 {
+          <span class="label-tag-value">grid-area: header;</span>
+        }
+        .grid-item2 {
+          <span class="label-tag-value">grid-area: menu;</span>
+        }
+        .grid-item3 {
+          <span class="label-tag-value">grid-area: main;</span>
+        }
+        .grid-item4 {
+          <span class="label-tag-value">grid-area: right;</span>
+        }
+        .grid-item5 {
+          <span class="label-tag-value">grid-area: footer;</span>
+        }
+      </pre>
+	   </p>
+
+	 <h3>The Order of the Items : </h3> 
+      <div class="grid-contener" style="grid-gap: 10px;">
+	    <div class="grid-items" style="grid-area: 2 / 3 / 3 / 4;" title="grid-area: 2 / 3 / 3 / 4;">1</div>
+	    <div class="grid-items" style="grid-area: 1 / 3 / 2 / 4;" title="grid-area: 1 / 3 / 2 / 4;">2</div>
+	    <div class="grid-items" style="grid-area: 2 / 1 / 3 / 2;" title="grid-area: 2 / 1 / 3 / 2;">3</div>
+	    <div class="grid-items" style="grid-area: 1 / 1 / 2 / 2;" title="grid-area: 1 / 1 / 2 / 2;">4</div>
+	    <div class="grid-items" style="grid-area: 2 / 2 / 3 / 3;" title="grid-area: 2 / 2 / 3 / 3;">5</div>
+	    <div class="grid-items" style="grid-area: 1 / 2 / 2 / 3;" title="grid-area: 1 / 2 / 2 / 3;">6</div>
+	  </div>
+        <p class="bold">
+	    <span class="label-tag">CSS Properties Used: </span>
+         <pre class="bold" style="white-space: pre-wrap;">
+        .grid-contener {
+          <span class="label-tag-value">display: grid;</span>
+          <span class="label-tag-value">grid-template-columns: auto auto auto;</span>
+          grid-gap: 10px;
+          background-color: #f99c93;
+          padding: 10px;
+        }
+        .grid-items {
+          padding: 20px;
+          background-color: #89a6c5;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+        }
+        .grid-item1 {
+          <span class="label-tag-value">grid-area: 2 / 3 / 3 / 4;</span>
+        }
+        .grid-item2 {
+          <span class="label-tag-value">grid-area: 1 / 3 / 2 / 4;</span>
+        }
+        .grid-item3 {
+          <span class="label-tag-value">grid-area: 2 / 1 / 3 / 2;</span>
+        }
+        .grid-item4 {
+          <span class="label-tag-value">grid-area: 1 / 1 / 2 / 2;</span>
+        }
+        .grid-item5 {
+          <span class="label-tag-value">grid-area: 2 / 2 / 3 / 3;</span>
+        }
+        .grid-item5 {
+          <span class="label-tag-value">grid-area: 1 / 2 / 2 / 3;</span>
+        }		
+      </pre>
+	   </p>
+     	  
 	 </div>
 	
    </article>
@@ -1178,9 +1376,7 @@
 	
    </ul>
   </aside>
-  
- 
-	 
+
  </main> 
 	 
   
