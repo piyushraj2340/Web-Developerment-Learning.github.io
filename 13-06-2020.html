@@ -1,0 +1,600 @@
+<!DOCTYPE html>   
+<!-- HTML -->
+ 
+ 
+
+<html lang="en">
+ <head>
+  <title>13.06.2020 -- JS-- </title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JAVASCRIPT, Web, Development, Learning, tutorials, !--Web Dev--, javascript, Date(), date() function , ">
+  <meta name="description" content="web development learning or making notes and backup of web Learning code for javascript Date() function  date: 13.06.2020 .">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <link href="assets/images/testing-1.png" type="image/png" rel="icon">
+  
+  <style>
+	 /*   CSS Code goes here. */
+	 
+	 [id*="demo-"] {
+	   border: 1px solid;
+	   padding: 20px;
+	   margin: 10px;
+	   display: block;
+	   color: #4d90fe;
+	 }
+	 
+	 #milli-value {
+	  width: 70px;
+	  text-align: center;
+	  cursor: not-allowed;
+	 }
+	 
+	 #input-date-milli-value {
+	  width: 140px;
+	  border-radius: 25px / 50px;
+	  text-align: center;
+	  outline: none;
+	  color: red;
+	  border: 2px solid #000;
+	 }
+	 #input-date-milli-value:focus {
+	  border: 2px solid #4d90fe;
+	 }
+  </style>
+  
+  <script src="https://kit.fontawesome.com/b8afffe50a.js" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+  <header id= "dark-font-social" >
+  <div class="slide-div">
+   
+   <a class="fas fa-ellipsis-v" id="menu-dfs" onclick="menuDFS()"></a> 
+   
+   <a class="prev fas fa-angle-left" onclick="plusSlides(-1)"></a>
+   
+   <div class="fontsize-dark slide fade a-slide">
+   <button id="inc" onclick= "fontInc()">A+</button>
+   <button id="reset" onclick= "fontReset()">A</button>
+   <button id="dec" onclick= "fontDec()"> A-</button>
+		
+   <a id="dark-mode" onclick="darkTheme()">
+   <button id="dark" title="Dark Theme"></button>
+   </a>
+  </div>
+  
+  <div class="contact-info slide fade">
+  <a href="javascript:void(0)" class="contacts a-slide">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fas fa-envelope"></i> piyushraj2340@gmail.com</span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts a-slide">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"> <i class="fab fa-whatsapp"></i> +91-7463980230 </span>
+  </a>
+  
+  <a href="javascript:void(0)" class="contacts a-slide">
+   <span style="font-size: 16px; font-weight: 550; font-family: arial;"><i class="fas fa-phone-alt"></i> +91-7903560968</span>
+  </a>
+  </div>
+  
+  <div class="social-link slide fade a-slide">
+  <a href="https://facebook.com" class="sp-image" id="sp-youtube"></a>
+  
+  <a href="https://facebook.com" class="sp-image" id="sp-twitter"></a>
+  
+  <a href="https://facebook.com" class="sp-image" id="sp-instagram"></a>
+  
+ 
+  <a href="https://facebook.com" class="sp-image" id="sp-facebook"> </a>
+  </div>
+  
+  <a class="next fas fa-angle-right" onclick="plusSlides(1)"></a>
+ </div>
+ </header>
+ 
+  <header id= "logo-nav">
+  
+   <a href="index.html">
+    <img id="logo" src="assets/images/testing.png" >
+    <span class="sitename" style="font-family: arial">&lt;</span>
+    <span class="sitename">!--webDev--</span>
+    <span style="font-family: arial" class="sitename">&gt;</span>
+   </a>
+   
+   <nav id="nav">  
+    <a href = "index.html">
+	  <b class="dot">&bull;</b>
+	  <span class="nav">Home</span>
+    </a>
+	
+	
+	<div id="w3school-com" title="w3schools.com">
+	  <a href = "https://www.w3schools.com" target="_blank" >
+	  <b class="dot">&bull;</b>
+	  <span class="nav w3school">w3schools</span>
+	  <span class="w3school nav w3com">.com</span>
+	  <i class="fas fa-caret-up list-hide"></i>
+	  <i class="fas fa-caret-down list-view"></i>
+	  </a>
+	
+	 <div class="dropdown-list">
+	  <a href="https://www.w3schools.com/html/default.asp" target="_blank" title="w3schools HTML Toutorial">HTML</a>
+			   
+	  <a href="https://www.w3schools.com/css/default.asp" target="_blank" title="w3schools CSS Toutorial">CSS</a>
+			   
+	  <a href="https://www.w3schools.com/js/default.asp" target="_blank" title="w3schools JAVASCRIPT Toutorial">JAVASCRIPT</a>
+			  
+	 </div>
+     
+	 </div>
+   <!--	<a href="javascript:void(0)">
+	 <li> 
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> By Date </span>
+	 </li>
+	</a> -->
+	
+	<a href="about.html">
+	  <b class="dot">&bull;</b> 
+	  <span class="nav"> About </span>
+	</a>
+	 </nav> 
+	 
+	 <a id="menu" onclick="menuFunction()">
+	  <i class="fas fa-bars" style="font-size: 30px;"></i>
+	 </a>
+		   
+     <!-- <li><input type = "search" placeholder = "Searching..."> </li> -->
+		
+   </ul>
+  </header>
+	 
+ <main id= "main">
+	
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="right-menu-open" onclick="asideRightMenuOpen()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="right-menu-close" onclick="asideRightMenuClose()"></a>
+  
+  <a href="javascript:void(0)" class="fas fa-angle-double-left" id="left-menu-close" onclick="asideLeftMenuClose()"></a>
+
+  <a href="javascript:void(0)" class="fas fa-angle-double-right" id="left-menu-open" onclick="asideLeftMenuOpen()"></a>
+   
+  <aside id="aside-left">
+   <ul> 
+    <a href="15-05-2020.html">
+     <li>15.05.2020-- js -- Google Maps</li>
+    </a>
+		  
+    <a href="18-05-2020.html">
+     <li>18.05.2020-- CSS -- border-radius -- border-images -- </li>
+    </a>
+	
+	<a href="21-05-2020.html">
+	 <li>21.05.2020-- CSS -- border-images -- Multiple background  </li>
+	</a>
+	
+	<a href="22-05-2020.html">
+	 <li>22.05.2020-- CSS -- Gradient</li>
+	</a>
+	
+	<a href="23-05-2020.html">
+	 <li>23.05.2020-- CSS -- Text Shadow -- Box Shadow -- Flexbox(flex-direction & flex-wrap) - </li>
+	</a>
+	
+	<a href="24-05-2020.html">
+	 <li>24.05.2020-- CSS -- Flexbox(justify-content & align-items) </li>
+	</a>
+	
+	<a href="25-05-2020.html">
+	 <li>25.05.2020-- CSS -- Flexbox(align-content and Flexbox Child-Elements[order and flex-grow].</li>
+	</a>
+	
+	<a href="26-05-2020.html">
+	 <li>26.05.2020-- CSS -- Flexbox Child-Elements</li>
+	</a>
+	
+	<a href="04-06-2020.html">
+	 <li>04.06.2020-- CSS -- Grid Layout --</li>
+	</a>
+	
+	<a href="06-06-2020.html">
+	 <li>06.06.2020-- CSS -- Grid Layout --</li>
+	</a>
+	
+	<a href="13-06-2020.html">
+	 <li class="active">13.06.2020-- JS -- Date() function </li>
+	</a>
+
+   </ul>
+	 
+  </aside>
+	 
+  <section id="content">
+   <article id= "topic">
+    <div id="comment">
+     <span class="comment">&lt;!-- Topic Name --&gt;</span>
+	 <hr class="hr-line-bg" />
+	 <hr class="hr-line-sm" />
+	 <h2>Date()</h2>
+	 <hr class="hr-line-sm" />
+	 <hr class="hr-line-bg" />
+    </div>
+  </article>
+		 
+   <article id="learning">
+    <div id="js-date">
+	 <hr class="hr-line-bg" />
+	 <hr class="hr-line-sm" />
+	 <h2>JavaScript Date() Object</h2>
+	 <hr class="hr-line-sm" />
+	 <hr class="hr-line-bg" />
+	 
+	 <h3>JavaScript Date Output :</h3> 
+	 
+	 <p style="white-space: pre-line;">
+	   <span class="label-tag" align="left">Note: </span>  By default, JavaScript will use the browser's time zone and display a date as a full text string: <br /><br />
+		<p align="center">
+	    <span id="demo-00" class="bold"></span>
+	 </p>
+	 </p>
+	 <p class="bold">
+	  <span class="label-tag"> JavaScript Code Used :</span>
+
+       <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date00 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-00"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date00</span><span class="operator">;</span>
+       </pre>
+	 </p>
+	 
+	 <h2>Creating Date Objects</h2>
+	 <hr class="hr-line-bg" />
+	 <hr class="hr-line-sm" />
+	 <hr class="hr-line-bg" />
+	 
+	 <p class="bold">There are 4 ways to create Date object.</p>
+	 <ul>
+	   <li>new Date()</li>
+	   <li>new Date(year, month, date, hour, minute, second, and millisecond)</li>
+	   <li>new Date(millisecond)</li>
+	   <li>new Date(date String)</li>
+	 </ul>
+	 <hr class="hr-line-bg" />
+	 <hr class="hr-line-sm" />
+	 <hr class="hr-line-bg" />
+	 <h3>new Date(year, month, ...) :</h3>
+	 <p>
+	    <span class="label-tag">Note : </span> new Date(year, month, day, hour, minute, second, and millisecond), these 7 property is Specified in same order.
+	 </p>
+	 <p class="bold" align="center"> 
+	    <span id="demo-01"></span>
+	 </p>
+	 
+	 <p class="bold">
+	  <span class="label-tag"> JavaScript Code Used :</span>
+
+       <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date01 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(2020, 07, 25, 8, 30, 30, 30);</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-01"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date01</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	 <p>
+	   <span class="label-tag">Note : </span> JavaScript count Month from 0 to 11.
+	    0 is January and 11 is December.
+		<br />
+		
+		6 Number of property only specified(year, month, date, hour, minute, second).
+		<br />
+		5 Number of property only specified(year, month, date, hour, minute).
+        <br />
+		4 Number of property only specified(year, month, date, hour).		
+		<br />
+		3 Number of property only specified(year, month, date).
+		<br />
+		2 Number of property only specified(year, month).
+		<br />
+		<span class="bold" style="color: #4d90fe;">but 1 number of Property doesn't specified year, it specified millisecond.</span>
+		
+	 </p>
+	 
+	 <span class="label-tag">For Example: </span> Here var d = new Date(2020); this means 2020 is millisecond not year.
+	 
+	 <p align="center">
+	    <span class="bold" id="demo-02"></span>
+	 </p>
+	 
+	 <p class="bold">
+	  <span class="label-tag"> JavaScript Code Used :</span>
+
+       <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date02 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(2020);</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-02"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date02</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	 <hr class="hr-line-bg" />
+	 <hr class="hr-line-sm" />
+	 <hr class="hr-line-bg" />
+	 <h3>Previous Century :</h3>
+	 <p class="bold">
+	    one and two digit year will taken as 19xx.
+	 </p>
+	 <p>
+	 <span class="label-tag">For Example: </span> var d = new Date(20, 07, 25, 8, 30, 30, 30); and var d1 = new Date(0, 07, 25, 8, 30, 30, 30); Here 20 and 0  is treated 1920 and 1900 respectively.
+	 </p>
+     <p align="center">	 
+	   <span id="demo-03"></span>
+	   <span id="demo-04"></span>
+	 </p>
+	 <p class="bold">
+	  <span class="label-tag"> JavaScript Code Used :</span>
+
+       <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date03 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(20, 07, 25, 8, 30, 30, 30);</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-03"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date03</span><span class="operator">;</span>
+		
+        <span class="js-keywords">var </span><span class="js-variable">date04 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(0, 07, 25, 8, 30, 30, 30);</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-04"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date04</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   
+	   <hr class="hr-line-bg" />
+	   <hr class="hr-line-sm" />
+	   <hr class="hr-line-bg" />
+	   
+	   <h3>new Date(dateString) :</h3>
+	   
+	   <p align="center">
+	    <span class="bold" id="demo-05"></span>
+	   </p>
+	   
+	  <p class="bold">
+	  <span class="label-tag"> JavaScript Code Used :</span>
+
+       <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date05 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020, february, 29, 12:30:59");</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-05"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date05</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   <p align="center">or</p>
+	   <p>
+	   <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date05 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020 february 29 12:30:59");</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-05"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date05</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   <p align="center">or</p>
+	   <p>
+	   <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date05 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("february 29 12:30:59 2020");</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-05"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date05</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag">Note: </span>There is no rule of order in writing date string, you can put month first or year first doesn't matter. we can also omit comma(,) but put space between each properties.
+	   </p>
+	   
+	   <hr class="hr-line-bg" />
+	   <hr class="hr-line-sm" />
+	   <hr class="hr-line-bg" />
+	   
+	   <h3>new Date(milliseconds) : </h3>
+	   
+	   JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated).
+	   
+	   <p align="center" class="bold">
+	    Now the time is: <span class="bold" id="demo-06" style="display: inline-block;"></span> milliseconds past January 01, 1970.
+	   </p>
+	   
+	  <p class="bold">
+	  <span class="label-tag"> JavaScript Code Used :</span>
+
+       <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">function </span><span class="js-property">printMillisecond()</span> <span class="operator">{</span>
+          <span class="js-keywords">var </span><span class="js-variable">date06 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020, february, 29, 12:30:59");</span><span class="js-property">
+          <span class="js-keywords">var </span><span class="js-variable">d</span> <span class="operator">=</span> date06.getTime()<span clss="operator">;</span>
+          <span class="js-property">document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-06"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d</span><span class="operator">;</span>
+        <span class="operator">}</span>
+        
+        <input type="checkbox" id="interval-checkbox" onchange="inputEnable()"><label for="interval-checkbox"><span class="js-property">setInterval</span><span class="operator">(</span><span class="js-keywords">printMillisecond</span><span class="operator">,</span> <input type="number" class="js-number" id="milli-value" value="1" onchange="clickToRun()" disabled /><span class="operator">);</span></label> 
+       </pre>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag">Example : </span> var d = new Date(0); means :  Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time) . 
+	   </p>
+	   
+	   <p align="center">
+	     <span class="bold" id="demo-07"></span>
+	   </p>
+	   
+	   <p>
+	   <span class="label-tag"> JavaScript Code Used :</span>
+	   
+	   <pre style="white-space: pre-wrap;">
+        <span class="js-keywords">var </span><span class="js-variable">date07 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(<input type="number" id="input-date-milli-value" onchange="typeToRun()" value="0" />);</span><span class="js-property">
+        document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-07"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date07</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag">Notes :</span> Negative value of millisecond accept in javascript.
+		<br />
+		<span class="label-tag">Example :</span> var d = new Date(-100000000000) is approx.. Mon Oct 31 1966 19:43:20; 
+	   </p>
+	   
+	   <h3>Displaying Dates : </h3>
+	   
+	   By default javascript output dates in full string format. this means that when we display date object in html. its automatically converted to a string, with the toString() method.
+	   
+	   <p align="center">
+	    <span class="bold" id="demo-08"></span>
+		 both is Same
+	    <span class="bold" id="demo-09"></span>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+	    
+	   
+	   <pre style="white-space: pre-wrap;">
+       <span class="js-keywords">function </span><span class="js-property">printDateString()</span> <span class="operator">{ </span>
+         <span class="js-keywords">var </span><span class="js-variable">date08 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-08"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date08</span><span class="operator">;</span>
+        
+         <span class="js-keywords">var </span><span class="js-variable">date09 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-09"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date09.toString()</span><span class="operator">;</span>
+       <span class="operator">}</span>
+       <span class="js-property">setInterval</span><span class="operator">(</span><span class="js-keywords">printDateString</span><span class="operator">, </span><span class="js-number">1000</span><span class="operator">);</span>
+       </pre>
+	   </p>
+	   
+	   <span class="label-tag">toUTCString()</span>
+	   <p align="center">
+	    <span class="bold" id="demo-10"></span>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre style="white-space: pre-wrap;">
+         <span class="js-keywords">var </span><span class="js-variable">date10 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-10"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date10.toUTCString()</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   <span class="label-tag">toDateString() :</span> This method converts date to more readable format.
+	   
+	   <p align="center">
+	    <span class="bold" id="demo-11"></span>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre style="white-space: pre-wrap;">
+         <span class="js-keywords">var </span><span class="js-variable">date11 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-11"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date11.toDateString()</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	 
+	</div>
+	
+	<script>
+      // 1st Example
+	   var date00 = new Date();
+	   document.getElementById("demo-00").innerHTML = date00;
+	   
+	  // 2nd Example
+	   var date01 = new Date(2020, 07, 25, 8, 30, 30, 30);
+	   document.getElementById("demo-01").innerHTML = date01;
+	  
+	  // 3rd Example 
+	   var date02 = new Date(2020);
+	   document.getElementById("demo-02").innerHTML = date02;
+	   
+	  // 4th Example
+	   var date03 = new Date(20, 07, 25, 8, 30, 30, 30);
+	   document.getElementById("demo-03").innerHTML = date03;
+	  // 5th Example
+       var date04 = new Date(0, 07, 25, 8, 30, 30, 30);
+	   document.getElementById("demo-04").innerHTML = date04;  
+	  // 6th Example
+       var date05 = new Date("2020 february 29 12:30:59");
+	   document.getElementById("demo-05").innerHTML = date05; 
+	  // 7th Example
+	  var getInput = document.getElementById("milli-value");
+	  var varCheckbox = document.getElementById("interval-checkbox");
+	  function inputEnable() {
+	    if(varCheckbox.checked == true) {
+		  getInput.disabled = false;
+		  getInput.style.cursor = "text";
+		}
+		
+		else {
+		  getInput.disabled = true;
+		  getInput.style.cursor = "not-allowed";
+		}
+	  }
+	  
+	 var clickToRun = (function() {
+	    var clearInt = null;
+        return function() {
+	  
+	    function printMillisecond() {
+           var date06 = new Date();
+		   var d = date06.getTime()
+	       document.getElementById("demo-06").innerHTML = d;
+        }
+		clearInterval(clearInt);
+		var getInputValue = getInput.value;
+        clearInt = setInterval(printMillisecond, getInputValue);
+        return getInputValue;
+     }
+	 })();	
+
+	 window.addEventListener("load", clickToRun);
+	 
+	 // 8th Example 
+	 var typeToRun = (function() {
+	    return function () {
+		  var typeToChange = document.getElementById("input-date-milli-value").value;
+		  var d = parseInt(typeToChange);
+		  var date07 = new Date(d);
+	      document.getElementById("demo-07").innerHTML = date07;
+		}
+	 })();
+	  
+	 window.addEventListener("load", typeToRun);
+	 
+	 // 9th Example 
+	 function printDateString() {
+	  var date08 = new Date();
+	  var date09 = new Date();
+	  
+	  document.getElementById("demo-08").innerHTML = date08;
+	  document.getElementById("demo-09").innerHTML = date09.toString();
+	 }
+	 
+	 setInterval(printDateString, 1000);
+	 
+	 // 10th Example
+	 var date10 = new Date();
+	 document.getElementById("demo-10").innerHTML = date10.toUTCString();
+	 
+	 // 11th Example
+	 var date11 = new Date();
+	 document.getElementById("demo-11").innerHTML = date11.toDateString();
+	 </script>
+   </article>
+   
+   
+   <footer id="footer">
+    This Page is developed by Piyush raj &copy;2020.
+   </footer>
+		 
+  </section>
+   
+  <aside id="aside-right">
+   <ul>
+    <a href="#topic">
+     <li>Topic Name</li>
+    </a>
+	<a href="#js-date">
+	  <li>JS-Date()</li>
+	</a>
+   </ul>
+  </aside>
+  
+ 
+	 
+ </main> 
+	 
+  
+
+ <script src="index.js"></script>
+ </body>
+ </html>

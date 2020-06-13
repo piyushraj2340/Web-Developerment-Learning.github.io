@@ -564,7 +564,12 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
  
 #learning h2 {
 	 text-align: center;
+	 font-size: 28px;
  }
+ 
+#learning h3 {
+	font-size: 25px;
+}
 
 #aside-right {
 	float: right;
@@ -687,10 +692,33 @@ aside a {
 
 }
 
-.hr-line {
+.hr-line-bg, .hr-line-sm {
 	background-image: -webkit-linear-gradient(left, #5680e9, #84ceeb, #5ab9ea, #c1c8e4, #8860d0);
 	height: 3px;
-	width: 90%;
+}
+
+.hr-line-bg {
+	width: 80%;
+}
+
+.hr-line-sm {
+	width: 70%;
+}
+
+.js-keywords {
+	color: mediumblue;
+}
+
+.js-variable, .js-property, .operator {
+	color: #000;
+}
+
+.js-string {
+	color: brown;
+}
+
+.js-number {
+	color: red;
 }
 
 

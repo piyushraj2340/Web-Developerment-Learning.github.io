@@ -70,6 +70,16 @@ var prev = document.getElementsByClassName("prev");
 var newSlide = document.getElementsByClassName("a-slide");
 
 var dropDownA = document.querySelectorAll("#logo-nav .dropdown-list a");
+
+var jsKeywords = document.getElementsByClassName("js-keywords");
+
+var jsVariable = document.getElementsByClassName("js-variable");
+
+var jsProperty = document.getElementsByClassName("js-property");
+
+var jsOperator = document.getElementsByClassName("operator");
+
+var jsString = document.getElementsByClassName("js-string");
  
 
 var countDarkTheme = 0;
@@ -226,6 +236,11 @@ var countDFS = 0;
 	      var learnDiv = learningDiv.length;
 	      var lenActive = active.length;
 	      var lenDropA = dropDownA.length;
+		  var lenKeywords = jsKeywords.length;
+		  var lenVariable = jsVariable.length;
+		  var lenProperty = jsProperty.length;
+		  var lenOperator = jsOperator.length;
+		  var lenString = jsString.length;
 		   
 	        for(i=0; i<navLen; i++) {
               navItem[i].style.color = "#fff";
@@ -247,6 +262,26 @@ var countDFS = 0;
 	        for(i=0; i<lenDropA; i++) {
 		      dropDownA[i].style.color = "#fff";
 	        }
+			
+			for(i=0; i<lenKeywords; i++) {
+				jsKeywords[i].style.color = "#88c999";
+			}
+			
+			for(i=0; i<lenVariable; i++) {
+				jsVariable[i].style.color = "#fff";
+			}
+			
+			for(i=0; i<lenProperty; i++) {
+				jsProperty[i].style.color = "#fff";
+			}
+			
+			for(i=0; i<lenOperator; i++) {
+			    jsOperator[i].style.color = "#fff";
+			}
+			
+			for(i=0; i<lenString; i++) {
+				jsString[i].style.color = "#c5a5c5";
+			}
 
             if(window.innerWidth <= 991) {
 	          asideLeft.style.backgroundColor = "#282c34";
@@ -298,7 +333,12 @@ var countDFS = 0;
 	      var liLen = elemLi.length;
 	      var learnDiv = learningDiv.length;
 	      var lenActive = active.length;
-          var lenDropA = dropDownA.length;	
+          var lenDropA = dropDownA.length;
+          var lenKeywords = jsKeywords.length;
+		  var lenVariable = jsVariable.length;
+		  var lenProperty = jsProperty.length;
+		  var lenOperator = jsOperator.length;
+		  var lenString = jsString.length;		  
 	
             for(i=0; i<navLen; i++) {
 	          navItem[i].style.color = "#000";
@@ -320,6 +360,26 @@ var countDFS = 0;
 	        for(i=0; i<lenDropA; i++) {
 		      dropDownA[i].style.color = "#000";
 	        }
+			
+			for(i=0; i<lenKeywords; i++) {
+				jsKeywords[i].style.color = "mediumblue";
+			}
+			
+			for(i=0; i<lenVariable; i++) {
+				jsVariable[i].style.color = "#000";
+			}
+			
+			for(i=0; i<lenProperty; i++) {
+				jsProperty[i].style.color = "#000";
+			}
+			
+			for(i=0; i<lenOperator; i++) {
+			    jsOperator[i].style.color = "#000";
+			}
+			
+			for(i=0; i<lenString; i++) {
+				jsString[i].style.color = "brown";
+			}
 	
 	        if(window.innerWidth <= 991) {
 	          asideLeft.style.backgroundColor = "#FFF";
