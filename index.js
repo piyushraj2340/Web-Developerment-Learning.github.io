@@ -81,6 +81,11 @@ var jsOperator = document.getElementsByClassName("operator");
 
 var jsString = document.getElementsByClassName("js-string");
  
+var jsComment = document.getElementsByClassName("js-comment");
+
+var jsNumber = document.getElementsByClassName("js-number");
+
+var codeExample = document.getElementsByClassName("example");
 
 var countDarkTheme = 0;
 var countMenu = 0;
@@ -233,7 +238,7 @@ var countDFS = 0;
 	      var i;
 	      var navLen = navItem.length;
 	      var liLen = elemLi.length;
-	      var learnDiv = learningDiv.length;
+	      //var learnDiv = learningDiv.length;
 	      var lenActive = active.length;
 	      var lenDropA = dropDownA.length;
 		  var lenKeywords = jsKeywords.length;
@@ -241,6 +246,9 @@ var countDFS = 0;
 		  var lenProperty = jsProperty.length;
 		  var lenOperator = jsOperator.length;
 		  var lenString = jsString.length;
+		  var lenNumber = jsNumber.length;
+		  var lenComment = jsComment.length;
+		  var lenExample = codeExample.length;
 		   
 	        for(i=0; i<navLen; i++) {
               navItem[i].style.color = "#fff";
@@ -250,10 +258,10 @@ var countDFS = 0;
               elemLi[i].style.color = "#fff";
             }
        
-	        for(i=0; i<learnDiv; i++) {
+	        /*  for(i=0; i<learnDiv; i++) {
 		      learningDiv[i].style.backgroundColor = "#555";
 		      learningDiv[i].style.boxShadow = "0 6px 3px 0 rgba(256,256,256,0.7), 0 0px 10px 0 rgba(256,256,256,0.7)";
-	        }
+	        }  */
 	
 	        for(i=0; i<lenActive; i++) {
               active[i].style.color = "#1a73e8";
@@ -281,6 +289,18 @@ var countDFS = 0;
 			
 			for(i=0; i<lenString; i++) {
 				jsString[i].style.color = "#c5a5c5";
+			}
+			
+			for(i=0; i<lenNumber; i++) {
+				jsNumber[i].style.color = "#80b6ff";
+			}
+			
+			for(i=0; i<lenComment; i++) {
+				jsComment[i].style.color = "#999";
+			}
+			
+			for(i=0; i<lenExample; i++) {
+				codeExample[i].style.backgroundColor = "#555";
 			}
 
             if(window.innerWidth <= 991) {
@@ -331,7 +351,7 @@ var countDFS = 0;
 	      var i;
           var navLen = navItem.length;
 	      var liLen = elemLi.length;
-	      var learnDiv = learningDiv.length;
+	      //var learnDiv = learningDiv.length;
 	      var lenActive = active.length;
           var lenDropA = dropDownA.length;
           var lenKeywords = jsKeywords.length;
@@ -339,7 +359,11 @@ var countDFS = 0;
 		  var lenProperty = jsProperty.length;
 		  var lenOperator = jsOperator.length;
 		  var lenString = jsString.length;		  
-	
+	      var lenNumber = jsNumber.length;
+		  var lenComment = jsComment.length;
+		  var lenExample = codeExample.length;
+		  
+		  
             for(i=0; i<navLen; i++) {
 	          navItem[i].style.color = "#000";
             }
@@ -348,10 +372,10 @@ var countDFS = 0;
               elemLi[i].style.color = "#000";
             }
 	
-	        for(i=0; i<learnDiv; i++) {
+	        /* for(i=0; i<learnDiv; i++) {
 		      learningDiv[i].style.backgroundColor = "transparent";
 		      learningDiv[i].style.boxShadow = "null";
-	        }
+	        } */
 	
 	        for(i=0; i<lenActive; i++) {
 		      active[i].style.color = "#1a73e8"; 
@@ -379,6 +403,18 @@ var countDFS = 0;
 			
 			for(i=0; i<lenString; i++) {
 				jsString[i].style.color = "brown";
+			}
+			
+			for(i=0; i<lenNumber; i++) {
+				jsNumber[i].style.color = "red";
+			}
+			
+			for(i=0; i<lenComment; i++) {
+				jsComment[i].style.color = "green";
+			}
+			
+			for(i=0; i<lenExample; i++) {
+				codeExample[i].style.backgroundColor = "#fff";
 			}
 	
 	        if(window.innerWidth <= 991) {
@@ -898,6 +934,8 @@ var countDFS = 0;
 	    if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
 			
  	      logoNav.style.backgroundColor = "#8860d0";
+ 	      logoNav.style.backgroundImage = "linear-gradient(45deg, #686664,  #ec7e74)";
+		  
 	      logoNav.style.height = "60px";
 	      logoNav.style.position = "fixed";
 	      logoNav.style.top = "0";
@@ -1009,6 +1047,7 @@ var countDFS = 0;
   
 	    else {
 	      logoNav.style.backgroundColor = "transparent";
+		  logoNav.style.backgroundImage = null;
 	      logoNav.style.height = "80px";
 	      logoNav.style.lineHeight = "80px";
 	      logoNav.style.position = "relative";

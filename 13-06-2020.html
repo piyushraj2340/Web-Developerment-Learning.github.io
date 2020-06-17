@@ -26,19 +26,23 @@
 	 
 	 #milli-value {
 	  width: 70px;
-	  text-align: center;
 	  cursor: not-allowed;
 	 }
 	 
-	 #input-date-milli-value {
-	  width: 140px;
+	 #input-date-milli-value, #milli-value {
 	  border-radius: 25px / 50px;
 	  text-align: center;
 	  outline: none;
 	  color: red;
 	  border: 2px solid #000;
+	  opacity: 0.8;
 	 }
-	 #input-date-milli-value:focus {
+	 
+	 #input-date-milli-value {
+	  width: 140px;
+	 }
+	 
+	 #input-date-milli-value:focus, #milli-value:focus {
 	  border: 2px solid #4d90fe;
 	 }
   </style>
@@ -230,7 +234,7 @@
 	 <hr class="hr-line-sm" />
 	 <hr class="hr-line-bg" />
 	 
-	 <h3>JavaScript Date Output :</h3> 
+	 <h3 id="js-date-output">JavaScript Date Output :</h3> 
 	 
 	 <p style="white-space: pre-line;">
 	   <span class="label-tag" align="left">Note: </span>  By default, JavaScript will use the browser's time zone and display a date as a full text string: <br /><br />
@@ -241,8 +245,9 @@
 	 <p class="bold">
 	  <span class="label-tag"> JavaScript Code Used :</span>
 
-       <pre style="white-space: pre-wrap;">
+       <pre class="example">
         <span class="js-keywords">var </span><span class="js-variable">date00 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+		
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-00"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date00</span><span class="operator">;</span>
        </pre>
 	 </p>
@@ -273,8 +278,9 @@
 	 <p class="bold">
 	  <span class="label-tag"> JavaScript Code Used :</span>
 
-       <pre style="white-space: pre-wrap;">
+       <pre class="example">
         <span class="js-keywords">var </span><span class="js-variable">date01 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(2020, 07, 25, 8, 30, 30, 30);</span><span class="js-property">
+        
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-01"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date01</span><span class="operator">;</span>
        </pre>
 	   </p>
@@ -306,8 +312,9 @@
 	 <p class="bold">
 	  <span class="label-tag"> JavaScript Code Used :</span>
 
-       <pre style="white-space: pre-wrap;">
+       <pre class="example">
         <span class="js-keywords">var </span><span class="js-variable">date02 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(2020);</span><span class="js-property">
+		
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-02"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date02</span><span class="operator">;</span>
        </pre>
 	   </p>
@@ -323,16 +330,21 @@
 	 </p>
      <p align="center">	 
 	   <span id="demo-03"></span>
+	   <br /> &
 	   <span id="demo-04"></span>
 	 </p>
 	 <p class="bold">
 	  <span class="label-tag"> JavaScript Code Used :</span>
 
-       <pre style="white-space: pre-wrap;">
+       <pre class="example">
         <span class="js-keywords">var </span><span class="js-variable">date03 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(20, 07, 25, 8, 30, 30, 30);</span><span class="js-property">
+		 
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-03"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date03</span><span class="operator">;</span>
 		
+		<span class="js-comment">// & </span>
+		
         <span class="js-keywords">var </span><span class="js-variable">date04 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(0, 07, 25, 8, 30, 30, 30);</span><span class="js-property">
+		 
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-04"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date04</span><span class="operator">;</span>
        </pre>
 	   </p>
@@ -351,24 +363,21 @@
 	  <p class="bold">
 	  <span class="label-tag"> JavaScript Code Used :</span>
 
-       <pre style="white-space: pre-wrap;">
+       <pre class="example">
         <span class="js-keywords">var </span><span class="js-variable">date05 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020, february, 29, 12:30:59");</span><span class="js-property">
+		
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-05"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date05</span><span class="operator">;</span>
-       </pre>
-	   </p>
+       
+	   <span class="js-comment">// or</span>
 	   
-	   <p align="center">or</p>
-	   <p>
-	   <pre style="white-space: pre-wrap;">
         <span class="js-keywords">var </span><span class="js-variable">date05 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020 february 29 12:30:59");</span><span class="js-property">
+		 
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-05"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date05</span><span class="operator">;</span>
-       </pre>
-	   </p>
+       
+	    <span class="js-comment">// or</span>
 	   
-	   <p align="center">or</p>
-	   <p>
-	   <pre style="white-space: pre-wrap;">
         <span class="js-keywords">var </span><span class="js-variable">date05 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("february 29 12:30:59 2020");</span><span class="js-property">
+		 
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-05"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date05</span><span class="operator">;</span>
        </pre>
 	   </p>
@@ -392,11 +401,15 @@
 	  <p class="bold">
 	  <span class="label-tag"> JavaScript Code Used :</span>
 
-       <pre style="white-space: pre-wrap;">
+        <pre class="example">
         <span class="js-keywords">function </span><span class="js-property">printMillisecond()</span> <span class="operator">{</span>
-          <span class="js-keywords">var </span><span class="js-variable">date06 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020, february, 29, 12:30:59");</span><span class="js-property">
-          <span class="js-keywords">var </span><span class="js-variable">d</span> <span class="operator">=</span> date06.getTime()<span clss="operator">;</span>
-          <span class="js-property">document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-06"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d</span><span class="operator">;</span>
+		
+        <span class="js-keywords">var </span><span class="js-variable">date06 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020, february, 29, 12:30:59");</span><span class="js-property">
+		
+        <span class="js-keywords">var </span><span class="js-variable">d</span> <span class="operator">=</span> date06.getTime()<span clss="operator">;</span>
+		
+        <span class="js-property">document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-06"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d</span><span class="operator">;</span>
+		
         <span class="operator">}</span>
         
         <input type="checkbox" id="interval-checkbox" onchange="inputEnable()"><label for="interval-checkbox"><span class="js-property">setInterval</span><span class="operator">(</span><span class="js-keywords">printMillisecond</span><span class="operator">,</span> <input type="number" class="js-number" id="milli-value" value="1" onchange="clickToRun()" disabled /><span class="operator">);</span></label> 
@@ -414,8 +427,9 @@
 	   <p>
 	   <span class="label-tag"> JavaScript Code Used :</span>
 	   
-	   <pre style="white-space: pre-wrap;">
-        <span class="js-keywords">var </span><span class="js-variable">date07 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(<input type="number" id="input-date-milli-value" onchange="typeToRun()" value="0" />);</span><span class="js-property">
+	   <pre class="example">
+        <span class="js-keywords">var </span><span class="js-variable">date07 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date(<input type="number" class="js-number" id="input-date-milli-value" onchange="typeToRun()" value="0" />);</span><span class="js-property">
+		
         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-07"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date07</span><span class="operator">;</span>
        </pre>
 	   </p>
@@ -440,13 +454,19 @@
 	    <span class="label-tag"> JavaScript Code Used :</span>
 	    
 	   
-	   <pre style="white-space: pre-wrap;">
+	   <pre class="example">
        <span class="js-keywords">function </span><span class="js-property">printDateString()</span> <span class="operator">{ </span>
+	   
          <span class="js-keywords">var </span><span class="js-variable">date08 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+		 
          document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-08"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date08</span><span class="operator">;</span>
         
+		 <span class="js-comment">// both is Same </span> 
+		
          <span class="js-keywords">var </span><span class="js-variable">date09 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+		   
          document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-09"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date09.toString()</span><span class="operator">;</span>
+		 
        <span class="operator">}</span>
        <span class="js-property">setInterval</span><span class="operator">(</span><span class="js-keywords">printDateString</span><span class="operator">, </span><span class="js-number">1000</span><span class="operator">);</span>
        </pre>
@@ -460,8 +480,9 @@
 	   <p>
 	    <span class="label-tag"> JavaScript Code Used :</span>
 
-	   <pre style="white-space: pre-wrap;">
+	   <pre class="example">
          <span class="js-keywords">var </span><span class="js-variable">date10 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+		  
          document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-10"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date10.toUTCString()</span><span class="operator">;</span>
        </pre>
 	   </p>
@@ -475,12 +496,567 @@
 	   <p>
 	    <span class="label-tag"> JavaScript Code Used :</span>
 
-	   <pre style="white-space: pre-wrap;">
+	   <pre class="example">
          <span class="js-keywords">var </span><span class="js-variable">date11 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date();</span><span class="js-property">
+		   
          document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-11"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date11.toDateString()</span><span class="operator">;</span>
        </pre>
 	   </p>
 	 
+	</div>
+	
+	<div id="date-formats">
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <h2>JavaScript Date Formats</h2>  
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  
+	  <h3>JavaScript Date Input :</h3> 
+	  
+	  There are generally 3 type of JavaScript date input formats: 
+        <ul>
+		  <li>ISO Date -- Example: "2020-06-14"(The International Standard)</li>
+		  <li>Short Date -- Example: "06/14/2020</li>
+		  <li>Long Date -- Example: "Jun 14 2020" or "14 Jun 2020"</li>
+		</ul>	  
+	    <p>
+		 <span class="label-tag">Notes:</span> The ISO format a strict standard in JavaScript. The other format are not so well defined and might be browser specific. 
+		</p>
+		<hr class="hr-line-bg" />
+		<hr class="hr-line-sm" />
+		<hr class="hr-line-bg" />
+		<h3>JavaScript ISO Dates & Time :</h3>
+		<p>
+		 <span class="label-tag">Notes:</span> <br /><br />
+		 ISO 8601 is the international standard for the representation of dates and times. <br /><br />
+
+         The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+		</p>
+		<p align="center">
+		  <span class="bold" id="demo-12" title="year, month and date."></span>
+		  &
+		  <span class="bold" id="demo-13" title="year and month."></span>
+		  &
+		  <span class="bold" id="demo-14" title="only year."></span>
+		  &
+		  <span class="bold" id="demo-15" title="date and time."></span>
+		  &
+		  <span class="bold" id="demo-16" title="date and time WithOut Letter Z. with +HH:MM "></span>
+		  &
+		  <span class="bold" id="demo-17" title="date and time WithOut Letter Z. with -HH:MM"></span>
+		</p>
+		
+		<p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date12 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020-06-14");</span><span class="js-property"> <span class="js-comment">// year, month and date.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-12"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date12</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">// & </span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date13 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020-06");</span><span class="js-property"> <span class="js-comment">// year and month.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-13"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date13</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">// & </span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date14 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020");</span><span class="js-property"> <span class="js-comment">// only year.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-14"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date14</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">// & </span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date15 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020-06-14T12:00:00Z");</span><span class="js-property"> <span class="js-comment">// date and time. related to UTC.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-15"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date15</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">// & </span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date16 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020-06-14T11:15:00+05:30");</span><span class="js-property"> <span class="js-comment">// date and time. related to UTC +05:30.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-16"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date16</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">// & </span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date17 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("2020-06-14T11:15:00-05:30");</span><span class="js-property"> <span class="js-comment">// date and time. related to UTC -05:30.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-17"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date17</span><span class="operator">;</span>
+       </pre>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag">Note :</span> <br />
+		Here capital T Separate Date and time.<br /><br />
+		UTC time is defined with a Capital Letter Z.<br /><br />
+		we can also modify the time related to different time zone, Remove the Letter Z and add +HH:MM or -HH:MM instead:
+		
+		
+	   </p>
+	   <hr class="hr-line-bg" />
+	   <hr class="hr-line-sm" />
+	   <hr class="hr-line-bg" />
+	   <h3>JavaScript Short Dates :</h3>
+	   
+	   short date are written with "MM/DD/YYYY".
+	   
+	   <p align="center">
+	    <span class="bold" id="demo-18"></span>
+	   </p>
+	   
+	   <span class="label-tag">Note: </span> <br />
+	   
+	   YYYY-MM-DD and DD-MM-YYYY is undefine some browser try to guess it some browser produce an error <br /><br />
+	    
+	   <span class="bold">month and date with no leading zero produce and Error.</span>	
+	   <hr class="hr-line-bg" />
+	   <hr class="hr-line-sm" />
+	   <hr class="hr-line-bg" />
+	   
+	   <h3>JavaScript Long Dates :</h3>
+	   Long dates are most often written with a "MMM DD YYYY" syntax like this.
+	   <p align="center">
+	    <span class="bold" id="demo-19"></span>
+		same as 
+	    <span class="bold" id="demo-20"></span>
+		same as 
+	    <span class="bold" id="demo-21"></span>
+		same as 
+	    <span class="bold" id="demo-22"></span>
+		same as 
+	    <span class="bold" id="demo-23"></span>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date19 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("August 25 2020");</span><span class="js-property"> <span class="js-comment">// here month name is full [August].</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-19"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date19</span><span class="operator">;</span>
+		 
+         <span class="js-comment">//same as</span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date20 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("Aug 25 2020");</span><span class="js-property"> <span class="js-comment">// here month name is in abbreviated form  [Aug].</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-20"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date20</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">//same as</span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date21 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("Aug, 25, 2020");</span><span class="js-property"> <span class="js-comment">// here is comma[,].</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-21"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date21</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">//same as</span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date22 </span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("AUG, 25, 2020");</span><span class="js-property"> <span class="js-comment">// here is Capital abbreviated [AUG].</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-22"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date22</span><span class="operator">;</span>
+		 
+		<span class="js-comment">//same as</span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date23</span><span class="operator">=</span> <span class="js-keywords">new </span><span class="js-property">Date("AUGUST, 25, 2020");</span><span class="js-property"> <span class="js-comment">// here is Capital Month Name [AUGUST].</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-23"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date23</span><span class="operator">;</span>
+         </pre>
+        </p>		 
+
+	   
+	   <span class="label-tag">Note :</span> <br />
+	   month and date are in any order, means 25 Aug 2020 or Aug 25 2020. 
+	   <br /><br />
+	   And, month can be written in full (January), or abbreviated (Jan):
+	   <br /><br />
+	   Commas are ignored. Names are case insensitive:
+	   
+	   <hr class="hr-line-bg" />
+	   <hr class="hr-line-sm" />
+	   <hr class="hr-line-bg" />
+	   <h3>Date Input - Parsing Dates: </h3>
+	   
+	   
+	   <p align="center">
+	    <span class="bold" id="demo-24"></span>
+		&
+	    <span class="bold" id="demo-25"></span>
+	   </p>
+	   
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date24 </span><span class="operator">=</span><span class="js-property">Date.parse("Aug 25 2020");</span><span class="js-property"> <span class="js-comment">// here date string is converted into the milliseconds.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-24"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date24</span><span class="operator">;</span>
+		 
+		 <span class="js-comment">//first we try to convert date string into milliseconds then we are going to use these  milliseconds inside new Date() Method to print date. </span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">date25 </span><span class="operator">= </span><span class="js-property">Date.parse("Aug 25 2020");</span><span class="js-property"> <span class="js-comment">// here date string is converted into the milliseconds.</span>
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">d00 </span><span class="operator">=</span> <span class="js-property"><span class="js-keywords">new </span>Date(date25);</span><span class="js-property"> <span class="js-comment">// here milliseconds is used to convert new date object</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-25"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d00</span><span class="operator">;</span>
+		 </pre>
+		 </p>
+		 
+	</div>
+	
+	<div id="date-get-methods">
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <h2>Date Get Methods</h2>
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  
+	  <table>
+	    <thead>
+		 <tr>
+		   <th>Method</th>
+		   <th>Description</th>
+		 </tr>
+		</thead>
+		<tbody>
+		 <tr>
+		  <td>getFullYear()</td>
+		  <td>Get the year as a four digit number (yyyy).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getMonth()</td>
+		  <td>Get the month as a number (0-11).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getDate()</td>
+		  <td>Get the day as a number (1-31).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getHours()</td>
+		  <td>Get the hour (0-23).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getMinutes()</td>
+		  <td>Get the minute (0-59).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getSeconds()</td>
+		  <td>Get the second (0-59).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getMilliseconds()</td>
+		  <td>Get the millisecond (0-999).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getTime()</td>
+		  <td>Get the time (milliseconds since January 1, 1970).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>getDay()</td>
+		  <td>Get the weekday as a number (0-6).</td>
+		 </tr>
+		 
+		 <tr>
+		  <td>Date.now()</td>
+		  <td>Get the time. ECMAScript 5.</td>
+		 </tr>
+		 
+		</tbody>
+	  </table>
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getTime() Method :</h3>
+	  
+	  The <span class="bold">getTime()</span> Method return the milliseconds since 1 Jan 1970.
+	
+	  <p align="center">
+	    <span class="bold" id="demo-26"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date26 </span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">d01 </span><span class="operator">=</span> <span class="js-property">date26.getTime();</span><span class="js-property"><span class="js-comment">//we get milliseconds since 1 Jan 1970.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-26"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d01</span><span class="operator">;</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  
+	  <h3>getFullYear() Method :</h3>
+	  
+	  the <span class="bold">getFullYear()</span> Method give the year of that date in YYYY formate.
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-27"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date27 </span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">d02 </span><span class="operator">=</span> <span class="js-property">date27.getFullYear();</span><span class="js-property"><span class="js-comment">//we get the current year.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-27"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d02</span><span class="operator">;</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg">
+	  <hr class="hr-line-sm">
+	  <hr class="hr-line-bg">
+	  <h3>getMonth() Method :</h3>
+	  the <span class="bold">getMonth()</span> methods gives the month of the date in number [0-11].
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-28"></span>
+	  </p>
+	  
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date28 </span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">d03 </span><span class="operator">=</span> <span class="js-property">date28.getFullYear();</span><span class="js-property"><span class="js-comment">//we get the month as number - 1.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-28"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">d03</span><span class="operator">;</span>
+	  </pre>
+	  </p>
+	  <span class="label-tag">Notes :</span> In JavaScript, the first month (January) is month number 0 and the last month (December) is the number 11. In Other Word, In JavaScript, We get Month as Month number is minus(-) 1.
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-29"></span>
+	  </p>
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date29 </span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">months </span><span class="operator">=</span> <span class="js-property">["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]</span><span class="js-property"><span class="js-comment">//create an array with month name.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-28"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">months[date29.getMonth()]</span><span class="operator">;</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getDate() Method :</h3>
+	  the <span class="label-tag">getDate()</span> methods gives the date of a date as a number [1-31].
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-30"></span>
+	  </p>
+	  
+	   <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date30 </span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-30"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date30.getDate()</span><span class="operator">;</span><span class="js-comment">//get the date only not month and year.</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getHours() Method :</h3>
+	  the <span class="bold">getHours()</span> Methods gives the hours of a date as a number [0-23].
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-31"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date31</span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-31"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date31.getHours()</span><span class="operator">;</span><span class="js-comment">//get the Hours only not month and year nor minute and second.</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getMinutes() Method :</h3>
+	  the <span class="bold">getMinutes()</span> Method gives the minutes of a date as a number [0-59].
+     
+      <p align="center">
+	    <span class="bold" id="demo-32"></span>
+	  </p>	 
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date32</span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-32"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date32.getMinutes()</span><span class="operator">;</span><span class="js-comment">//get the Minutes only not month and year nor hours and second.</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getSeconds() Method :</h3>
+	  The <span class="bold">getSeconds</span> Method gives the second of a date as a number [0-59].
+	  
+	  <p align="center">
+	   <span class="bold" id="demo-33"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date33</span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-33"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date33.getSeconds()</span><span class="operator">;</span><span class="js-comment">//get the Second only not month and year nor hours and Minutes.</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getMilliseconds() Method : </h3>
+	  
+	  the <span class="bold">getMilliseconds()</span> Method gives the millisecond of a date as a number [0-999].
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-34"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date34</span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-34"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date34.getMilliseconds()</span><span class="operator">;</span><span class="js-comment">//get the milliseconds only not month and year nor hours, Minutes and second.</span>
+	  </pre>
+	  </p>
+	  
+	  <hr class="hr-line-bg" />
+	  <hr class="hr-line-sm" />
+	  <hr class="hr-line-bg" />
+	  <h3>getDay() Method :</h3>
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-35"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date35</span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-35"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">date35.getDay()</span><span class="operator">;</span><span class="js-comment">//get the day as the day number - minus 1 (-1) .</span>
+	  </pre>
+	  </p>
+	  
+	  <span class="label-tag">Notes :</span> In JavaScript, the first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday".
+	  
+	  <p align="center">
+	    <span class="bold" id="demo-36"></span>
+	  </p>
+	  
+	  <p>
+	    <span class="label-tag"> JavaScript Code Used :</span>
+
+	   <pre class="example">
+         <span class="js-keywords">var </span><span class="js-variable">date36 </span><span class="operator">=</span> <span class="js-keywords">new</span> <span class="js-property">Date();</span><span class="js-property">
+		 
+		 <span class="js-keywords">var </span><span class="js-variable">days </span><span class="operator">=</span> <span class="js-property">["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</span><span class="js-property"><span class="js-comment">//create an array with Days name.</span>
+		   
+         document.getElementById</span><span class="operator">(</span><span class="js-string">"demo-36"</span><span class="operator">)</span>.<span class="js-keywords">innerHTML</span><span class="operator"> =</span> <span class="js-variable">months[date36.getDay()]</span><span class="operator">;</span>
+	  </pre>
+	  </p>
+	 
+	</div>
+	
+	<div id="date-set-methods">
+	<hr class="hr-line-bg" />
+	<hr class="hr-line-sm" />
+	<h2>Date Set Methods</h2>
+	<hr class="hr-line-sm" />
+	<hr class="hr-line-bg" />
+	
+	<div class="table">
+	<table>
+	  <thead>
+	    <tr>
+		 <th>Method</th>
+		 <th>Description</th>
+		</tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+		 <td>setDate()</td>
+		 <td>Set the day as a number (1-31).</td>
+		</tr>
+		
+		<tr>
+		 <td>setFullYear()</td>
+		 <td>Set the year (optionally month and day).</td>
+		</tr>
+		
+		<tr>
+		 <td>setHours()</td>
+		 <td>Set the hour (0-23).</td>
+		</tr>
+		
+		<tr>
+		 <td>setMilliseconds()</td>
+		 <td>Set the milliseconds (0-999).</td>
+		</tr>
+		
+		<tr>
+		 <td>setMinutes()</td>
+		 <td>Set the minutes (0-59).</td>
+		</tr>
+		
+		<tr>
+		 <td>setMonth()</td>
+		 <td>Set the month (0-11).</td>
+		</tr>
+		
+		<tr>
+		 <td>setSeconds()</td>
+		 <td>Set the seconds (0-59).</td>
+		</tr>
+		
+		<tr>
+		 <td>setTime()</td>
+		 <td>Set the time (milliseconds since January 1, 1970).</td>
+		</tr>
+	  </tbody>
+	</table>
+	<hr class="hr-line-bg" />
+	<hr class="hr-line-sm" />
+	<hr class="hr-line-bg" />
+	<h3>setFullYear() Method :</h3>
+	</div>
 	</div>
 	
 	<script>
@@ -568,6 +1144,106 @@
 	 // 11th Example
 	 var date11 = new Date();
 	 document.getElementById("demo-11").innerHTML = date11.toDateString();
+	 
+	 // 12th Example
+	 var date12 = new Date("2020-06-14");
+	 document.getElementById("demo-12").innerHTML = date12;
+	 
+	 var date13 = new Date("2020-06");
+	 document.getElementById("demo-13").innerHTML = date13;
+	 
+	 var date14 = new Date("2020");
+	 document.getElementById("demo-14").innerHTML = date14;
+	 
+	 var date15 = new Date("2020-06-14T17:58:00Z");
+	 document.getElementById("demo-15").innerHTML = date15;
+	 
+	 var date16 = new Date("2020-06-14T11:15:00+05:30");
+	 document.getElementById("demo-16").innerHTML = date16;
+	 
+	 var date17 = new Date("2020-06-14T11:15:00-05:30");
+	 document.getElementById("demo-17").innerHTML = date17;
+	 
+	 // 13th Example
+	 var date18 = new Date("06/16/2020");
+	 document.getElementById("demo-18").innerHTML = date18;
+	 
+	 // 14th Example
+	 var date19 = new Date("August 25 2020");
+	 document.getElementById("demo-19").innerHTML = date19;
+	 
+	 var date20 = new Date("Aug 25 2020");
+	 document.getElementById("demo-20").innerHTML = date20;
+	 
+	 var date21 = new Date("Aug 25 2020");
+	 document.getElementById("demo-21").innerHTML = date21;
+	 
+	 var date22 = new Date("AUG 25 2020");
+	 document.getElementById("demo-22").innerHTML = date22;
+	 
+	 var date23 = new Date("AUGUST 25 2020");
+	 document.getElementById("demo-23").innerHTML = date23;
+	 
+	 
+	 // 15th Example
+	  var date24 = Date.parse("Aug 25 2020");
+	  document.getElementById("demo-24").innerHTML = date24;
+	  
+	  var date25 = Date.parse("Aug 25 2020");
+	  var d00 = new Date(date25);
+	  document.getElementById("demo-25").innerHTML = d00;
+	  
+	 // 16th Example
+	  var date26 = new Date();
+	  var d01 = date26.getTime();
+	  document.getElementById("demo-26").innerHTML = d01;
+	  
+	 // 17th Example 
+	 var date27 =  new Date();
+	 var d02 = date27.getFullYear();
+	 document.getElementById("demo-27").innerHTML = d02;
+	 
+	 // 18th Example
+	 var date28 =  new Date();
+	 var d03 = date28.getMonth();
+	 document.getElementById("demo-28").innerHTML = d03;
+	 
+	 // 19th Example
+	 var date29 = new Date();
+	 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	 document.getElementById("demo-29").innerHTML = months[date29.getMonth()];
+	 
+	 // 20th Example 
+	 var date30 = new Date();
+	 document.getElementById("demo-30").innerHTML = date30.getDate();
+     
+	 // 21th Example
+	 var date31 = new Date();
+	 document.getElementById("demo-31").innerHTML = date31.getHours();
+	 
+	 // 22th Example 
+	 var date32 =  new Date();
+	 document.getElementById("demo-32").innerHTML = date32.getMinutes();
+	 
+	 // 23th Example
+	 var date33 = new Date();
+	 document.getElementById("demo-33").innerHTML = date33.getSeconds();
+	 
+	 // 24th Example
+	 var date34 = new Date();
+	 document.getElementById("demo-34").innerHTML = date34.getMilliseconds();
+	 
+	 // 25th Example
+	 var date35 = new Date();
+	 document.getElementById("demo-35").innerHTML = date35.getDay();
+	 
+	 // 26th Example
+	 var date36 = new Date();
+	 
+	 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	 
+	 document.getElementById("demo-36").innerHTML = days[date36.getDay()];
+	 
 	 </script>
    </article>
    
@@ -583,8 +1259,21 @@
     <a href="#topic">
      <li>Topic Name</li>
     </a>
+	
 	<a href="#js-date">
-	  <li>JS-Date()</li>
+	  <li>Date() Object</li>
+	</a>
+	
+	<a href="#date-formats">
+	  <li>Date() Formats</li>
+	</a>
+	
+	<a href="#date-get-methods">
+	  <li>Date() Get Method</li>
+	</a>
+	
+	<a href="#date-set-methods">
+	  <li>Date() Set Method</li> 
 	</a>
    </ul>
   </aside>

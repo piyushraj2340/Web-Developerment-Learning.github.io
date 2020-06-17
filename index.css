@@ -77,9 +77,10 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
 #dark-font-social {
 	height: 50px;
 	background-color: #8860d0;
+	background-image: linear-gradient(45deg, #686664, #c1c8e4, #ec7e74);
 	line-height: 50px;
 	padding: 0px 20px;
-    /* text-align: center; */
+    /* text-align: center;  */
 	/* overflow: hidden; */
 	margin: 0px 0 4px 0;
 }
@@ -580,6 +581,7 @@ html::-webkit-scrollbar-button:vertical:single-button:increment:hover, body::-we
 	padding: 5px;
     position: sticky; 
 	top: 70px;
+	font-weight: 16px;
 	/* overflow-x: hidden; */
 	/* overflow-y: scroll; */
 }
@@ -593,7 +595,7 @@ aside ul {
 	list-style-type: circle;
 	margin: 10px 20px;
 	padding: 0;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 aside ul li {
@@ -719,6 +721,63 @@ aside a {
 
 .js-number {
 	color: red;
+}
+
+.js-comment {
+	color: green;
+}
+
+.example {
+	white-space: pre-line !important;
+	background-color: #fff;
+	border-left: 4px solid #4CAF50;
+    padding: 10px 12px;
+	font-size: 16px;
+	font-family: consolas,"courier new";
+	word-wrap: break-word;	
+}
+
+table {
+	border-collapse: collapse;
+	min-width: 100%;
+}
+
+.table {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+table {
+	border: 1px solid #ddd;
+}
+
+thead tr {
+	border: none !important;
+}
+
+tr:nth-child(odd) { 
+  background-image: linear-gradient(to bottom, transparent 90%, #5680e9 , #84ceeb , #5ab9ea , #c1c8e4, #8860d0 );
+}
+
+tr:nth-child(even) {
+	background-color: #999;
+}
+
+
+
+th {
+	padding: 10px 20px;
+	font-weight: 550;
+	text-align: left;
+	font-size: 20px;
+	background-color: #4CAF50;
+	
+}
+
+td {
+	padding: 8px 16px;
+	font-size: 17px;
+	text-align: left;
 }
 
 
@@ -886,9 +945,7 @@ aside a {
    overflow-y: scroll;
 }
 
-pre {
-	white-space: pre-line !important;
-}
+
 
 
 }
