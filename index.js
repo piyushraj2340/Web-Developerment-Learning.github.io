@@ -182,6 +182,10 @@ var countDFS = 0;
     }
 	
 //darkTheme function dark mode control
+
+    darkTheme(); // calling the default dark mood 
+	
+	alert("Dark Mode Is Now Activated"); // alerting the user for this things 
 	  
     function darkTheme() {
 	
@@ -898,7 +902,7 @@ var countDFS = 0;
 //making scroll function for contentMap	
 	 
 		        asideRightAnchor[i].onscroll = (function() {
-                    if(document.body.scrollTop <= lastPosition[i] &&document.body.scrollTop >= startPosition[i] || document.documentElement.scrollTop <= lastPosition[i] && document.documentElement.scrollTop >= startPosition[i]) { //condition for scroll position is between start scroll position and last scroll position 
+                    if(document.body.scrollTop <= lastPosition[i] && document.body.scrollTop >= startPosition[i] || document.documentElement.scrollTop <= lastPosition[i] && document.documentElement.scrollTop >= startPosition[i]) { //condition for scroll position is between start scroll position and last scroll position 
 
                       rightAnchorLi[i].style.color = "#1a73e8";
 		              rightAnchorLi[i].style.fontWeight = "550";

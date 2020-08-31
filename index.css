@@ -740,15 +740,12 @@ aside a {
 table {
 	border-collapse: collapse;
 	min-width: 100%;
+	border: 1px solid #ddd;
 }
 
 .table {
 	overflow-x: auto;
 	overflow-y: hidden;
-}
-
-table {
-	border: 1px solid #ddd;
 }
 
 thead tr {
